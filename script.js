@@ -215,9 +215,11 @@ function playNext() {
   styleActive.classList.remove('item-active');
    if (playNum < 3) {
       playNum++;
+      isPlay = false;
       playAudio();
    } else {
       playNum = 0;
+      isPlay = false;
       playAudio();
    }
    console.log(playNum)
