@@ -246,18 +246,21 @@ for(let i = 0; i < playList.length; i++) {
    console.log(playList[i].title)
  };
 
+let sec = 0;
+let min = 0;
+
 function durat () {
-   let sec = 0;
-   let min = 0;
-   if (sec < 10) {
+   if (+sec < 59) {
       sec++
    } else {
       min++;
       sec = 0;
    }
-   let time = `${min}.toString().padStart(2, '0'):${sec}.toString().padStart(2, '0')`;
+   let time = `${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
    console.log(time);
-   console.log(playList[playNum].duration);
+   if(playList[playNum].duration === time) {
+    console.log('YEEEEEEEEEEEEEES!');  
+   }
    setTimeout(durat, 1000);
 };
 durat ();
