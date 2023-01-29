@@ -200,12 +200,12 @@ function playAudio() {
   if(!isPlay) {
   audio.play();
   isPlay = true;
-  playBtn.classList.toggle('pause');
+  playBtn.classList.add('pause');
   durat ();
   } else {
    audio.pause();
    isPlay = false;
-   playBtn.classList.toggle('pause');
+   playBtn.classList.remove('pause');
   }
 };
 
