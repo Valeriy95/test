@@ -255,7 +255,8 @@ function durat () {
       min++;
       sec = 0;
    }
-   let time = `${min}.toString().padStart(2, '0'):${sec}.toString().padStart(2, '0')`
+   let time = `${min}.toString().padStart(2, '0'):${sec}.toString().padStart(2, '0')`;
+   console.log(time);
    console.log(playList[playNum].duration);
    setTimeout(durat, 1000);
 };
