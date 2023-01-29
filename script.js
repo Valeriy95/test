@@ -192,7 +192,7 @@ playBtn.addEventListener('click', playAudio);
 
 function playAudio() {
   //audio.src = 'https://7oom.ru/audio/naturesounds/07%20Birds%20(7oom.ru).mp3';
-  let styleActive = document.querySelector(`${playList[playNum]}`);
+  let styleActive = document.querySelector(`.num${playNum}`);
   styleActive.classList.add('item-active');
   console.log(styleActive);
   audio.src = playList[playNum].src;
