@@ -210,6 +210,8 @@ function playAudio() {
 
 playNextBtn.addEventListener('click', playNext);
 function playNext() {
+  let styleActive = document.querySelector(`.num${playNum}`);
+  styleActive.classList.remove('item-active');
    if (playNum < 3) {
       playNum++;
       playAudio();
@@ -222,6 +224,8 @@ function playNext() {
 
 playPrevBtn.addEventListener('click', playPrev);
 function playPrev() {
+   let styleActive = document.querySelector(`.num${playNum}`);
+   styleActive.classList.remove('item-active');
    if (playNum > 0) {
       playNum--;
       playAudio();
