@@ -173,16 +173,27 @@ window.addEventListener('load', getLocalWeather);
 // Виджет цитата дня 
 
 async function getQuotes() {  
-   // const quotes = 'file:///C:/Users/Валера/Desktop/Momentum/valeriy95-JSFEPRESCHOOL2022Q4/accecs/data.json';
-   const quotes = `data.json`;
-   console.log(quotes)
+   const quotes = 'data.json';
    const res = await fetch(quotes);
-   //const res = await fetch(quotes, {mode: 'no-cors'});
    const data = await res.json(); 
-   console.log(data[0].text);
-   console.log(data[0].author);
+   let a = Math.floor(Math.random() * 3);
+   console.log(a);
+   console.log(data[a].author);
+   console.log(data[a].text);
  }
  getQuotes();
+
+// async function getQuotes() {  
+//    // const quotes = 'file:///C:/Users/Валера/Desktop/Momentum/valeriy95-JSFEPRESCHOOL2022Q4/accecs/data.json';
+//    const quotes = `data.json`;
+//    console.log(quotes)
+//    const res = await fetch(quotes);
+//    //const res = await fetch(quotes, {mode: 'no-cors'});
+//    const data = await res.json(); 
+//    console.log(data[0].text);
+//    console.log(data[0].author);
+//  }
+//  getQuotes();
 
 // function getQuotes() {
 //    const quotes = 'data.json';
