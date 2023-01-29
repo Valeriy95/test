@@ -1,2 +1,2 @@
-// import playList from './playList.js';
+import playList from './playList.js';
 console.log(playList);
