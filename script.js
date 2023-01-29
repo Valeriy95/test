@@ -182,15 +182,6 @@ async function getQuotes() {
 
 // 6. Аудиоплеер
 
-for(let i = 0; i < playList.length; i++) {
-   const li = document.createElement('li');
-   const playListContainer = document.querySelector('.play-list');
-   li.classList.add('play-item');
-   li.classList.add(`num${[i]}`);
-   li.textContent = playList[i].title;
-   playListContainer.append(li);
-   console.log(playList[i].title)
- }
 
 let isPlay = false;
 let playNum = 0;
@@ -201,7 +192,6 @@ const playPrevBtn = document.querySelector('.play-prev');
 playBtn.addEventListener('click', playAudio);
 
 function playAudio() {
-  //audio.src = 'https://7oom.ru/audio/naturesounds/07%20Birds%20(7oom.ru).mp3';
   let styleActive = document.querySelector(`.num${playNum}`);
   styleActive.classList.add('item-active');
   console.log(styleActive);
@@ -246,13 +236,13 @@ function playPrev() {
    console.log(playNum)
 };
 
+for(let i = 0; i < playList.length; i++) {
+   const li = document.createElement('li');
+   const playListContainer = document.querySelector('.play-list');
+   li.classList.add('play-item');
+   li.classList.add(`num${[i]}`);
+   li.textContent = playList[i].title;
+   playListContainer.append(li);
+   console.log(playList[i].title)
+ };
 
-// for(let i = 0; i < playList.length; i++) {
-//    const li = document.createElement('li');
-//    const playListContainer = document.querySelector('.play-list');
-//    li.classList.add('play-item');
-//    li.classList.add(`num${[i]}`);
-//    li.textContent = playList[i].title;
-//    playListContainer.append(li);
-//    console.log(playList[i].title)
-//  }
