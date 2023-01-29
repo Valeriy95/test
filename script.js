@@ -260,7 +260,7 @@ for(let i = 0; i < playList.length; i++) {
    const li = document.createElement('li');
    const playListContainer = document.querySelector('.play-list');
    li.classList.add('play-item');
-   li.classList.add('num[i]');
+   li.classList.add(`num${[i]}`);
    li.textContent = playList[i].title;
    playListContainer.append(li);
    console.log(playList[i].title)
