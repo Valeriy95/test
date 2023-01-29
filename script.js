@@ -201,6 +201,7 @@ function playAudio() {
   audio.play();
   isPlay = true;
   playBtn.classList.toggle('pause');
+  durat ();
   } else {
    audio.pause();
    isPlay = false;
@@ -259,11 +260,11 @@ function durat () {
    let time = `${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
    console.log(time);
    if(playList[playNum].duration === time) {
-    console.log('YEEEEEEEEEEEEEES!');  
+     playNext();
    }
    setTimeout(durat, 1000);
 };
-durat ();
+// durat ();
 
    
    
