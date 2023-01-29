@@ -266,6 +266,7 @@ function durat () {
      min = 0;
      playNext();
      //playBtn.classList.remove('pause');
+   }
    } else {
      sec = 0;
      min = 0;
@@ -273,6 +274,3 @@ function durat () {
    setTimeout(durat, 1000);
 };
 // durat ();
-
-   
-   
