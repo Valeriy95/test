@@ -202,7 +202,6 @@ function playAudio() {
   isPlay = true;
   playBtn.classList.add('pause');
   durat ();
-  setTimeout(durat, 1000);
   } else {
    audio.pause();
    isPlay = false;
@@ -277,4 +276,5 @@ function durat () {
    }
 //    setTimeout(durat, 1000);
 };
+setTimeout(durat, 1000);
 // durat ();
