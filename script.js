@@ -176,8 +176,8 @@ const changeQuote = document.querySelector('.change-quote');
 changeQuote.addEventListener('click', getQuotes)
 
 async function getQuotes() {  
-   let quote = document.querySelector('.quote');
-   let author = document.querySelector('.author');
+   const quote = document.querySelector('.quote');
+   const author = document.querySelector('.author');
    const quotes = 'data.json';
    const res = await fetch(quotes);
    const data = await res.json(); 
@@ -190,28 +190,6 @@ async function getQuotes() {
  }
  getQuotes();
 
-// async function getQuotes() {  
-//    // const quotes = 'file:///C:/Users/Валера/Desktop/Momentum/valeriy95-JSFEPRESCHOOL2022Q4/accecs/data.json';
-//    const quotes = `data.json`;
-//    console.log(quotes)
-//    const res = await fetch(quotes);
-//    //const res = await fetch(quotes, {mode: 'no-cors'});
-//    const data = await res.json(); 
-//    console.log(data[0].text);
-//    console.log(data[0].author);
-//  }
-//  getQuotes();
-
-// function getQuotes() {
-//    const quotes = 'data.json';
-//    fetch(quotes)
-//      .then(res => res.json())
-//      .then(data => { 
-//        console.log(data);
-//      })
-      
-//  }
-//  getQuotes();
 
 // 6. Аудиоплеер
 
