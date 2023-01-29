@@ -190,6 +190,7 @@ const playBtn = document.querySelector('.play');
 const playNextBtn = document.querySelector('.play-next');
 const playPrevBtn = document.querySelector('.play-prev');
 playBtn.addEventListener('click', playAudio);
+playBtn.addEventListener('click', durat);
 
 function playAudio() {
   let styleActive = document.querySelector(`.num${playNum}`);
@@ -201,7 +202,7 @@ function playAudio() {
   audio.play();
   isPlay = true;
   playBtn.classList.add('pause');
-  durat ();
+//   durat ();
   } else {
    audio.pause();
    isPlay = false;
@@ -269,12 +270,11 @@ function durat () {
      playNext();
      //playBtn.classList.remove('pause');
    }
-//    setTimeout(durat, 1000);   
+   setTimeout(durat, 1000);   
    } else {
      sec = 0;
      min = 0;
    }
 //    setTimeout(durat, 1000);
 };
-setTimeout(durat, 1000);
 // durat ();
