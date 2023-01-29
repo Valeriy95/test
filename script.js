@@ -173,19 +173,15 @@ window.addEventListener('load', getLocalWeather);
 // Виджет цитата дня 
 
 const changeQuote = document.querySelector('.change-quote');
-changeQuote.addEventListener('click', ror)
-
-function ror () {
- console.log('Hello!');  
-}
+changeQuote.addEventListener('click', getQuotes)
 
 async function getQuotes() {  
-   const quote = document.querySelector('.quote');
-   const author = document.querySelector('.author');
+   let quote = document.querySelector('.quote');
+   let author = document.querySelector('.author');
    const quotes = 'data.json';
    const res = await fetch(quotes);
    const data = await res.json(); 
-   let a = Math.floor(Math.random() * 3);
+   let a = Math.floor(Math.random() * 20);
    console.log(a);
    console.log(data[a].author);
    console.log(data[a].text);
