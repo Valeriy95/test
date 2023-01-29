@@ -247,7 +247,7 @@ for(let i = 0; i < playList.length; i++) {
  };
 
 function durat () {
-   console.log(playList[i].duration);
+   console.log(playList[playNum].duration);
    setTimeout(durat, 1000);
 };
 durat ();
