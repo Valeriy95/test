@@ -7,6 +7,6 @@ async function getQuotes() {
    let a = Math.floor(Math.random() * 3);
    console.log(a);
    console.log(data[a][text]);
-   console.log(data[a][author]);
+//    console.log(data[a][author]);
  }
  getQuotes();
