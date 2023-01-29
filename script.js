@@ -210,7 +210,7 @@ function playAudio() {
 };
 
 playNextBtn.addEventListener('click', playNext);
-playNextBtn.addEventListener('click', durat);
+// playNextBtn.addEventListener('click', durat);
 function playNext() {
   let styleActive = document.querySelector(`.num${playNum}`);
   styleActive.classList.remove('item-active');
@@ -218,10 +218,12 @@ function playNext() {
       playNum++;
       isPlay = false;
       playAudio();
+      durat();
    } else {
       playNum = 0;
       isPlay = false;
       playAudio();
+      durat();
    }
    console.log(playNum)
 };
