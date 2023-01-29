@@ -188,11 +188,12 @@ const audio = new Audio();
 const playBtn = document.querySelector('.play');
 const playNextBtn = document.querySelector('.play-next');
 const playPrevBtn = document.querySelector('.play-prev');
+let styleActive = document.querySelector(`.num${playNum}`);
 playBtn.addEventListener('click', playAudio);
 
 function playAudio() {
   //audio.src = 'https://7oom.ru/audio/naturesounds/07%20Birds%20(7oom.ru).mp3';
-  let styleActive = document.querySelector(`.num${playNum}`);
+//   let styleActive = document.querySelector(`.num${playNum}`);
   styleActive.classList.add('item-active');
   console.log(styleActive);
   audio.src = playList[playNum].src;
@@ -210,7 +211,7 @@ function playAudio() {
 
 playNextBtn.addEventListener('click', playNext);
 function playNext() {
-  let styleActive = document.querySelector(`.num${playNum}`);
+//   let styleActive = document.querySelector(`.num${playNum}`);
   styleActive.classList.remove('item-active');
    if (playNum < 3) {
       playNum++;
@@ -224,7 +225,7 @@ function playNext() {
 
 playPrevBtn.addEventListener('click', playPrev);
 function playPrev() {
-   let styleActive = document.querySelector(`.num${playNum}`);
+//    let styleActive = document.querySelector(`.num${playNum}`);
    styleActive.classList.remove('item-active');
    if (playNum > 0) {
       playNum--;
