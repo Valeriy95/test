@@ -250,7 +250,7 @@ function durat () {
    console.log(playList[i].duration);
    setTimeout(durat, 1000);
 };
-
+durat ();
 
    
    
