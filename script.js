@@ -6,7 +6,7 @@ async function getQuotes() {
    const data = await res.json(); 
    let a = Math.floor(Math.random() * 3);
    console.log(a);
-   console.log(data[a][author]);
-//    console.log(data[a][author]);
+   console.log(data[a].author.);
+   console.log(data[a].text);
  }
  getQuotes();
