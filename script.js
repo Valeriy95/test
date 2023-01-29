@@ -269,10 +269,11 @@ function durat () {
      playNext();
      //playBtn.classList.remove('pause');
    }
+   setTimeout(durat, 1000);   
    } else {
      sec = 0;
      min = 0;
    }
-   setTimeout(durat, 1000);
+//    setTimeout(durat, 1000);
 };
 // durat ();
