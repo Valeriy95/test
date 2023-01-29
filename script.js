@@ -1,16 +1,5 @@
 "use strict"
 
-// async function getQuotes() {  
-//    const quotes = 'data.json';
-//    const res = await fetch(quotes);
-//    const data = await res.json(); 
-//    let a = Math.floor(Math.random() * 3);
-//    console.log(a);
-//    console.log(data[a].author);
-//    console.log(data[a].text);
-//  }
-//  getQuotes();
-
 let timeOfDay;
 
 // Часы и календарь;
@@ -238,28 +227,28 @@ function playPrev() {
 };
 
 
-const playList = [
-   {      
-     title: 'Aqua Caelestis',
-     src: 'assets/sounds/Aqua Caelestis.mp3',
-     duration: '00:39'
-   },  
-   {      
-     title: 'Ennio Morricone',
-     src: 'assets/sounds/Ennio Morricone.mp3',
-     duration: '01:37'
-   },
-   {      
-      title: 'River Flows In You',
-      src: 'assets/sounds/River Flows In You.mp3',
-      duration: '01:37'
-    },  
-    {      
-      title: 'Summer Wind',
-      src: 'assets/sounds/Summer Wind.mp3',
-      duration: '01:50'
-    }
- ];
+// const playList = [
+//    {      
+//      title: 'Aqua Caelestis',
+//      src: 'assets/sounds/Aqua Caelestis.mp3',
+//      duration: '00:39'
+//    },  
+//    {      
+//      title: 'Ennio Morricone',
+//      src: 'assets/sounds/Ennio Morricone.mp3',
+//      duration: '01:37'
+//    },
+//    {      
+//       title: 'River Flows In You',
+//       src: 'assets/sounds/River Flows In You.mp3',
+//       duration: '01:37'
+//     },  
+//     {      
+//       title: 'Summer Wind',
+//       src: 'assets/sounds/Summer Wind.mp3',
+//       duration: '01:50'
+//     }
+//  ];
 
 for(let i = 0; i < playList.length; i++) {
    const li = document.createElement('li');
