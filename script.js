@@ -251,7 +251,7 @@ let sec = 0;
 let min = 0;
 
 function durat () {
-   if (!isPlay) {
+   if (isPlay) {
       if (+sec < 59) {
          sec++
       } else {
