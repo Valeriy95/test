@@ -173,6 +173,8 @@ window.addEventListener('load', getLocalWeather);
 // Виджет цитата дня 
 
 async function getQuotes() {  
+   const quote = document.querySelector('.quote');
+   const author = document.querySelector('.author');
    const quotes = 'data.json';
    const res = await fetch(quotes);
    const data = await res.json(); 
@@ -180,6 +182,8 @@ async function getQuotes() {
    console.log(a);
    console.log(data[a].author);
    console.log(data[a].text);
+   quote.textContent = data[a].text;
+   author.textContent = data[a].author;
  }
  getQuotes();
 
