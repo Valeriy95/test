@@ -248,8 +248,9 @@ for(let i = 0; i < playList.length; i++) {
 
 function durat () {
    console.log(playList[i].duration);
+   setTimeout(durat, 1000);
 };
 
-setTimeout(durat, 1000)
+
    
    
