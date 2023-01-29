@@ -182,6 +182,16 @@ async function getQuotes() {
 
 // 6. Аудиоплеер
 
+for(let i = 0; i < playList.length; i++) {
+   const li = document.createElement('li');
+   const playListContainer = document.querySelector('.play-list');
+   li.classList.add('play-item');
+   li.classList.add(`num${[i]}`);
+   li.textContent = playList[i].title;
+   playListContainer.append(li);
+   console.log(playList[i].title)
+ }
+
 let isPlay = false;
 let playNum = 0;
 const audio = new Audio();
@@ -238,35 +248,12 @@ function playPrev() {
 };
 
 
-// const playList = [
-//    {      
-//      title: 'Aqua Caelestis',
-//      src: 'assets/sounds/Aqua Caelestis.mp3',
-//      duration: '00:39'
-//    },  
-//    {      
-//      title: 'Ennio Morricone',
-//      src: 'assets/sounds/Ennio Morricone.mp3',
-//      duration: '01:37'
-//    },
-//    {      
-//       title: 'River Flows In You',
-//       src: 'assets/sounds/River Flows In You.mp3',
-//       duration: '01:37'
-//     },  
-//     {      
-//       title: 'Summer Wind',
-//       src: 'assets/sounds/Summer Wind.mp3',
-//       duration: '01:50'
-//     }
-//  ];
-
-for(let i = 0; i < playList.length; i++) {
-   const li = document.createElement('li');
-   const playListContainer = document.querySelector('.play-list');
-   li.classList.add('play-item');
-   li.classList.add(`num${[i]}`);
-   li.textContent = playList[i].title;
-   playListContainer.append(li);
-   console.log(playList[i].title)
- }
+// for(let i = 0; i < playList.length; i++) {
+//    const li = document.createElement('li');
+//    const playListContainer = document.querySelector('.play-list');
+//    li.classList.add('play-item');
+//    li.classList.add(`num${[i]}`);
+//    li.textContent = playList[i].title;
+//    playListContainer.append(li);
+//    console.log(playList[i].title)
+//  }
