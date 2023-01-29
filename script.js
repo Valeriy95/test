@@ -185,7 +185,7 @@ async function getQuotes() {
    console.log(a);
    console.log(data[a].author);
    console.log(data[a].text);
-   quote.textContent = data[a].text;
+   quote.textContent = `"${data[a].text}"`;
    author.textContent = data[a].author;
  }
  getQuotes();
