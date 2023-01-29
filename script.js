@@ -202,6 +202,7 @@ function playAudio() {
   isPlay = true;
   playBtn.classList.add('pause');
   durat ();
+  setTimeout(durat, 1000);
   } else {
    audio.pause();
    isPlay = false;
@@ -269,7 +270,7 @@ function durat () {
      playNext();
      //playBtn.classList.remove('pause');
    }
-   setTimeout(durat, 1000);   
+//    setTimeout(durat, 1000);   
    } else {
      sec = 0;
      min = 0;
