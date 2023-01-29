@@ -1,5 +1,8 @@
 "use strict"
 
+import playList from './playList.js';
+console.log(playList);
+
 let timeOfDay;
 
 // Часы и календарь;
