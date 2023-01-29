@@ -181,12 +181,9 @@ async function getQuotes() {
    const quotes = 'data.json';
    const res = await fetch(quotes);
    const data = await res.json(); 
-   let a = Math.floor(Math.random() * 20);
-   console.log(a);
-   console.log(data[a].author);
-   console.log(data[a].text);
-   quote.textContent = `"${data[a].text}"`;
-   author.textContent = data[a].author;
+   let num = Math.floor(Math.random() * 20);
+   quote.textContent = `"${data[num].text}"`;
+   author.textContent = data[num].author;
  }
  getQuotes();
 
