@@ -202,7 +202,6 @@ function playAudio() {
   audio.play();
   isPlay = true;
   playBtn.classList.add('pause');
-//   durat ();
   } else {
    audio.pause();
    isPlay = false;
@@ -211,6 +210,7 @@ function playAudio() {
 };
 
 playNextBtn.addEventListener('click', playNext);
+playNextBtn.addEventListener('click', durat);
 function playNext() {
   let styleActive = document.querySelector(`.num${playNum}`);
   styleActive.classList.remove('item-active');
@@ -227,6 +227,7 @@ function playNext() {
 };
 
 playPrevBtn.addEventListener('click', playPrev);
+playPrevBtn.addEventListener('click', durat);
 function playPrev() {
    let styleActive = document.querySelector(`.num${playNum}`);
    styleActive.classList.remove('item-active');
@@ -275,6 +276,4 @@ function durat () {
      sec = 0;
      min = 0;
    }
-//    setTimeout(durat, 1000);
 };
-// durat ();
