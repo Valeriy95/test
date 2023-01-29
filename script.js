@@ -251,20 +251,24 @@ let sec = 0;
 let min = 0;
 
 function durat () {
-   if (+sec < 59) {
-      sec++
-   } else {
-      min++;
-      sec = 0;
-   }
+   if (!isPlay) {
+      if (+sec < 59) {
+         sec++
+      } else {
+         min++;
+         sec = 0;
+      }
    let time = `${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
    console.log(time);
    if(playList[playNum].duration === time) {
-     isPlay = false;
+     //isPlay = false;
      sec = 0;
      min = 0;
      playNext();
-     playBtn.classList.remove('pause');
+     //playBtn.classList.remove('pause');
+   } else {
+     sec = 0;
+     min = 0;
    }
    setTimeout(durat, 1000);
 };
