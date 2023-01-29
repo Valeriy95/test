@@ -172,6 +172,9 @@ window.addEventListener('load', getLocalWeather);
 
 // Виджет цитата дня 
 
+const changeQuote = document.querySelector('.change-quote');
+changeQuote.addEventListener('click', getQuotes)
+
 async function getQuotes() {  
    const quote = document.querySelector('.quote');
    const author = document.querySelector('.author');
