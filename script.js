@@ -246,3 +246,10 @@ for(let i = 0; i < playList.length; i++) {
    console.log(playList[i].title)
  };
 
+function durat () {
+   console.log(playList[i].duration);
+};
+
+setTimeout(durat, 1000)
+   
+   
