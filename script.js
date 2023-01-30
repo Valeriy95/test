@@ -253,13 +253,15 @@ for(let i = 0; i < playList.length; i++) {
    console.log(playList[i].title)
  };
 
-let sec = 0;
-let min = 0;
+// let sec = 0;
+// let min = 0;
 
 function durat (e) {
 //    if(e.target == playNextBtn) {
 //       console.log('YESSS!!');
 //       }
+   let sec = 0;
+   let min = 0;
    if (isPlay) {
       if (+sec < 59) {
          sec++
