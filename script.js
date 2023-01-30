@@ -256,7 +256,10 @@ for(let i = 0; i < playList.length; i++) {
 let sec = 0;
 let min = 0;
 
-function durat () {
+function durat (e) {
+   if(e.target == playNextBtn) {
+      console.log('YESSS!!');
+      }
    if (isPlay) {
       if (+sec < 59) {
          sec++
