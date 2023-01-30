@@ -257,9 +257,9 @@ let sec = 0;
 let min = 0;
 
 function durat (e) {
-   if(e.target == playNextBtn) {
-      console.log('YESSS!!');
-      }
+//    if(e.target == playNextBtn) {
+//       console.log('YESSS!!');
+//       }
    if (isPlay) {
       if (+sec < 59) {
          sec++
