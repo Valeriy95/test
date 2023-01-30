@@ -210,20 +210,20 @@ function playAudio() {
 };
 
 playNextBtn.addEventListener('click', playNext);
-playNextBtn.addEventListener('click', durat);
+// playNextBtn.addEventListener('click', durat);
 function playNext() {
   let styleActive = document.querySelector(`.num${playNum}`);
   styleActive.classList.remove('item-active');
    if (playNum < 3) {
       playNum++;
       isPlay = false;
+      // durat();
       playAudio();
-//       durat();
    } else {
       playNum = 0;
       isPlay = false;
+      //       durat();
       playAudio();
-//       durat();
    }
    console.log(playNum)
 };
