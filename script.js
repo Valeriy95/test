@@ -195,7 +195,6 @@ playBtn.addEventListener('click', durat);
 function playAudio() {
   let styleActive = document.querySelector(`.num${playNum}`);
   styleActive.classList.add('item-active');
-  console.log(styleActive);
   audio.src = playList[playNum].src;
   audio.currentTime = 0;
   if(!isPlay) {
@@ -210,7 +209,6 @@ function playAudio() {
 };
 
 playNextBtn.addEventListener('click', playNext);
-// playNextBtn.addEventListener('click', durat);
 function playNext() {
   let styleActive = document.querySelector(`.num${playNum}`);
   styleActive.classList.remove('item-active');
@@ -219,21 +217,17 @@ function playNext() {
       isPlay = false;
       sec = 0;
       min = 0;
-      // durat();
       playAudio();
    } else {
       playNum = 0;
       isPlay = false;
       sec = 0;
       min = 0;
-      //       durat();
       playAudio();
    }
-   console.log(playNum)
 };
 
 playPrevBtn.addEventListener('click', playPrev);
-// playPrevBtn.addEventListener('click', durat);
 function playPrev() {
    let styleActive = document.querySelector(`.num${playNum}`);
    styleActive.classList.remove('item-active');
@@ -250,7 +244,6 @@ function playPrev() {
       min = 0;
       playAudio();
    }
-   console.log(playNum)
 };
 
 for(let i = 0; i < playList.length; i++) {
@@ -260,7 +253,6 @@ for(let i = 0; i < playList.length; i++) {
    li.classList.add(`num${[i]}`);
    li.textContent = playList[i].title;
    playListContainer.append(li);
-   console.log(playList[i].title)
  };
 
 let sec = 0;
@@ -278,11 +270,9 @@ function durat () {
    let time = `${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
    console.log(time);
    if(playList[playNum].duration === time) {
-     //isPlay = false;
      sec = 0;
      min = 0;
      playNext();
-     //playBtn.classList.remove('pause');
    }
    setTimeout(durat, 1000);   
    } else {
