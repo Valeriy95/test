@@ -233,15 +233,21 @@ function playNext() {
 };
 
 playPrevBtn.addEventListener('click', playPrev);
-playPrevBtn.addEventListener('click', durat);
+// playPrevBtn.addEventListener('click', durat);
 function playPrev() {
    let styleActive = document.querySelector(`.num${playNum}`);
    styleActive.classList.remove('item-active');
    if (playNum > 0) {
       playNum--;
+      isPlay = false;
+      sec = 0;
+      min = 0;
       playAudio();
    } else {
       playNum = 3;
+      isPlay = false;
+      sec = 0;
+      min = 0;
       playAudio();
    }
    console.log(playNum)
@@ -260,11 +266,8 @@ for(let i = 0; i < playList.length; i++) {
 let sec = 0;
 let min = 0;
 
-function durat (e) {
-//    if(e.target == playNextBtn) {
-//       console.log('YESSS!!');
-//       }
-
+function durat () {
+   
    if (isPlay) {
       if (+sec < 59) {
          sec++
