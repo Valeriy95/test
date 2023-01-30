@@ -280,3 +280,12 @@ function durat () {
      min = 0;
    }
 };
+
+// Продвинутый аудиоплеер
+
+function updateProgress (e) {
+   console.log('SANYAAAA!!');
+}
+
+audio.addEventListener('timeupdate', updateProgress);
+
