@@ -284,7 +284,7 @@ function durat () {
 // Продвинутый аудиоплеер
 
 function updateProgress (e) {
-   console.log('SANYAAAA!!');
+   console.log(e.srcElement);
 }
 
 audio.addEventListener('timeupdate', updateProgress);
