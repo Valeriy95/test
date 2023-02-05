@@ -284,6 +284,7 @@ body {
 .wrapper-player {
  display: flex;
  flex-direction: column;
+ width: 35%;
 }
 
 .wrapper-player1 {
