@@ -285,8 +285,8 @@ function durat () {
 
 function updateProgress (e) {
    const {duration, currentTime} = e.srcElement;
-   console.log(duration);
-   console.log(currentTime);
+   console.log(`duration: ${duration}`);
+   console.log(`currentTime: ${currentTime}`);
 }
 
 audio.addEventListener('timeupdate', updateProgress);
