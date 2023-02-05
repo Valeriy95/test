@@ -264,6 +264,23 @@ body {
   min-height: 20px;
 }
 
+.progress-container {
+  background-color: #C5B358;
+  border-radius: 5px;
+  width: 25%;
+  height: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.progress {
+  background-color: blue;
+  border-radius: 5px;
+  height: 6px;
+  width: 158px;
+}
 
 @media (max-width: 768px) {
   .time {
