@@ -300,8 +300,8 @@ const progressContainer = document.querySelector(".progress-container");
 function setProgress(e) {
    const width = this.clientWidth;
    const clickX = e.offsetX;
-   console.log(width);
-   console.log(clickX);
+   const duration = audio.duration;
+   audio.currentTime = (clickX / width) * duration;
 }
 
 progressContainer.addEventListener("click", setProgress);
