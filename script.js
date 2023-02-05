@@ -299,7 +299,9 @@ const progressContainer = document.querySelector(".progress-container");
 
 function setProgress(e) {
    const width = this.clientWidth;
+   const clickX = e.offset(X);
    console.log(width);
+   console.log(clickX);
 }
 
 progressContainer.addEventListener("click", setProgress);
