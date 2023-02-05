@@ -198,7 +198,7 @@ function playAudio() {
   let styleActive = document.querySelector(`.num${playNum}`);
   styleActive.classList.add('item-active');
   
-  songname.textContent = `${playList[playNum].title}: ${audio.currentTime.toFixed(2) / 10}/${audio.duration.toFixed(2) / 100}`
+  songname.textContent = `${playList[playNum].title}: ${(audio.currentTime / 10).toFixed(2)}/${(audio.duration / 100).toFixed(2)}`
    
   audio.src = playList[playNum].src;
   audio.currentTime = 0;
