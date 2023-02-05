@@ -192,9 +192,14 @@ const playPrevBtn = document.querySelector('.play-prev');
 playBtn.addEventListener('click', playAudio);
 playBtn.addEventListener('click', durat);
 
+const songname = document.querySelector('.song-name');
+
 function playAudio() {
   let styleActive = document.querySelector(`.num${playNum}`);
   styleActive.classList.add('item-active');
+  
+  songname.textContent = `${playList[playNum].title}`
+   
   audio.src = playList[playNum].src;
   audio.currentTime = 0;
   if(!isPlay) {
