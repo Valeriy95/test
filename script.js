@@ -193,13 +193,15 @@ playBtn.addEventListener('click', playAudio);
 playBtn.addEventListener('click', durat);
 
 const songname = document.querySelector('.song-name');
+const songDuraction = document.querySelector('.song-duraction');
 
 function playAudio() {
   let styleActive = document.querySelector(`.num${playNum}`);
   styleActive.classList.add('item-active');
   
-  songname.textContent = `${playList[playNum].title}: ${(audio.currentTime / 10).toFixed(2)}/${(audio.duration / 100).toFixed(2)}`
-   
+  songname.textContent = playList[playNum].title
+  songDuraction.textContent = `${(audio.currentTime / 10).toFixed(2)}/ ${playList[playNum].duraction}`
+  
   audio.src = playList[playNum].src;
   audio.currentTime = 0;
   if(!isPlay) {
