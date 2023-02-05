@@ -267,7 +267,7 @@ body {
 .progress-container {
   background-color: #C5B358;
   border-radius: 5px;
-  width: 25%;
+  width: 100%;
   height: 10px;
   display: flex;
   align-items: center;
@@ -284,6 +284,11 @@ body {
 .wrapper-player {
  display: flex;
  flex-direction: column;
+}
+
+.wrapper-player1 {
+ display: flex;
+ flex-direction: row; 
 }
 
 @media (max-width: 768px) {
