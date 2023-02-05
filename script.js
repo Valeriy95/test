@@ -308,4 +308,4 @@ progressContainer.addEventListener("click", setProgress);
 
 audio.addEventListener('ended', playNext);
 
-console.log(audio.name);
+console.log(playList[0].title);
