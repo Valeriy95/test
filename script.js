@@ -288,7 +288,7 @@ function updateProgress (e) {
    const {duration, currentTime} = e.srcElement;
    console.log(`duration: ${duration}`);
    console.log(`currentTime: ${currentTime}`);
-   const progressProcent = (currentTime * duration) * 100;
+   const progressProcent = (currentTime / duration) * 100;
    progress.style.width = `${progressProcent}%`;
 }
 
