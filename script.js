@@ -210,6 +210,7 @@ function playAudio() {
 
 playNextBtn.addEventListener('click', playNext);
 function playNext() {
+  console.log(playList[playNum].title);
   let styleActive = document.querySelector(`.num${playNum}`);
   styleActive.classList.remove('item-active');
    if (playNum < 3) {
@@ -308,4 +309,4 @@ progressContainer.addEventListener("click", setProgress);
 
 audio.addEventListener('ended', playNext);
 
-console.log(playList[0].title);
+
