@@ -282,7 +282,7 @@ function durat () {
 };
 
 // Продвинутый аудиоплеер
-let progress = document.querySelector(".progress");
+const progress = document.querySelector(".progress");
 
 function updateProgress (e) {
    const {duration, currentTime} = e.srcElement;
@@ -293,4 +293,16 @@ function updateProgress (e) {
 }
 
 audio.addEventListener('timeupdate', updateProgress);
+
+
+const progressContainer = document.querySelector(".progress-container");
+
+function setProgress(e) {
+   const width = this.clientWidth;
+   console.log(width);
+}
+
+progressContainer.addEventListener("click", setProgress);
+
+
 
