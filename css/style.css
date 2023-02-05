@@ -279,7 +279,7 @@ body {
   background-color: blue;
   border-radius: 5px;
   height: 6px;
-  width: 158px;
+/*   width: 158px; */
 }
 
 @media (max-width: 768px) {
