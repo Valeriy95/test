@@ -200,8 +200,9 @@ function playAudio() {
   styleActive.classList.add('item-active');
   
   let a = Math.round(audio.currentTime);
+  let b = a.padStart(5, '00:00');
   songname.textContent = playList[playNum].title
-  songDuraction.textContent = `${a.padStart(5, '00:00')}/ ${Math.round(audio.duration) / 100}`
+  songDuraction.textContent = `${b}/ ${Math.round(audio.duration) / 100}`
   
   audio.src = playList[playNum].src;
   audio.currentTime = 0;
