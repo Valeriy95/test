@@ -190,12 +190,9 @@ const playBtn = document.querySelector('.play');
 const playNextBtn = document.querySelector('.play-next');
 const playPrevBtn = document.querySelector('.play-prev');
 playBtn.addEventListener('click', playAudio);
-// playBtn.addEventListener('click', durat);
-
 const songname = document.querySelector('.song-name');
 const songDuraction = document.querySelector('.song-duraction');
 const wrapperPlayer = document.querySelector('.wrapper-player');
-
 
 function playAudio() {
   let styleActive = document.querySelector(`.num${playNum}`);
@@ -239,14 +236,10 @@ function playNext() {
    if (playNum < 3) {
       playNum++;
       isPlay = false;
-//       sec = 0;
-//       min = 0;
       playAudio();
    } else {
       playNum = 0;
       isPlay = false;
-//       sec = 0;
-//       min = 0;
       playAudio();
    }
 };
@@ -258,14 +251,10 @@ function playPrev() {
    if (playNum > 0) {
       playNum--;
       isPlay = false;
-//       sec = 0;
-//       min = 0;
       playAudio();
    } else {
       playNum = 3;
       isPlay = false;
-//       sec = 0;
-//       min = 0;
       playAudio();
    }
 };
@@ -279,31 +268,6 @@ for(let i = 0; i < playList.length; i++) {
    playListContainer.append(li);
  };
 
-// let sec = 0;
-// let min = 0;
-
-// function durat () {
-   
-//    if (isPlay) {
-//       if (+sec < 59) {
-//          sec++
-//       } else {
-//          min++;
-//          sec = 0;
-//       }
-//    let time = `${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
-//    console.log(time);
-//    if(playList[playNum].duration === time) {
-//      sec = 0;
-//      min = 0;
-//      playNext();
-//    }
-//    setTimeout(durat, 1000);   
-//    } else {
-//      sec = 0;
-//      min = 0;
-//    }
-// };
 
 // Продвинутый аудиоплеер
 const progress = document.querySelector(".progress");
