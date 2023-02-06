@@ -203,7 +203,7 @@ function playAudio() {
   let a = Math.round(audio.currentTime);
   let b = a.toString().padStart(5, '00:00');
   songname.textContent = playList[playNum].title
-  songDuraction.textContent = `${b} / ${Math.round(audio.duration) / 100}`
+//   songDuraction.textContent = `${b} / ${Math.round(audio.duration) / 100}`
   console.log(readableDuration(audio.duration));
    console.log(readableDuration(audio.currentTime));
   audio.src = playList[playNum].src;
@@ -218,6 +218,12 @@ function playAudio() {
    playBtn.classList.remove('pause');
   }
 };
+
+function showTime123() {
+   songDuraction.textContent = `${readableDuration(audio.currentTime)} / ${readableDuration(audio.duration)}`;
+   setTimeout(showTime123, 1000);
+};
+showTime123();
 
 function readableDuration(seconds) {
    let sec = Math.floor(seconds);
