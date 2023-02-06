@@ -195,6 +195,7 @@ playBtn.addEventListener('click', durat);
 const songname = document.querySelector('.song-name');
 const songDuraction = document.querySelector('.song-duraction');
 
+
 function playAudio() {
   let styleActive = document.querySelector(`.num${playNum}`);
   styleActive.classList.add('item-active');
@@ -203,7 +204,7 @@ function playAudio() {
   let b = a.toString().padStart(5, '00:00');
   songname.textContent = playList[playNum].title
   songDuraction.textContent = `${b} / ${Math.round(audio.duration) / 100}`
-  
+  console.log(readableDuration(audio.duration));
   audio.src = playList[playNum].src;
   audio.currentTime = 0;
   if(!isPlay) {
@@ -216,6 +217,19 @@ function playAudio() {
    playBtn.classList.remove('pause');
   }
 };
+
+function readableDuration(seconds) {
+   let sec = Math.floor(seconds);
+   let min = Math.floor(sec / 60);
+   min = min >= 10 ? min : '' + min;
+   sec = Math.floor(sec % 60);
+   sec = sec >=10 ? sec : '0' + sec;
+   return min + ':' + sec;
+}
+
+// setTimeout(function(){
+//    readableDuration(audio.duration)
+// }, 1000);
 
 playNextBtn.addEventListener('click', playNext);
 function playNext() {
