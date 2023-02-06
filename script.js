@@ -297,8 +297,9 @@ progressContainer.addEventListener("click", setProgress);
 audio.addEventListener('ended', playNext);
 
 
-let range = document.getElementById('range');
-range.onchange = function(){
+const range = document.getElementById('range');
+const volumeBtn = document.querySelector('.volume');
+volumeBtn.onchange = function(){
   if (this.value == this.min){
     audio.volume = 0;
   } else if(this.value == this.max){
