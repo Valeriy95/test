@@ -201,7 +201,7 @@ function playAudio() {
   
 //    console.log(audio.currentTime="seconds")
   songname.textContent = playList[playNum].title
-  songDuraction.textContent = `${audio.currentTime}/ ${playList[playNum].duraction}`
+  songDuraction.textContent = `${Math.round(audio.currentTime)}/ ${Math.round(audio.duraction)}`
   
   audio.src = playList[playNum].src;
   audio.currentTime = 0;
