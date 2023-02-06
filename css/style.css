@@ -296,6 +296,12 @@ body {
  display:none; 
 }
 
+.volume {
+  width: 16px;
+  height: 16px;
+  background-image: url("../assets/svg/icons8-низкая-громкость-50.png");
+}
+
 @media (max-width: 768px) {
   .time {
     min-height: 80px;
