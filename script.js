@@ -200,7 +200,7 @@ const wrapperPlayer = document.querySelector('.wrapper-player');
 function playAudio() {
   let styleActive = document.querySelector(`.num${playNum}`);
   styleActive.classList.add('item-active');
-  wrapperPlayer1.classList.remove('hidden');
+  wrapperPlayer.classList.remove('hidden');
   
   songname.textContent = playList[playNum].title;
   audio.src = playList[playNum].src;
