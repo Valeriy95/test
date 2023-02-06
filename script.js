@@ -218,7 +218,7 @@ function playAudio() {
 
 function songTime() {
    songDuraction.textContent = `${currentTimeDuration(audio.currentTime)} / ${currentTimeDuration(audio.duration)}`;
-   setTimeout(showTime123, 1000);
+   setTimeout(songTime, 1000);
 };
 songTime();
 
