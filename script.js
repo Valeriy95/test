@@ -299,10 +299,21 @@ audio.addEventListener('ended', playNext);
 
 const range = document.getElementById('range');
 const volumeBtn = document.querySelector('.volume');
+// volumeBtn.onclick = function(){
+//   if (this.value == this.min){
+//     audio.volume = 0;
+//   } else if(this.value == this.max){
+//     audio.volume = 1;
+//   }
+// };
+
+let counterVolume = 0;
 volumeBtn.onclick = function(){
-  if (this.value == this.min){
+   counterVolume++;
+  if (counterVolume % 2 == 1){
     audio.volume = 0;
-  } else if(this.value == this.max){
+  } else if(counterVolume % 2 == 0){
     audio.volume = 1;
   }
 };
+
