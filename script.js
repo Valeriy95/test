@@ -200,7 +200,7 @@ function playAudio() {
   styleActive.classList.add('item-active');
   
   songname.textContent = playList[playNum].title
-  songDuraction.textContent = `${(audio.currentTime / 10).toFixed(2)}/ ${playList[playNum].duraction}`
+  songDuraction.textContent = `${(audio.currentTime="seconds")}/ ${playList[playNum].duraction}`
   
   audio.src = playList[playNum].src;
   audio.currentTime = 0;
