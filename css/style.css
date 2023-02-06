@@ -299,7 +299,7 @@ body {
 .volume {
   width: 16px;
   height: 16px;
-  background-image: url("../assets/svg/icons8-низкая-громкость-50.png");
+  background-image: url("../assets/svg/icons8-низкая-громкость-16.png");
 }
 
 @media (max-width: 768px) {
