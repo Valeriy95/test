@@ -194,7 +194,7 @@ playBtn.addEventListener('click', durat);
 
 const songname = document.querySelector('.song-name');
 const songDuraction = document.querySelector('.song-duraction');
-const wrapperPlayer1 = document.querySelector('.wrapper-player1');
+const wrapperPlayer = document.querySelector('.wrapper-player');
 
 
 function playAudio() {
