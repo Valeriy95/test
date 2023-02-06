@@ -199,7 +199,7 @@ function playAudio() {
   let styleActive = document.querySelector(`.num${playNum}`);
   styleActive.classList.add('item-active');
   
-   console.log(audio.currentTime="seconds")
+//    console.log(audio.currentTime="seconds")
   songname.textContent = playList[playNum].title
   songDuraction.textContent = `${audio.currentTime}/ ${playList[playNum].duraction}`
   
