@@ -326,6 +326,8 @@ function volumeMuteBtn () {
 };
 
 
+// 8. Перевод приложения на два языка (en/ru или en/be);
+
 
    
    
