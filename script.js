@@ -299,25 +299,20 @@ audio.addEventListener('ended', playNext);
 
 const range = document.getElementById('range');
 const volumeBtn = document.querySelector('.volume');
-// volumeBtn.onclick = function(){
-//   if (this.value == this.min){
-//     audio.volume = 0;
-//   } else if(this.value == this.max){
-//     audio.volume = 1;
-//   }
-// };
+const range = document.querySelector('.range');
 
 let counterVolume = 0;
 volumeBtn.onclick = function(){
    counterVolume++;
   if (counterVolume % 2 == 1){
     audio.volume = 0;
-//    volumeBtn.style.backgroundImage = 'url("../assets/svg/free-icon-mute-709561.png")';
-     volumeBtn.style.opacity = '0.5';
+    volumeBtn.style.opacity = '0.5';
   } else if(counterVolume % 2 == 0){
     audio.volume = 1;
-     volumeBtn.style.opacity = '1';
-//     volumeBtn.style.backgroundImage = 'url("../assets/svg/free-icon-sound-3091231.png")';
+    volumeBtn.style.opacity = '1';
   }
 };
 
+range.onchange = function(){
+   audio.volume = range.volume;
+}
