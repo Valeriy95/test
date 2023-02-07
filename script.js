@@ -194,6 +194,10 @@ const songname = document.querySelector('.song-name');
 const songDuraction = document.querySelector('.song-duraction');
 const wrapperPlayer = document.querySelector('.wrapper-player');
 
+const playBtnPl = document.querySelector('.btn-play-pl');
+const playNextBtnPl = document.querySelector('.btn-next-pl');
+const playPrevBtnPl = document.querySelector('.btn-prev-pl');
+
 function playAudio() {
   let styleActive = document.querySelector(`.num${playNum}`);
   styleActive.classList.add('item-active');
@@ -206,10 +210,12 @@ function playAudio() {
   audio.play();
   isPlay = true;
   playBtn.classList.add('pause');
+  playBtnPl.classList.add('pause');   
   } else {
    audio.pause();
    isPlay = false;
    playBtn.classList.remove('pause');
+   playBtnPl.classList.remove('pause');
   }
 };
 
@@ -229,6 +235,8 @@ function currentTimeDuration(seconds) {
 }
 
 playNextBtn.addEventListener('click', playNext);
+playNextBtnPl.addEventListener('click', playNext);
+
 function playNext() {
   console.log(playList[playNum].title);
   let styleActive = document.querySelector(`.num${playNum}`);
@@ -245,6 +253,8 @@ function playNext() {
 };
 
 playPrevBtn.addEventListener('click', playPrev);
+playPrevBtnPl.addEventListener('click', playPrev);
+
 function playPrev() {
    let styleActive = document.querySelector(`.num${playNum}`);
    styleActive.classList.remove('item-active');
