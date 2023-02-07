@@ -189,7 +189,6 @@ const audio = new Audio();
 const playBtn = document.querySelector('.play');
 const playNextBtn = document.querySelector('.play-next');
 const playPrevBtn = document.querySelector('.play-prev');
-playBtn.addEventListener('click', playAudio);
 const songname = document.querySelector('.song-name');
 const songDuraction = document.querySelector('.song-duraction');
 const wrapperPlayer = document.querySelector('.wrapper-player');
@@ -198,6 +197,9 @@ const playBtnPl = document.querySelector('.btn-play-pl');
 const playNextBtnPl = document.querySelector('.btn-next-pl');
 const playPrevBtnPl = document.querySelector('.btn-prev-pl');
 
+
+playBtn.addEventListener('click', playAudio);
+playBtnPl.addEventListener('click', playAudio);
 function playAudio() {
   let styleActive = document.querySelector(`.num${playNum}`);
   styleActive.classList.add('item-active');
