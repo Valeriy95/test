@@ -267,7 +267,7 @@ body {
 .progress-container {
   background-color: #FFFFFF;
   border-radius: 5px;
-  width: 100%;
+  width: 35%;
   height: 10px;
   display: flex;
   align-items: center;
@@ -290,6 +290,7 @@ body {
 .wrapper-player1 {
  display: flex;
  flex-direction: row; 
+ justify-content: space-between;
 }
 
 .hidden {
@@ -300,7 +301,20 @@ body {
   width: 32px;
   height: 32px;
   background-image: url("../assets/svg/free-icon-sound-3091231.png");
-  cursor: pointer;;
+  cursor: pointer;
+  margin-top: 9px;
+  margin-left: 3px;
+}
+
+.song-duraction {
+  margin-top: 17px;
+  margin-left: 4px;
+}
+
+.range {
+  width: 20%;
+  margin-top: 8px;
+  margin-left: 10px;
 }
 
 @media (max-width: 768px) {
