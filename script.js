@@ -271,47 +271,59 @@ for(let i = 0; i < playList.length; i++) {
 
 // Продвинутый аудиоплеер
 const progress = document.querySelector(".progress");
+const progressContainer = document.querySelector(".progress-container");
+const volumeBtn = document.querySelector('.volume');
+const range = document.querySelector('.range');
+let counterVolume = 0;
 
 function updateProgress (e) {
    const {duration, currentTime} = e.srcElement;
-   console.log(`duration: ${duration}`);
-   console.log(`currentTime: ${currentTime}`);
    const progressProcent = (currentTime / duration) * 100;
    progress.style.width = `${progressProcent}%`;
-}
+};
 
 audio.addEventListener('timeupdate', updateProgress);
-
-
-const progressContainer = document.querySelector(".progress-container");
 
 function setProgress(e) {
    const width = this.clientWidth;
    const clickX = e.offsetX;
    const duration = audio.duration;
    audio.currentTime = (clickX / width) * duration;
-}
+};
 
 progressContainer.addEventListener("click", setProgress);
 
 audio.addEventListener('ended', playNext);
 
-const volumeBtn = document.querySelector('.volume');
-const range = document.querySelector('.range');
+range.addEventListener('change', function () {
+   audio.volume = range.value / 100;
+});
 
-let counterVolume = 0;
-volumeBtn.onclick = function(){
-   counterVolume++;
-  if (counterVolume % 2 == 1){
+volumeBtn.addEventListener('click', volumeMuteBtn);
+
+function volumeMuteBtn () {
+  counterVolume++;
+  if (counterVolume % 2 == 1) {
     audio.volume = 0;
     volumeBtn.style.opacity = '0.5';
-  } else if(counterVolume % 2 == 0){
+  } 
+  if (counterVolume % 2 == 0) {
     audio.volume = 1;
     volumeBtn.style.opacity = '1';
   }
 };
 
-range.onchange = function(){
-   audio.volume = range.value / 100;
-   console.log(range.value);
-}
+
+// volumeBtn.onclick = function(){
+//    counterVolume++;
+//   if (counterVolume % 2 == 1){
+//     audio.volume = 0;
+//     volumeBtn.style.opacity = '0.5';
+//   } else if(counterVolume % 2 == 0){
+//     audio.volume = 1;
+//     volumeBtn.style.opacity = '1';
+//   }
+// };
+
+   
+   
