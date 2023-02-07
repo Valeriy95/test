@@ -315,9 +315,23 @@ body {
 }
 
 .range {
+  -webkit-appearance: none;
   width: 15%;
   margin-top: 8px;
   margin-left: 10px;
+  border: 1px solid #000000;
+  height: 5px;
+  background-color: #000000;
+  border-radius: 10px;
+}
+
+.range::-webkit-slider-thumb{
+   -webkit-appearance: none;
+   background: #000000;
+   width: 15px;
+   height: 15px;
+   border-radius: 10px;
+   cursor: pointer;
 }
 
 .btn-next-pl {
@@ -331,6 +345,7 @@ body {
 .btn-play-pl {
   margin-top: 4px; 
 }
+
 
 @media (max-width: 768px) {
   .time {
