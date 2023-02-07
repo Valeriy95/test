@@ -313,5 +313,5 @@ volumeBtn.onclick = function(){
 
 range.onchange = function(){
    audio.volume = range.value / 100;
-   console.log(range.volume);
+   console.log(range.value);
 }
