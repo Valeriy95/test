@@ -326,16 +326,6 @@ function volumeMuteBtn () {
 };
 
 
-// volumeBtn.onclick = function(){
-//    counterVolume++;
-//   if (counterVolume % 2 == 1){
-//     audio.volume = 0;
-//     volumeBtn.style.opacity = '0.5';
-//   } else if(counterVolume % 2 == 0){
-//     audio.volume = 1;
-//     volumeBtn.style.opacity = '1';
-//   }
-// };
 
    
    
