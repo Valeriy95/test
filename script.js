@@ -314,5 +314,6 @@ volumeBtn.onclick = function(){
 };
 
 range.onchange = function(){
-   audio.volume = range.volume;
+   audio.volume = +range.volume;
+   console.log(range.volume);
 }
