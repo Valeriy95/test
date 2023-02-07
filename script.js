@@ -296,8 +296,6 @@ progressContainer.addEventListener("click", setProgress);
 
 audio.addEventListener('ended', playNext);
 
-
-const range = document.getElementById('range');
 const volumeBtn = document.querySelector('.volume');
 const range = document.querySelector('.range');
 
