@@ -285,6 +285,9 @@ body {
  display: flex;
  flex-direction: column;
  width: 45%;
+ background: darkgrey;
+ height: 80px;
+ border-radius: 10px;
 }
 
 .wrapper-player1 {
