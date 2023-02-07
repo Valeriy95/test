@@ -312,8 +312,10 @@ volumeBtn.onclick = function(){
    counterVolume++;
   if (counterVolume % 2 == 1){
     audio.volume = 0;
+   volumeBtn.style.backgroundImage = url("../assets/svg/free-icon-mute-709561.png");
   } else if(counterVolume % 2 == 0){
     audio.volume = 1;
+    volumeBtn.style.backgroundImage = url("../assets/svg/free-icon-sound-3091231.png");
   }
 };
 
