@@ -3,6 +3,7 @@
 import playList from './playList.js';
 
 let timeOfDay;
+let timeOfDay1;
 let greetingTranslation = {
 en : [['Good night'], ['Good morning'], ['Good afternoon'], ['Good evening']],
 ru : [['Доброй ночи'], ['Доброе утро'], ['Добрый день'], ['Добрый вечер']]
@@ -35,20 +36,20 @@ function getTimeOfDay() {
    const date = new Date();
    const hours = date.getHours();
    if (0 <= hours && hours < 6) {
-//       timeOfDay = 'night';
-      timeOfDay = 0;
+      timeOfDay = 'night';
+      timeOfDay1 = 0;
    };
    if (6 <= hours && hours < 12) {
-//       timeOfDay = 'morning';
-      timeOfDay = 1;
+      timeOfDay = 'morning';
+      timeOfDay1 = 1;
    };
    if (12 <= hours && hours < 18) {
-//       timeOfDay =  'afternoon';
-      timeOfDay = 2;
+      timeOfDay =  'afternoon';
+      timeOfDay1 = 2;
    };
    if (18 <= hours && hours < 24) {
-//       timeOfDay = 'evening';
-      timeOfDay = 3;
+      timeOfDay = 'evening';
+      timeOfDay1 = 3;
    };
 };
 
@@ -64,7 +65,7 @@ function getTimeOfDay() {
 
 function showGreeting(en) {
    const greetingText = document.querySelector('.greeting');
-   greetingText.textContent = greetingTranslation.en[timeOfDay];
+   greetingText.textContent = greetingTranslation.en[timeOfDay1];
 }
 
 const names = document.querySelector('.names');
