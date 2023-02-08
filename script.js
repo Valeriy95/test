@@ -4,7 +4,7 @@ import playList from './playList.js';
 
 let timeOfDay;
 let timeOfDay1;
-let greetingTranslation = {
+const greetingTranslation = {
 en : [['Good night'], ['Good morning'], ['Good afternoon'], ['Good evening']],
 ru : [['Доброй ночи'], ['Доброе утро'], ['Добрый день'], ['Добрый вечер']]
 };
@@ -132,8 +132,8 @@ const city = document.querySelector('.city');
 city.addEventListener('change', change);
 city.value = 'Minsk';
 
-async function getWeather() {  
-   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&lang=en&appid=7fc8479d420477b3afca25c033208929&units=metric`;  
+async function getWeather(en) {  
+   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&lang=${en}&appid=7fc8479d420477b3afca25c033208929&units=metric`;  
    console.log(url)
    const weatherIcon = document.querySelector('.weather-icon');
    const temperature = document.querySelector('.temperature');
@@ -160,7 +160,7 @@ async function getWeather() {
       weatherError.textContent = '';
    }
  };
- getWeather();
+ getWeather('en');
 
 function change() {
  getWeather();
@@ -356,6 +356,7 @@ settingBtn.addEventListener('click', tests);
 
 function tests () {
    showGreeting('ru');
+   getWeather('ru');
    console.log('click');
 };
    
