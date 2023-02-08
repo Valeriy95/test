@@ -67,7 +67,7 @@ function showGreeting(en) {
    const greetingText = document.querySelector('.greeting');
    greetingText.textContent = greetingTranslation.en[timeOfDay1];
 }
-showGreeting(en);
+showGreeting('en');
 
 const names = document.querySelector('.names');
 function removeValue () {
