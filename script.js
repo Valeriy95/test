@@ -350,5 +350,7 @@ function volumeMuteBtn () {
 // ru : [['Доброй ночи'], ['Доброе утро'], ['Добрый день'], ['Добрый вечер']]
 // };
 
+const settingBtn = document.querySelector('.setting');
+settingBtn.addEventListener('click', showGreeting(ru));
    
    
