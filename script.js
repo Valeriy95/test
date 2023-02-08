@@ -26,10 +26,11 @@ function showDate(lang = 'en') {
    const date = document.querySelector('.date');
    const dateNow = new Date();
    const options = { weekday: 'long', month: 'long', day: 'numeric'};
+   const currentDate;
    if (lang == 'ru') {
-      const currentDate = dateNow.toLocaleDateString('ru-Ru', options);
+      currentDate = dateNow.toLocaleDateString('ru-Ru', options);
    } else {
-      const currentDate = dateNow.toLocaleDateString('en-En', options);
+      currentDate = dateNow.toLocaleDateString('en-En', options);
    }
    date.textContent = currentDate;
 };
