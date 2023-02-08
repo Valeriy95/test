@@ -63,9 +63,9 @@ function getTimeOfDay() {
 // ru : [['Доброй ночи'], ['Доброе утро'], ['Добрый день'], ['Добрый вечер']]
 // };
 
-function showGreeting(en) {
+function showGreeting(lang = 'en') {
    const greetingText = document.querySelector('.greeting');
-   greetingText.textContent = greetingTranslation[en][timeOfDay1];
+   greetingText.textContent = greetingTranslation[lang][timeOfDay1];
 }
 showGreeting();
 
@@ -132,8 +132,8 @@ const city = document.querySelector('.city');
 city.addEventListener('change', change);
 city.value = 'Minsk';
 
-async function getWeather(en) {  
-   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&lang=${en}&appid=7fc8479d420477b3afca25c033208929&units=metric`;  
+async function getWeather(lang = 'en') {  
+   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&lang=${lang}&appid=7fc8479d420477b3afca25c033208929&units=metric`;  
    console.log(url)
    const weatherIcon = document.querySelector('.weather-icon');
    const temperature = document.querySelector('.temperature');
@@ -160,7 +160,7 @@ async function getWeather(en) {
       weatherError.textContent = '';
    }
  };
- getWeather('en');
+ getWeather();
 
 function change() {
  getWeather();
