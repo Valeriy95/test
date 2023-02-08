@@ -46,9 +46,14 @@ function getTimeOfDay() {
    };
 };
 
-function showGreeting() {
+function showGreeting(en) {
    const greetingText = document.querySelector('.greeting');
    greetingText.textContent = `Good ${timeOfDay}`;
+}
+
+function showGreeting(ru) {
+   const greetingText = document.querySelector('.greeting');
+   greetingText.textContent = greetingTranslation[ru];
 }
 
 const names = document.querySelector('.names');
@@ -328,6 +333,12 @@ function volumeMuteBtn () {
 
 // 8. Перевод приложения на два языка (en/ru или en/be);
 
+let greetingTranslation = {
+ru: "Доброй ночи",
+ru: "Доброе утро",
+ru: "Добрый день",
+ru: "Добрый вечер"
+}
 
    
    
