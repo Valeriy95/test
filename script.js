@@ -17,7 +17,7 @@ function showTime() {
    time.textContent = currentTime;
    showDate();
    getTimeOfDay();
-   showGreeting();
+//    showGreeting();
    setTimeout(showTime, 1000);
 };
 showTime();
@@ -67,6 +67,7 @@ function showGreeting(en) {
    const greetingText = document.querySelector('.greeting');
    greetingText.textContent = greetingTranslation.en[timeOfDay1];
 }
+showGreeting(en);
 
 const names = document.querySelector('.names');
 function removeValue () {
