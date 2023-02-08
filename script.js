@@ -1,10 +1,12 @@
 "use strict"
 
 import playList from './playList.js';
-console.log(playList);
 
 let timeOfDay;
-
+let greetingTranslation = {
+en : [['Good night'], ['Good morning'], ['Good afternoon'], ['Good evening']],
+ru : [['Доброй ночи'], ['Доброе утро'], ['Добрый день'], ['Добрый вечер']]
+};
 // Часы и календарь;
 
 function showTime() {
@@ -55,10 +57,10 @@ function getTimeOfDay() {
 //    greetingText.textContent = `Good ${timeOfDay}`;
 // }
 
-let greetingTranslation = {
-en : [['Good night'], ['Good morning'], ['Good afternoon'], ['Good evening']],
-ru : [['Доброй ночи'], ['Доброе утро'], ['Добрый день'], ['Добрый вечер']]
-};
+// let greetingTranslation = {
+// en : [['Good night'], ['Good morning'], ['Good afternoon'], ['Good evening']],
+// ru : [['Доброй ночи'], ['Доброе утро'], ['Добрый день'], ['Добрый вечер']]
+// };
 
 function showGreeting(en) {
    const greetingText = document.querySelector('.greeting');
