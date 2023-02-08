@@ -17,7 +17,7 @@ function showTime() {
    time.textContent = currentTime;
    showDate();
    getTimeOfDay();
-//    showGreeting();
+   showGreeting();
    setTimeout(showTime, 1000);
 };
 showTime();
