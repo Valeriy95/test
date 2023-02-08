@@ -65,7 +65,7 @@ function getTimeOfDay() {
 
 function showGreeting(lang) {
    const greetingText = document.querySelector('.greeting');
-   greetingText.textContent = greetingTranslation.lang[timeOfDay1];
+   greetingText.textContent = greetingTranslation[lang][timeOfDay1];
 }
 showGreeting('en');
 
