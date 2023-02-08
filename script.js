@@ -46,7 +46,7 @@ function getTimeOfDay() {
    };
    if (18 <= hours && hours < 24) {
 //       timeOfDay = 'evening';
-      timeOfDay = = 3;
+      timeOfDay = 3;
    };
 };
 
