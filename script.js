@@ -9,7 +9,7 @@ en : [['Good night'], ['Good morning'], ['Good afternoon'], ['Good evening']],
 ru : [['Доброй ночи'], ['Доброе утро'], ['Добрый день'], ['Добрый вечер']]
 };
 // Часы и календарь;
-showGreeting('en');
+
 function showTime() {
    const time = document.querySelector('.time');
    const dateNow = new Date();
@@ -17,7 +17,7 @@ function showTime() {
    time.textContent = currentTime;
 //    showDate();
    getTimeOfDay();
-   showGreeting();
+//    showGreeting();
    setTimeout(showTime, 1000);
 };
 showTime();
@@ -64,11 +64,11 @@ function getTimeOfDay() {
 // }
 
 
-function showGreeting(lang) {
+function showGreeting(lang = 'en') {
    const greetingText = document.querySelector('.greeting');
    greetingText.textContent = greetingTranslation[lang][timeOfDay1];
 }
-// showGreeting('en');
+showGreeting();
 
 const names = document.querySelector('.names');
 function removeValue () {
