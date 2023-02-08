@@ -63,9 +63,9 @@ function getTimeOfDay() {
 // ru : [['Доброй ночи'], ['Доброе утро'], ['Добрый день'], ['Добрый вечер']]
 // };
 
-function showGreeting(en) {
+function showGreeting(lang) {
    const greetingText = document.querySelector('.greeting');
-   greetingText.textContent = greetingTranslation.en[timeOfDay1];
+   greetingText.textContent = greetingTranslation.lang[timeOfDay1];
 }
 showGreeting('en');
 
