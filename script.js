@@ -17,7 +17,7 @@ function showTime() {
    time.textContent = currentTime;
    showDate();
    getTimeOfDay();
-   showGreeting();
+//    showGreeting();
    setTimeout(showTime, 1000);
 };
 showTime();
@@ -58,10 +58,6 @@ function getTimeOfDay() {
 //    greetingText.textContent = `Good ${timeOfDay}`;
 // }
 
-// let greetingTranslation = {
-// en : [['Good night'], ['Good morning'], ['Good afternoon'], ['Good evening']],
-// ru : [['Доброй ночи'], ['Доброе утро'], ['Добрый день'], ['Добрый вечер']]
-// };
 
 function showGreeting(lang = 'en') {
    const greetingText = document.querySelector('.greeting');
@@ -151,13 +147,25 @@ async function getWeather(lang = 'en') {
       humidity.textContent = '';
       weatherError.textContent = `Error! city not found for '${city.value}'`;
    } else {
+//       weatherIcon.className = 'weather-icon owf';
+//       weatherIcon.classList.add(`owf-${data.weather[0].id}`);
+//       temperature.textContent = `${Math.floor(data.main.temp)}°C`;
+//       weatherDescription.textContent = data.weather[0].description;
+//       wind.textContent = `Wind speed: ${Math.floor(data.wind.speed)} m/s`;
+//       humidity.textContent = `Humidity: ${data.main.humidity}%`;
+//       weatherError.textContent = '';
       weatherIcon.className = 'weather-icon owf';
       weatherIcon.classList.add(`owf-${data.weather[0].id}`);
       temperature.textContent = `${Math.floor(data.main.temp)}°C`;
       weatherDescription.textContent = data.weather[0].description;
-      wind.textContent = `Wind speed: ${Math.floor(data.wind.speed)} m/s`;
-      humidity.textContent = `Humidity: ${data.main.humidity}%`;
       weatherError.textContent = '';
+      if(lang == 'ru') {
+         wind.textContent = `Скорость ветра: ${Math.floor(data.wind.speed)} m/s`;
+         humidity.textContent = `Влажность: ${data.main.humidity}%`;
+      } else {
+         wind.textContent = `Wind speed: ${Math.floor(data.wind.speed)} m/s`;
+         humidity.textContent = `Humidity: ${data.main.humidity}%`;
+      }
    }
  };
  getWeather();
