@@ -26,7 +26,7 @@ function showDate(lang = 'en') {
    const date = document.querySelector('.date');
    const dateNow = new Date();
    const options = { weekday: 'long', month: 'long', day: 'numeric'};
-   const currentDate;
+   let currentDate;
    if (lang == 'ru') {
       currentDate = dateNow.toLocaleDateString('ru-Ru', options);
    } else {
