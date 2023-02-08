@@ -34,6 +34,7 @@ function showDate(lang = 'en') {
    }
    date.textContent = currentDate;
 };
+showDate();
 
 // Приветствие;
 
