@@ -55,6 +55,11 @@ function getTimeOfDay() {
 //    greetingText.textContent = `Good ${timeOfDay}`;
 // }
 
+let greetingTranslation = {
+en : [['Good night'], ['Good morning'], ['Good afternoon'], ['Good evening']],
+ru : [['Доброй ночи'], ['Доброе утро'], ['Добрый день'], ['Добрый вечер']]
+};
+
 function showGreeting(en) {
    const greetingText = document.querySelector('.greeting');
    greetingText.textContent = greetingTranslation.en[timeOfDay];
@@ -337,10 +342,10 @@ function volumeMuteBtn () {
 
 // 8. Перевод приложения на два языка (en/ru или en/be);
 
-let greetingTranslation = {
-en : [['Good night'], ['Good morning'], ['Good afternoon'], ['Good evening']],
-ru : [['Доброй ночи'], ['Доброе утро'], ['Добрый день'], ['Добрый вечер']]
-};
+// let greetingTranslation = {
+// en : [['Good night'], ['Good morning'], ['Good afternoon'], ['Good evening']],
+// ru : [['Доброй ночи'], ['Доброе утро'], ['Добрый день'], ['Добрый вечер']]
+// };
 
    
    
