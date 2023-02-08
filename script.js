@@ -160,7 +160,7 @@ async function getWeather(lang = 'en') {
       weatherDescription.textContent = data.weather[0].description;
       weatherError.textContent = '';
       if(lang == 'ru') {
-         wind.textContent = `Скорость ветра: ${Math.floor(data.wind.speed)} m/s`;
+         wind.textContent = `Скорость ветра: ${Math.floor(data.wind.speed)} м/с`;
          humidity.textContent = `Влажность: ${data.main.humidity}%`;
       } else {
          wind.textContent = `Wind speed: ${Math.floor(data.wind.speed)} m/s`;
