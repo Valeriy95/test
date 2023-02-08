@@ -33,27 +33,31 @@ function getTimeOfDay() {
    const date = new Date();
    const hours = date.getHours();
    if (0 <= hours && hours < 6) {
-      timeOfDay = 'night';
+//       timeOfDay = 'night';
+      timeOfDay = 0;
    };
    if (6 <= hours && hours < 12) {
-      timeOfDay = 'morning';
+//       timeOfDay = 'morning';
+      timeOfDay = 1;
    };
    if (12 <= hours && hours < 18) {
-      timeOfDay =  'afternoon';
+//       timeOfDay =  'afternoon';
+      timeOfDay = 2;
    };
    if (18 <= hours && hours < 24) {
-      timeOfDay = 'evening';
+//       timeOfDay = 'evening';
+      timeOfDay = = 3;
    };
 };
 
+// function showGreeting(en) {
+//    const greetingText = document.querySelector('.greeting');
+//    greetingText.textContent = `Good ${timeOfDay}`;
+// }
+
 function showGreeting(en) {
    const greetingText = document.querySelector('.greeting');
-   greetingText.textContent = `Good ${timeOfDay}`;
-}
-
-function showGreeting(ru) {
-   const greetingText = document.querySelector('.greeting');
-   greetingText.textContent = greetingTranslation[ru];
+   greetingText.textContent = greetingTranslation.en[timeOfDay];
 }
 
 const names = document.querySelector('.names');
@@ -334,11 +338,9 @@ function volumeMuteBtn () {
 // 8. Перевод приложения на два языка (en/ru или en/be);
 
 let greetingTranslation = {
-ru: "Доброй ночи",
-ru: "Доброе утро",
-ru: "Добрый день",
-ru: "Добрый вечер"
-}
+en : [['Good night'], ['Good morning'], ['Good afternoon'], ['Good evening']],
+ru : [['Доброй ночи'], ['Доброе утро'], ['Добрый день'], ['Добрый вечер']]
+};
 
    
    
