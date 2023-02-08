@@ -352,6 +352,11 @@ function volumeMuteBtn () {
 // };
 
 const settingBtn = document.querySelector('.setting');
-settingBtn.addEventListener('click', showGreeting('ru'));
+settingBtn.addEventListener('click', tests);
+
+function tests () {
+   showGreeting('ru');
+   console.log('click');
+};
    
    
