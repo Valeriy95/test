@@ -382,8 +382,8 @@ function volumeMuteBtn () {
 
 // 8. Перевод приложения на два языка (en/ru или en/be);
 
-const settingBtn = document.querySelector('.setting');
-settingBtn.addEventListener('click', tests);
+// const settingBtn = document.querySelector('.setting');
+// settingBtn.addEventListener('click', tests);
 
 function tests () {
    isRus = true;
