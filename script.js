@@ -210,14 +210,13 @@ async function getQuotes() {
    let quotes;
    if (isRus == false) {
       quotes = 'data.json';
-      num = Math.floor(Math.random() * 20);
    } else {
       quotes = 'dataRus.json';
    }
 //    const quotes = 'data.json';
    const res = await fetch(quotes);
    const data = await res.json(); 
-//    num = Math.floor(Math.random() * 20);
+   num = Math.floor(Math.random() * 20);
    quote.textContent = `"${data[num].text}"`;
    author.textContent = data[num].author;
  }
@@ -399,7 +398,7 @@ function tests () {
    if (localStorage.getItem('city') == 'Minsk' || localStorage.getItem('city') == '') {
       city.value = 'Минск';
    };
-   getQuotes();
+   getQuotesTest();
 };
    
 
