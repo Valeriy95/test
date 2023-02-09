@@ -373,7 +373,20 @@ function tests () {
    getWeather('ru');
    showDate('ru')
    console.log('click');
-   names.value = 'Введите имя'
+//    names.value = 'Введите имя'
+   if (localStorage.getItem('names') !== null) {
+      console.log('YEEEEEEEEES!');
+   } else {
+      console.log('NOOOOOOOOOOOOOOO!');
+   };
 };
    
+
+// if (localStorage.getItem('names') !== null) {
+// console.log('YEEEEEEEEES!');
+// } else {
+// console.log('NOOOOOOOOOOOOOOO!');
+// }
+
+
    
