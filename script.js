@@ -1,7 +1,7 @@
 "use strict"
 
 import playList from './playList.js';
-
+let isRus = false;
 let timeOfDay;
 let timeOfDay1;
 const greetingTranslation = {
@@ -383,7 +383,7 @@ function volumeMuteBtn () {
 
 // 8. Перевод приложения на два языка (en/ru или en/be);
 
-let isRus = false;
+// let isRus = false;
 const settingBtn = document.querySelector('.setting');
 settingBtn.addEventListener('click', tests);
 
