@@ -357,7 +357,8 @@ body {
 
 .setting:hover {
   cursor: pointer;
-  transform: rotate(45deg);
+  transform: rotate(30deg);
+  transition: 1.5s;
 }
 
 
