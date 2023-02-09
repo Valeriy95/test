@@ -376,14 +376,13 @@ function tests () {
    if (localStorage.getItem('names') == '[Enter name]' || localStorage.getItem('names') == '') {
       names.value = 'Введите имя';
    }
+   if (localStorage.getItem('city') == 'Minsk') {
+      city.value = 'Минск';
+   }
 };
    
 
-// if (localStorage.getItem('names.value') == '[Enter name]' || ) {
-// console.log('YEEEEEEEEES!');
-// } else {
-// console.log('NOOOOOOOOOOOOOOO!');
-// }
+
 
 
    
