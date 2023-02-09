@@ -196,20 +196,36 @@ window.addEventListener('load', getLocalWeather);
 
 // Виджет цитата дня 
 
+   const quote = document.querySelector('.quote');
+   const author = document.querySelector('.author');
+   let num;
+
 const changeQuote = document.querySelector('.change-quote');
 changeQuote.addEventListener('click', getQuotes)
 
+
 async function getQuotes() {  
-   const quote = document.querySelector('.quote');
-   const author = document.querySelector('.author');
+//    const quote = document.querySelector('.quote');
+//    const author = document.querySelector('.author');
    const quotes = 'data.json';
    const res = await fetch(quotes);
    const data = await res.json(); 
-   let num = Math.floor(Math.random() * 20);
+   num = Math.floor(Math.random() * 20);
    quote.textContent = `"${data[num].text}"`;
    author.textContent = data[num].author;
  }
  getQuotes();
+
+async function getQuotesTest() {  
+//    const quote = document.querySelector('.quote');
+//    const author = document.querySelector('.author');
+   const quotes = 'dataRus.json';
+   const res = await fetch(quotes);
+   const data = await res.json(); 
+//    num = Math.floor(Math.random() * 20);
+   quote.textContent = `"${data[num].text}"`;
+   author.textContent = data[num].author;
+}
 
 
 // 6. Аудиоплеер
@@ -379,6 +395,7 @@ function tests () {
    if (localStorage.getItem('city') == 'Minsk' || localStorage.getItem('city') == '') {
       city.value = 'Минск';
    };
+   getQuotesTest();
 };
    
 
