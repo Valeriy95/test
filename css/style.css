@@ -348,7 +348,8 @@ body {
 
 .setting {
   position: absolute;
-  margin-left: -300px;
+  margin-top: -45px;
+  margin-left: -33%;
   width: 26px;
   height: 26px;
   background-image: url("../assets/svg/icons8-настройки-26.png");
