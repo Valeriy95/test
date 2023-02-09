@@ -346,6 +346,12 @@ body {
   margin-top: 4px; 
 }
 
+.setting {
+  width: 32px;
+  height: 32px;
+  background-image: url("../assets/svg/setting.png");
+}
+
 
 @media (max-width: 768px) {
   .time {
