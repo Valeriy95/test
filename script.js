@@ -373,12 +373,9 @@ function tests () {
    getWeather('ru');
    showDate('ru')
    console.log('click');
-//    names.value = 'Введите имя'
    if (localStorage.getItem('names') == '[Enter name]') {
-      console.log('YEEEEEEEEES!');
-   } else {
-      console.log('NOOOOOOOOOOOOOOO!');
-   };
+      names.value = 'Введите имя';
+   }
 };
    
 
