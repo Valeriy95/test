@@ -382,7 +382,7 @@ function tests () {
 };
    
 
-// if (localStorage.getItem('names') !== null) {
+// if (localStorage.getItem('names.value') == '[Enter name]') {
 // console.log('YEEEEEEEEES!');
 // } else {
 // console.log('NOOOOOOOOOOOOOOO!');
