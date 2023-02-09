@@ -355,6 +355,11 @@ body {
   background-image: url("../assets/svg/icons8-настройки-26.png");
 }
 
+.setting:hover {
+  cursor: pointer;
+  transform: rotate(45deg);
+}
+
 
 @media (max-width: 768px) {
   .time {
