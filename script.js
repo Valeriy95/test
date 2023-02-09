@@ -373,13 +373,13 @@ function tests () {
    getWeather('ru');
    showDate('ru')
    console.log('click');
-   if (localStorage.getItem('names') == '[Enter name]') {
+   if (localStorage.getItem('names') == '[Enter name]' || localStorage.getItem('names') == '') {
       names.value = 'Введите имя';
    }
 };
    
 
-// if (localStorage.getItem('names.value') == '[Enter name]') {
+// if (localStorage.getItem('names.value') == '[Enter name]' || ) {
 // console.log('YEEEEEEEEES!');
 // } else {
 // console.log('NOOOOOOOOOOOOOOO!');
