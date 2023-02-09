@@ -373,6 +373,7 @@ function tests () {
    getWeather('ru');
    showDate('ru')
    console.log('click');
+   names.value = 'Введите имя'
 };
    
    
