@@ -375,10 +375,10 @@ function tests () {
    console.log('click');
    if (localStorage.getItem('names') == '[Enter name]' || localStorage.getItem('names') == '') {
       names.value = 'Введите имя';
-   }
-   if (localStorage.getItem('city') == 'Minsk') {
+   };
+   if (localStorage.getItem('city') == 'Minsk' || localStorage.getItem('city') == '') {
       city.value = 'Минск';
-   }
+   };
 };
    
 
