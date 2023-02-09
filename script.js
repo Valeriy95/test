@@ -207,10 +207,17 @@ changeQuote.addEventListener('click', getQuotes)
 async function getQuotes() {  
 //    const quote = document.querySelector('.quote');
 //    const author = document.querySelector('.author');
-   const quotes = 'data.json';
+   let quotes;
+   if (isRus == false) {
+      quotes = 'data.json';
+      num = Math.floor(Math.random() * 20);
+   } else {
+      quotes = 'dataRus.json';
+   }
+//    const quotes = 'data.json';
    const res = await fetch(quotes);
    const data = await res.json(); 
-   num = Math.floor(Math.random() * 20);
+//    num = Math.floor(Math.random() * 20);
    quote.textContent = `"${data[num].text}"`;
    author.textContent = data[num].author;
  }
@@ -376,15 +383,12 @@ function volumeMuteBtn () {
 
 // 8. Перевод приложения на два языка (en/ru или en/be);
 
-// let greetingTranslation = {
-// en : [['Good night'], ['Good morning'], ['Good afternoon'], ['Good evening']],
-// ru : [['Доброй ночи'], ['Доброе утро'], ['Добрый день'], ['Добрый вечер']]
-// };
-
+let isRus = false;
 const settingBtn = document.querySelector('.setting');
 settingBtn.addEventListener('click', tests);
 
 function tests () {
+   isRus = true;
    showGreeting('ru');
    getWeather('ru');
    showDate('ru')
@@ -395,7 +399,7 @@ function tests () {
    if (localStorage.getItem('city') == 'Minsk' || localStorage.getItem('city') == '') {
       city.value = 'Минск';
    };
-   getQuotesTest();
+   getQuotes();
 };
    
 
