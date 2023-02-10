@@ -397,9 +397,11 @@ function tests (str) {
       getWeather('ru');
       showDate('ru');
       console.log('clickRU');
+//       if (localStorage.getItem('names') == '[Enter name]' || localStorage.getItem('names') == '') {
       if (localStorage.getItem('names') == '[Enter name]' || localStorage.getItem('names') == '') {
          names.value = 'Введите имя';
       };
+//       if (localStorage.getItem('city') == 'Minsk' || localStorage.getItem('city') == '') {
       if (localStorage.getItem('city') == 'Minsk' || localStorage.getItem('city') == '') {
          city.value = 'Минск';
       };
@@ -411,10 +413,12 @@ function tests (str) {
       getWeather('en');
       showDate('en');
       console.log('clickEN');
-      if (localStorage.getItem('names') == 'Введите имя' || localStorage.getItem('names') == '') {
+//       if (localStorage.getItem('names') == 'Введите имя' || localStorage.getItem('names') == '') {
+       if (localStorage.getItem('names') == 'Введите имя') {
          names.value = '[Enter name]';
       };
-      if (localStorage.getItem('city') == 'Минск' || localStorage.getItem('city') == '') {
+//       if (localStorage.getItem('city') == 'Минск' || localStorage.getItem('city') == '') {
+      if (localStorage.getItem('city') == 'Минск') {
          city.value = 'Minsk';
       };
       getQuotesTest2();
