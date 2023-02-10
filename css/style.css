@@ -373,6 +373,23 @@ body {
   border-radius: 26px 26px 26px 0px
 }
 
+.close-icon1 {
+  position: absolute;
+  width: 100%;
+  height: 0px;
+  border: 1px solid #000000;
+  transform: rotate(45deg); 
+}
+
+.close-icon1 {
+  position: absolute;
+  width: 100%;
+  height: 0px;
+  border: 1px solid #000000;
+  transform: rotate(-225deg); 
+}
+
+
 @media (max-width: 768px) {
   .time {
     min-height: 80px;
