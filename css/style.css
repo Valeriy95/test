@@ -351,7 +351,7 @@ body {
 .setting-icon {
   position: absolute;
   margin-top: -45px;
-  margin-left: 52%;
+  margin-left: 66%;
   width: 26px;
   height: 26px;
   background-image: url("../assets/svg/icons8-настройки-26.png");
@@ -373,7 +373,7 @@ body {
   height: 400px;
   margin-left: 70%;
   margin-top: -380px;
-  border-radius: 26px 26px 26px 0px
+  border-radius: 26px 26px 0px 26px
 }
 
 .close-icon {
@@ -430,7 +430,7 @@ body {
 } 
 
 .hide {
-  margin-left: -574px;
+  margin-left: 637px;
   transition: 1s;
 }
 
