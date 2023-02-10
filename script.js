@@ -398,11 +398,11 @@ function tests (str) {
       showDate('ru');
       console.log('clickRU');
 //       if (localStorage.getItem('names') == '[Enter name]' || localStorage.getItem('names') == '') {
-      if (localStorage.getItem('names') == '[Enter name]' || localStorage.getItem('names') == '') {
+      if (localStorage.getItem('names') == '[Enter name]') {
          names.value = 'Введите имя';
       };
 //       if (localStorage.getItem('city') == 'Minsk' || localStorage.getItem('city') == '') {
-      if (localStorage.getItem('city') == 'Minsk' || localStorage.getItem('city') == '') {
+      if (localStorage.getItem('city') == 'Minsk') {
          city.value = 'Минск';
       };
       getQuotesTest();
