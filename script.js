@@ -403,7 +403,7 @@ function tests (str) {
       if (localStorage.getItem('city') == 'Minsk' || localStorage.getItem('city') == '') {
          city.value = 'Минск';
       };
-      getQuotesTest;
+      getQuotesTest();
       };
    if (str == 'en') {
       isRus = false;
