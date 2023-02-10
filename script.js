@@ -223,12 +223,17 @@ async function getQuotes() {
  getQuotes();
 
 async function getQuotesTest() {  
-//    const quote = document.querySelector('.quote');
-//    const author = document.querySelector('.author');
    const quotes = 'dataRus.json';
    const res = await fetch(quotes);
    const data = await res.json(); 
-//    num = Math.floor(Math.random() * 20);
+   quote.textContent = `"${data[num].text}"`;
+   author.textContent = data[num].author;
+}
+
+async function getQuotesTest2() {  
+   const quotes = 'data.json';
+   const res = await fetch(quotes);
+   const data = await res.json(); 
    quote.textContent = `"${data[num].text}"`;
    author.textContent = data[num].author;
 }
@@ -398,7 +403,7 @@ function tests (str) {
       if (localStorage.getItem('city') == 'Minsk' || localStorage.getItem('city') == '') {
          city.value = 'Минск';
       };
-      getQuotes();
+      getQuotesTest;
       };
    if (str == 'en') {
       isRus = false;
@@ -412,7 +417,7 @@ function tests (str) {
       if (localStorage.getItem('city') == 'Минск' || localStorage.getItem('city') == '') {
          city.value = 'Minsk';
       };
-      getQuotes();
+      getQuotesTest2();
       }
 //    isRus = true;
 //    showGreeting('ru');
