@@ -398,7 +398,7 @@ function tests (str) {
       if (localStorage.getItem('city') == 'Minsk' || localStorage.getItem('city') == '') {
          city.value = 'Минск';
       };
-      getQuotesTest();
+      getQuotes();
       };
    if (str == 'en') {
       isRus = false;
@@ -412,7 +412,7 @@ function tests (str) {
       if (localStorage.getItem('city') == 'Минск' || localStorage.getItem('city') == '') {
          city.value = 'Minsk';
       };
-      getQuotesTest();
+      getQuotes();
       }
 //    isRus = true;
 //    showGreeting('ru');
