@@ -196,9 +196,9 @@ window.addEventListener('load', getLocalWeather);
 
 // Виджет цитата дня 
 
-   const quote = document.querySelector('.quote');
-   const author = document.querySelector('.author');
-   let num;
+const quote = document.querySelector('.quote');
+const author = document.querySelector('.author');
+let num;
 
 const changeQuote = document.querySelector('.change-quote');
 changeQuote.addEventListener('click', getQuotes)
@@ -222,7 +222,7 @@ async function getQuotes() {
  }
  getQuotes();
 
-async function getQuotesTest() {  
+async function getQuotesEn() {  
    const quotes = 'dataRus.json';
    const res = await fetch(quotes);
    const data = await res.json(); 
@@ -230,7 +230,7 @@ async function getQuotesTest() {
    author.textContent = data[num].author;
 }
 
-async function getQuotesTest2() {  
+async function getQuotesRu() {  
    const quotes = 'data.json';
    const res = await fetch(quotes);
    const data = await res.json(); 
@@ -387,10 +387,7 @@ function volumeMuteBtn () {
 
 // 8. Перевод приложения на два языка (en/ru или en/be);
 
-// const settingBtn = document.querySelector('.setting');
-// settingBtn.addEventListener('click', tests);
-
-function tests (str) {
+function changeLanguagesEnRu (str) {
    if (str == 'ru') {
       isRus = true;
       showGreeting('ru');
@@ -405,7 +402,7 @@ function tests (str) {
       if (city.value == 'Minsk') {
          city.value = 'Минск';
       };
-      getQuotesTest();
+      getQuotesEn();
       };
    if (str == 'en') {
       isRus = false;
@@ -421,7 +418,7 @@ function tests (str) {
       if (city.value == 'Минск') {
          city.value = 'Minsk';
       };
-      getQuotesTest2();
+      getQuotesRu();
       }
 //    isRus = true;
 //    showGreeting('ru');
@@ -461,10 +458,10 @@ function closeSetCont () {
 const chancelanguage = document.querySelectorAll('input[type=radio][name="lang"]');
 chancelanguage.forEach(chancelanguage => chancelanguage.addEventListener('change', function sur () {
    if(chancelanguage.value == 'ru') {
-      tests (chancelanguage.value);
+      changeLanguagesEnRu (chancelanguage.value);
       console.log('RU');
    } else if (chancelanguage.value == 'en') {
-      tests (chancelanguage.value);
+      changeLanguagesEnRu (chancelanguage.value);
       console.log('EN');
    }
 }));
