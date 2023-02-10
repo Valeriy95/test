@@ -356,6 +356,7 @@ body {
   width: 26px;
   height: 26px;
   background-image: url("../assets/svg/icons8-настройки-26.png");
+  transition: 1s;
 }
 
 .setting-icon:hover {
@@ -417,7 +418,6 @@ body {
   font-size: 24px;
 }
 
-.languages:hover,
 .image-collection:hover,
 .hide-block:hover {
   cursor: pointer;
@@ -425,6 +425,7 @@ body {
   transition: 1s;
 } 
 
+.languages:hover,
 .close-icon:hover,
 .close-icon1:hover,
 .close-icon2:hover {
