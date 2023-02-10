@@ -362,9 +362,13 @@ body {
 }
 
 .setting-container {
-  background: #000000;
-  width: 30px;
-  height: 30px;
+  position: absolute;
+  background: #ffffff;
+  width: 400px;
+  height: 400px;
+  margin-left: -577px;
+  margin-top: -380px;
+  border-radius: 26px 26px 26px 0px
 }
 
 @media (max-width: 768px) {
