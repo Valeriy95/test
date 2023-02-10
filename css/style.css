@@ -374,7 +374,8 @@ body {
   height: 400px;
   margin-left: 85%;
   margin-top: -380px;
-  border-radius: 26px 26px 0px 26px
+  border-radius: 26px 26px 0px 26px;
+  transition: 1s;
 }
 
 .close-icon {
