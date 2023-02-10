@@ -367,9 +367,9 @@ body {
   justify-content: space-evenly;
   position: absolute;
   background: darkgrey;;
-  width: 400px;
+  width: 350px;
   height: 400px;
-  margin-left: -577px;
+  margin-left: -574px;
   margin-top: -380px;
   border-radius: 26px 26px 26px 0px
 }
@@ -378,8 +378,8 @@ body {
   width: 30px;
   height: 30px;
   position: absolute;
-  margin-top: -280px;
-  margin-left: 320px
+  margin-top: -285px;
+  margin-left: 280px
 }
 
 .close-icon1 {
