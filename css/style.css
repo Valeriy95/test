@@ -258,10 +258,12 @@ body {
 
 .quote {
   min-height: 32px;
+  width: 600px;
 }
 
 .author {
   min-height: 20px;
+  width: 600px;
 }
 
 .progress-container {
@@ -349,7 +351,7 @@ body {
 .setting-icon {
   position: absolute;
   margin-top: -45px;
-  margin-left: -33%;
+  margin-left: 52%;
   width: 26px;
   height: 26px;
   background-image: url("../assets/svg/icons8-настройки-26.png");
