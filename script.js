@@ -398,7 +398,7 @@ function tests (str) {
       showDate('ru');
       console.log('clickRU');
 //       if (localStorage.getItem('names') == '[Enter name]' || localStorage.getItem('names') == '') {
-      if (localStorage.getItem('names') == '[Enter name]') {
+      if (names.value == '[Enter name]') {
          names.value = 'Введите имя';
       };
 //       if (localStorage.getItem('city') == 'Minsk' || localStorage.getItem('city') == '') {
@@ -414,7 +414,7 @@ function tests (str) {
       showDate('en');
       console.log('clickEN');
 //       if (localStorage.getItem('names') == 'Введите имя' || localStorage.getItem('names') == '') {
-       if (localStorage.getItem('names') == 'Введите имя') {
+       if (names.value == 'Введите имя') {
          names.value = '[Enter name]';
       };
 //       if (localStorage.getItem('city') == 'Минск' || localStorage.getItem('city') == '') {
