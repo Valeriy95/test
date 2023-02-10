@@ -369,7 +369,7 @@ body {
   background: darkgrey;;
   width: 350px;
   height: 400px;
-  margin-left: -574px;
+  margin-left: 70%;
   margin-top: -380px;
   border-radius: 26px 26px 26px 0px
 }
@@ -426,6 +426,12 @@ body {
 .close-icon2:hover {
   cursor: pointer;
 } 
+
+.hide {
+  margin-left: -574px;
+  transition: 1s;
+}
+
 
 @media (max-width: 768px) {
   .time {
