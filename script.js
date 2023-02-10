@@ -385,19 +385,47 @@ function volumeMuteBtn () {
 // const settingBtn = document.querySelector('.setting');
 // settingBtn.addEventListener('click', tests);
 
-function tests () {
-   isRus = true;
-   showGreeting('ru');
-   getWeather('ru');
-   showDate('ru')
-   console.log('click');
-   if (localStorage.getItem('names') == '[Enter name]' || localStorage.getItem('names') == '') {
-      names.value = 'Введите имя';
-   };
-   if (localStorage.getItem('city') == 'Minsk' || localStorage.getItem('city') == '') {
-      city.value = 'Минск';
-   };
-   getQuotesTest();
+function tests (str) {
+   if (str == 'ru') {
+      isRus = true;
+      showGreeting('ru');
+      getWeather('ru');
+      showDate('ru');
+      console.log('clickRU');
+      if (localStorage.getItem('names') == '[Enter name]' || localStorage.getItem('names') == '') {
+         names.value = 'Введите имя';
+      };
+      if (localStorage.getItem('city') == 'Minsk' || localStorage.getItem('city') == '') {
+         city.value = 'Минск';
+      };
+      getQuotesTest();
+      };
+   if (str == 'en') {
+      isRus = false;
+      showGreeting('en');
+      getWeather('en');
+      showDate('en');
+      console.log('clickEN');
+      if (localStorage.getItem('names') == 'Введите имя' || localStorage.getItem('names') == '') {
+         names.value = '[Enter name]';
+      };
+      if (localStorage.getItem('city') == 'Минск' || localStorage.getItem('city') == '') {
+         city.value = 'Minsk';
+      };
+      getQuotesTest();
+      }
+//    isRus = true;
+//    showGreeting('ru');
+//    getWeather('ru');
+//    showDate('ru')
+//    console.log('click');
+//    if (localStorage.getItem('names') == '[Enter name]' || localStorage.getItem('names') == '') {
+//       names.value = 'Введите имя';
+//    };
+//    if (localStorage.getItem('city') == 'Minsk' || localStorage.getItem('city') == '') {
+//       city.value = 'Минск';
+//    };
+//    getQuotesTest();
 };
    
 
@@ -421,6 +449,14 @@ function closeSetCont () {
    settingContainer.classList.remove('hide');
 };
 
-
-
+const chancelanguage = document.querySelectorAll('input[type=radio][name="lang"]');
+chancelanguage.forEach(chancelanguage => chancelanguage.addEventListener('change', function sur () {
+   if(chancelanguage.value == 'ru') {
+      tests (chancelanguage.value);
+      console.log('RU');
+   } else if (chancelanguage.value == 'en') {
+      tests (chancelanguage.value);
+      console.log('EN');
+   }
+}));
    
