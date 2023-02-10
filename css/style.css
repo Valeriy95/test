@@ -362,6 +362,8 @@ body {
 }
 
 .setting-container {
+  display: flex;
+  flex-direction: column;
   position: absolute;
   background: #ffffff;
   width: 400px;
