@@ -402,8 +402,8 @@ function tests (str) {
          names.value = 'Введите имя';
       };
 //       if (localStorage.getItem('city') == 'Minsk' || localStorage.getItem('city') == '') {
-      if (city.textContent == 'Minsk') {
-         city.textContent = 'Минск';
+      if (city.value == 'Minsk') {
+         city.value = 'Минск';
       };
       getQuotesTest();
       };
@@ -418,8 +418,8 @@ function tests (str) {
          names.value = '[Enter name]';
       };
 //       if (localStorage.getItem('city') == 'Минск' || localStorage.getItem('city') == '') {
-      if (city.textContent == 'Минск') {
-         city.textContent = 'Minsk';
+      if (city.value == 'Минск') {
+         city.value = 'Minsk';
       };
       getQuotesTest2();
       }
