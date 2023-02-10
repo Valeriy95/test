@@ -364,8 +364,9 @@ body {
 .setting-container {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   position: absolute;
-  background: #ffffff;
+  background: darkgrey;;
   width: 400px;
   height: 400px;
   margin-left: -577px;
@@ -377,7 +378,7 @@ body {
   width: 30px;
   height: 30px;
   position: absolute;
-  margin-top: 50px;
+  margin-top: -280px;
   margin-left: 320px
 }
 
@@ -399,15 +400,32 @@ body {
 
 .languages {
   color: #000000; 
+  font-size: 24px;
 }
 
 .image-collection {
   color: #000000; 
+  font-size: 24px;
 }
 
 .hide-block {
   color: #000000; 
+  font-size: 24px;
 }
+
+.languages:hover,
+.image-collection:hover,
+.hide-block:hover {
+  cursor: pointer;
+  color: #C5B358;
+  transition: 1s;
+} 
+
+.close-icon:hover,
+.close-icon1:hover,
+.close-icon2:hover {
+  cursor: pointer;
+} 
 
 @media (max-width: 768px) {
   .time {
