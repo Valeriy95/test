@@ -401,6 +401,25 @@ function tests () {
 };
    
 
+// 10. Настройки
+
+const settingContainer = document.querySelector('.setting-container');
+const settingIcon = document.querySelector('.setting-icon');
+const closeIcon = document.querySelector('.close-icon1');
+const closeIcon1 = document.querySelector('.close-icon1');
+const closeIcon2 = document.querySelector('.close-icon2');
+settingIcon.addEventListener('click', showSetCont);
+closeIcon.addEventListener('click', closeSetCont);
+closeIcon1.addEventListener('click', closeSetCont);
+closeIcon2.addEventListener('click', closeSetCont);
+
+function showSetCont () {
+   settingContainer.classList.add('hide');
+};
+
+function closeSetCont () {
+   settingContainer.classList.remove('hide');
+};
 
 
 
