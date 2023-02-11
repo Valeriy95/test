@@ -512,12 +512,12 @@ async function getLinkToImage2() {
    console.log(data);
    console.log(data.photos);
    console.log(data.photos.photo);
- console.log(data.photos.photo[0]);
+ console.log(data.photos.photo[0].url_l);
  const body = document.querySelector('body');
  let img = new Image();
- img.src = data;
+ img.src = data.photos.photo[0].url_l;
  img.onload = () => {      
-      body.style.background = `url(${data.urls.regular}) center/cover, rgba(0, 0, 0, 0.5)`;
+      body.style.background = `url(${data.photos.photo[0].url_l}) center/cover, rgba(0, 0, 0, 0.5)`;
   }; 
  }
 getLinkToImage2()
