@@ -470,4 +470,16 @@ chancelanguage.forEach(chancelanguage => chancelanguage.addEventListener('change
       console.log('EN');
    }
 }));
+
+function setLocalLanguage() {
+   localStorage.setItem('chancelanguage', chancelanguage.value);
+ };
+ window.addEventListener('beforeunload', setLocalLanguage);
+
+function getLocalLanguage() {
+   if(localStorage.getItem('chancelanguage')) {
+     chancelanguage.value = localStorage.getItem('chancelanguage');
+   }
+ };
+window.addEventListener('load', getLocalLanguage);
    
