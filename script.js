@@ -494,12 +494,12 @@ async function getLinkToImage() {
  const res = await fetch(url);
  const data = await res.json();
  console.log(data.urls.regular);
-//    const body = document.querySelector('body');
-//    let img = new Image();
-//    img.src = `https://raw.githubusercontent.com/Valeriy95/stage1-tasks/assets/images/${timeOfDay}/${randomNum.toString().padStart(2, '0')}.webp`;
-//    img.onload = () => {      
-//       body.style.background = `url('https://raw.githubusercontent.com/Valeriy95/stage1-tasks/assets/images/${timeOfDay}/${randomNum.toString().padStart(2, '0')}.webp') center/cover, rgba(0, 0, 0, 0.5)`;
-//   }; 
+ const body = document.querySelector('body');
+ let img = new Image();
+ img.src = data.urls.regular;
+ img.onload = () => {      
+      body.style.background = `url(${data.urls.regular}) center/cover, rgba(0, 0, 0, 0.5)`;
+  }; 
  }
 getLinkToImage()
 
