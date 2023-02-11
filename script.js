@@ -501,7 +501,7 @@ async function getLinkToImage() {
 //       body.style.background = `url('https://raw.githubusercontent.com/Valeriy95/stage1-tasks/assets/images/${timeOfDay}/${randomNum.toString().padStart(2, '0')}.webp') center/cover, rgba(0, 0, 0, 0.5)`;
 //   }; 
  }
-
+getLinkToImage()
 
 
 
