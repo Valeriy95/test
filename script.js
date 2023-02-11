@@ -501,7 +501,22 @@ async function getLinkToImage() {
       body.style.background = `url(${data.urls.regular}) center/cover, rgba(0, 0, 0, 0.5)`;
   }; 
  }
-getLinkToImage()
+// getLinkToImage()
+
+
+async function getLinkToImage2() {
+ const url = 'https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=ead20d55cac86a7c2b92802520507b81&tags=nature&extras=url_l&format=json&nojsoncallback=1';
+ const res = await fetch(url);
+ const data = await res.json();
+ console.log(data.urls.regular);
+ const body = document.querySelector('body');
+ let img = new Image();
+ img.src = data.urls.regular;
+ img.onload = () => {      
+      body.style.background = `url(${data.urls.regular}) center/cover, rgba(0, 0, 0, 0.5)`;
+  }; 
+ }
+getLinkToImage2()
 
 
 
