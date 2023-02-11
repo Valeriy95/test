@@ -486,3 +486,22 @@ function getLocalLanguage() {
  };
 window.addEventListener('load', getLocalLanguage);
    
+
+//  9. Получение фонового изображения от API
+
+async function getLinkToImage() {
+ const url = 'https://api.unsplash.com/photos/random?query=morning&client_id=TjmnzbgMoc-UhW_LILGZgsS9p_rcXLjTsy9L22RGQ6Y';
+ const res = await fetch(url);
+ const data = await res.json();
+ console.log(data.urls.regular);
+//    const body = document.querySelector('body');
+//    let img = new Image();
+//    img.src = `https://raw.githubusercontent.com/Valeriy95/stage1-tasks/assets/images/${timeOfDay}/${randomNum.toString().padStart(2, '0')}.webp`;
+//    img.onload = () => {      
+//       body.style.background = `url('https://raw.githubusercontent.com/Valeriy95/stage1-tasks/assets/images/${timeOfDay}/${randomNum.toString().padStart(2, '0')}.webp') center/cover, rgba(0, 0, 0, 0.5)`;
+  }; 
+ }
+
+
+
+
