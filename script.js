@@ -481,8 +481,8 @@ chancelanguage.forEach(chancelanguage => chancelanguage.addEventListener('change
 function getLocalLanguage() {
    if(localStorage.getItem('chancelanguage')) {
      chancelanguage.value = localStorage.getItem('chancelanguage');
+     changeLanguagesEnRu (chancelanguage.value);
    }
  };
 window.addEventListener('load', getLocalLanguage);
-console.log(chancelanguage.value)
    
