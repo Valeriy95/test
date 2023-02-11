@@ -512,12 +512,13 @@ async function getLinkToImage2() {
    console.log(data);
    console.log(data.photos);
    console.log(data.photos.photo);
- console.log(data.photos.photo[0].url_l);
+  let ranNum = Math.floor(Math.random() * 20 + 1);
+ console.log(data.photos.photo[ranNum].url_l);
  const body = document.querySelector('body');
  let img = new Image();
- img.src = data.photos.photo[0].url_l;
+ img.src = data.photos.photo[ranNum].url_l;
  img.onload = () => {      
-      body.style.background = `url(${data.photos.photo[0].url_l}) center/cover, rgba(0, 0, 0, 0.5)`;
+      body.style.background = `url(${data.photos.photo[ranNum].url_l}) center/cover, rgba(0, 0, 0, 0.5)`;
   }; 
  }
 getLinkToImage2()
