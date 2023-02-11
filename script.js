@@ -509,6 +509,8 @@ async function getLinkToImage2() {
  const res = await fetch(url);
  const data = await res.json();
 //  console.log(data.photos.0.url_l);
+   console.log(data.photos);
+   console.log(data.photos.photo);
  console.log(data.photos.photo[0]);
  const body = document.querySelector('body');
  let img = new Image();
