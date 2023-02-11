@@ -464,9 +464,11 @@ const chancelanguage = document.querySelectorAll('input[type=radio][name="lang"]
 chancelanguage.forEach(chancelanguage => chancelanguage.addEventListener('change', function sur () {
    if(chancelanguage.value == 'ru') {
       changeLanguagesEnRu (chancelanguage.value);
+      setLocalLanguage()
       console.log('RU');
    } else if (chancelanguage.value == 'en') {
       changeLanguagesEnRu (chancelanguage.value);
+      setLocalLanguage()
       console.log('EN');
    }
 }));
@@ -474,7 +476,7 @@ chancelanguage.forEach(chancelanguage => chancelanguage.addEventListener('change
 function setLocalLanguage() {
    localStorage.setItem('chancelanguage', chancelanguage.value);
  };
- window.addEventListener('beforeunload', setLocalLanguage);
+//  window.addEventListener('beforeunload', setLocalLanguage);
 
 function getLocalLanguage() {
    if(localStorage.getItem('chancelanguage')) {
