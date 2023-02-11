@@ -464,18 +464,18 @@ const chancelanguage = document.querySelectorAll('input[type=radio][name="lang"]
 chancelanguage.forEach(chancelanguage => chancelanguage.addEventListener('change', function sur () {
    if(chancelanguage.value == 'ru') {
       changeLanguagesEnRu (chancelanguage.value);
-      setLocalLanguage()
+      localStorage.setItem('chancelanguage', chancelanguage.value);
       console.log('RU');
    } else if (chancelanguage.value == 'en') {
       changeLanguagesEnRu (chancelanguage.value);
-      setLocalLanguage()
+      localStorage.setItem('chancelanguage', chancelanguage.value);
       console.log('EN');
    }
 }));
 
-function setLocalLanguage() {
-   localStorage.setItem('chancelanguage', chancelanguage.value);
- };
+// function setLocalLanguage() {
+//    localStorage.setItem('chancelanguage', chancelanguage.value);
+//  };
 //  window.addEventListener('beforeunload', setLocalLanguage);
 
 function getLocalLanguage() {
