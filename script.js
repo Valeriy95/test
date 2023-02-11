@@ -484,4 +484,5 @@ function getLocalLanguage() {
    }
  };
 window.addEventListener('load', getLocalLanguage);
+console.log(chancelanguage.value)
    
