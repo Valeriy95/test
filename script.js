@@ -388,21 +388,25 @@ function volumeMuteBtn () {
 // 8. Перевод приложения на два языка (en/ru или en/be);
 
 function changeLanguagesEnRu (str) {
+   const languages = document.querySelector('.languages');
+   const imageCollection = document.querySelector('.image-collection');
+   const hideBlock = document.querySelector('.hide-block');
    if (str == 'ru') {
       isRus = true;
       showGreeting('ru');
       getWeather('ru');
       showDate('ru');
       console.log('clickRU');
-//       if (localStorage.getItem('names') == '[Enter name]' || localStorage.getItem('names') == '') {
       if (names.value == '[Enter name]') {
          names.value = 'Введите имя';
       };
-//       if (localStorage.getItem('city') == 'Minsk' || localStorage.getItem('city') == '') {
       if (city.value == 'Minsk') {
          city.value = 'Минск';
       };
       getQuotesEn();
+      languages.textContent = 'Язык';
+      imageCollection.textContent = 'Коллекция изображений';
+      hideBlock.textContent = 'Скрыть/показать блоки';
       };
    if (str == 'en') {
       isRus = false;
@@ -410,15 +414,16 @@ function changeLanguagesEnRu (str) {
       getWeather('en');
       showDate('en');
       console.log('clickEN');
-//       if (localStorage.getItem('names') == 'Введите имя' || localStorage.getItem('names') == '') {
        if (names.value == 'Введите имя') {
          names.value = '[Enter name]';
       };
-//       if (localStorage.getItem('city') == 'Минск' || localStorage.getItem('city') == '') {
       if (city.value == 'Минск') {
          city.value = 'Minsk';
       };
       getQuotesRu();
+      languages.textContent = 'Language';
+      imageCollection.textContent = 'Image collection';
+      hideBlock.textContent = 'Hide/show blocks';
       }
 //    isRus = true;
 //    showGreeting('ru');
