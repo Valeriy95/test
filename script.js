@@ -508,7 +508,7 @@ async function getLinkToImage2() {
  const url = 'https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=ead20d55cac86a7c2b92802520507b81&tags=nature&extras=url_l&format=json&nojsoncallback=1';
  const res = await fetch(url);
  const data = await res.json();
- console.log(data.photos.url_l);
+ console.log(data.photos.0.url_l);
  const body = document.querySelector('body');
  let img = new Image();
  img.src = data;
