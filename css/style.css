@@ -437,6 +437,11 @@ body {
   transition: 1s;
 }
 
+.langBtnSet {
+  font-size: 24px;
+  color: black; 
+  padding-right: 30px;
+}
 
 @media (max-width: 768px) {
   .time {
