@@ -411,6 +411,7 @@ body {
 .image-collection {
   color: #000000; 
   font-size: 24px;
+  margin-bottom: 15px;
 }
 
 .hide-block {
@@ -441,6 +442,22 @@ body {
   font-size: 24px;
   color: black; 
   padding-right: 30px;
+}
+
+.imgBtn {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 45px;
+  justify-content: space-between;
+  height: 100px;
+}
+
+.language-container {
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 @media (max-width: 768px) {
