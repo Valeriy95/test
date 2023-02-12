@@ -489,7 +489,7 @@ window.addEventListener('load', getLocalLanguage);
 
 //  9. Получение фонового изображения от API
 
-async function getLinkToImage() {
+async function getLinkToImageUnsplash() {
  const url = 'https://api.unsplash.com/photos/random?query=morning&client_id=TjmnzbgMoc-UhW_LILGZgsS9p_rcXLjTsy9L22RGQ6Y';
  const res = await fetch(url);
  const data = await res.json();
@@ -504,7 +504,7 @@ async function getLinkToImage() {
 // getLinkToImage()
 
 
-async function getLinkToImage2() {
+async function getLinkToImageFlickr() {
  const url = 'https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=ead20d55cac86a7c2b92802520507b81&tags=nature&extras=url_l&format=json&nojsoncallback=1';
  const res = await fetch(url);
  const data = await res.json();
@@ -520,21 +520,24 @@ async function getLinkToImage2() {
       body.style.background = `url(${data.photos.photo[ranNum].url_l}) center/cover, rgba(0, 0, 0, 0.5)`;
   }; 
  }
-getLinkToImage2()
+// getLinkToImage2()
 
 const changeImageAPI = document.querySelectorAll('input[type=radio][name="imgcollection"]');
 changeImageAPI.forEach(changeImageAPI => changeImageAPI.addEventListener('change', function changeAPI () {
    if(changeImageAPI.value == 'github') {
 //       changeLanguagesEnRu (chancelanguage.value);
 //       localStorage.setItem('chancelanguage', chancelanguage.value);
+      setBg();
       console.log('github');
    } else if (changeImageAPI.value == 'unsplash') {
 //       changeLanguagesEnRu (chancelanguage.value);
 //       localStorage.setItem('chancelanguage', chancelanguage.value);
+      getLinkToImageUnsplash()
       console.log('unsplash');
    } else if (changeImageAPI.value == 'flickr') {
 //       changeLanguagesEnRu (chancelanguage.value);
 //       localStorage.setItem('chancelanguage', chancelanguage.value);
+      getLinkToImageFlickr()
       console.log('flickr');
    }
 }));
