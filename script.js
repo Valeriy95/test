@@ -593,6 +593,7 @@ tagBtn1.addEventListener('click', tests1);
 tagBtn2.addEventListener('click', tests2);
 
 function tests1 () {
+   getLocalLanguage()
    if (chancelanguage.value == 'ru') {
       timeOfDayUnsplash = prompt('Введите тег для Unsplash API');
    }
@@ -605,6 +606,7 @@ function tests1 () {
 }
 
 function tests2 () {
+   getLocalLanguage()
    if (chancelanguage.value == 'ru') {
       timeOfDayFlickr = prompt('Введите тег для Flickr API');
    }
