@@ -507,7 +507,8 @@ window.addEventListener('load', getLocalLanguage);
    
 
 //  9. Получение фонового изображения от API
-let timeOfDayAPI;
+let timeOfDayUnsplash;
+let timeOfDayFlickr;
 
 async function getLinkToImageUnsplash(changeImageAPI) {
 //    if(timeOfDayUnsplash == null || timeOfDayUnsplash == '' || timeOfDayUnsplash == undefined) {
