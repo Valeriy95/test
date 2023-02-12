@@ -612,7 +612,7 @@ function tests1 () {
   console.log(a);
 }
 
-function tests1 () {
+function tests2 () {
  let a = prompt('Введите число');
   console.log(a);
 }
