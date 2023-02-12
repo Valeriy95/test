@@ -622,13 +622,13 @@ tagBtn2.addEventListener('click', tests2);
 function tests1 () {
    timeOfDayUnsplash = prompt('Введите тег 1111');
    getLinkToImageUnsplash(changeImageAPI.value);
-   console.log(timeOfDayAPI);
+   console.log(timeOfDayUnsplash);
 }
 
 function tests2 () {
    timeOfDayFlickr = prompt('Введите тег 22222');
    getLinkToImageUnsplash(changeImageAPI.value);
-   console.log(timeOfDayAPI);
+   console.log(timeOfDayFlickr);
 }
 
 
