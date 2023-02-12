@@ -463,12 +463,16 @@ body {
 .tagBtn1 {
   width: 60px;
   height: 20px;
+  border-radius: 10px;
+  border-color: white;
   transition: 1s;
 }
 
 .tagBtn2 {
   width: 60px;
   height: 20px;
+  border-radius: 10px;
+  border-color: white;
   transition: 1s;
 }
 
@@ -476,6 +480,7 @@ body {
 .tagBtn2:hover {
   color: white;
   background: black;
+  border-color: black;
   cursor: pointer;
   transition: 1s;
 }
