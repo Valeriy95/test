@@ -503,7 +503,7 @@ async function getLinkToImageUnsplash(changeImageAPI) {
       }; 
    }
    if (changeImageAPI == 'flickr') {
-      url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=ead20d55cac86a7c2b92802520507b81&tags=${timeOfDay}&extras=url_l&format=json&nojsoncallback=1`;
+      const url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=ead20d55cac86a7c2b92802520507b81&tags=${timeOfDay}&extras=url_l&format=json&nojsoncallback=1`;
       const res = await fetch(url);
       const data = await res.json();
       console.log(data);
