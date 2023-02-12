@@ -490,7 +490,7 @@ window.addEventListener('load', getLocalLanguage);
 //  9. Получение фонового изображения от API
 
 async function getLinkToImageUnsplash() {
- const url = 'https://api.unsplash.com/photos/random?query=morning&client_id=TjmnzbgMoc-UhW_LILGZgsS9p_rcXLjTsy9L22RGQ6Y';
+ const url = `https://api.unsplash.com/photos/random?query=${timeOfDay}&client_id=TjmnzbgMoc-UhW_LILGZgsS9p_rcXLjTsy9L22RGQ6Y`;
  const res = await fetch(url);
  const data = await res.json();
  console.log(data.urls.regular);
@@ -505,7 +505,7 @@ async function getLinkToImageUnsplash() {
 
 
 async function getLinkToImageFlickr() {
- const url = 'https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=ead20d55cac86a7c2b92802520507b81&tags=nature&extras=url_l&format=json&nojsoncallback=1';
+ const url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=ead20d55cac86a7c2b92802520507b81&tags=${timeOfDay}&extras=url_l&format=json&nojsoncallback=1`;
  const res = await fetch(url);
  const data = await res.json();
    console.log(data);
