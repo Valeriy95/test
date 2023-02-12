@@ -460,21 +460,26 @@ body {
   justify-content: space-between;
 }
 
-.tagBtn1 {
-  width: 60px;
-  height: 20px;
+.tagBtn1,
+.tagBtn2 {
+  text-align: center;
+  border: 1px solid black;
+  background: white;
+  color: black;
+  font-size: 18px;
+  width: 70px;
+  height: 24px;
   border-radius: 10px;
-  border-color: white;
   transition: 1s;
 }
 
-.tagBtn2 {
+/* .tagBtn2 {
   width: 60px;
   height: 20px;
   border-radius: 10px;
   border-color: white;
   transition: 1s;
-}
+} */
 
 .tagBtn1:hover,
 .tagBtn2:hover {
@@ -485,8 +490,14 @@ body {
   transition: 1s;
 }
 
-button {
+div {
   transition: 1s;
+}
+
+.unsplash-container,
+.flickr-container {
+  display: flex;
+  flex-direction: row;
 }
 
 @media (max-width: 768px) {
