@@ -510,12 +510,16 @@ window.addEventListener('load', getLocalLanguage);
 let timeOfDayAPI;
 
 async function getLinkToImageUnsplash(changeImageAPI) {
-   if(timeOfDayAPI == null || timeOfDayAPI == '' || timeOfDayAPI == undefined) {
-   timeOfDayAPI = timeOfDay;
-    console.log('ZALLLLUUUPPAAAA');
-   }
+//    if(timeOfDayUnsplash == null || timeOfDayUnsplash == '' || timeOfDayUnsplash == undefined) {
+//    timeOfDayUnsplash = timeOfDay;
+//     console.log('ZALLLLUUUPPAAAA');
+//    }
    if (changeImageAPI == 'unsplash') {
-      const url = `https://api.unsplash.com/photos/random?query=${timeOfDayAPI}&client_id=TjmnzbgMoc-UhW_LILGZgsS9p_rcXLjTsy9L22RGQ6Y`;
+      if(timeOfDayUnsplash == null || timeOfDayUnsplash == '' || timeOfDayUnsplash == undefined) {
+         timeOfDayUnsplash = timeOfDay;
+         console.log('timeOfDayUnsplash-null');
+       };
+      const url = `https://api.unsplash.com/photos/random?query=${timeOfDayUnsplash}&client_id=TjmnzbgMoc-UhW_LILGZgsS9p_rcXLjTsy9L22RGQ6Y`;
       const res = await fetch(url);
       const data = await res.json();
       console.log(data.urls.regular);
@@ -525,9 +529,14 @@ async function getLinkToImageUnsplash(changeImageAPI) {
       img.onload = () => {      
          body.style.background = `url(${data.urls.regular}) center/cover, rgba(0, 0, 0, 0.5)`;
       }; 
-   }
+      console.log('timeOfDayUnsplash');
+   } 
    if (changeImageAPI == 'flickr') {
-      const url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=ead20d55cac86a7c2b92802520507b81&tags=${timeOfDayAPI}&extras=url_l&format=json&nojsoncallback=1`;
+      if(timeOfDayFlickr == null || timeOfDayFlickr == '' || timeOfDayFlickr == undefined) {
+         timeOfDayFlickr = timeOfDay;
+         console.log('timeOfDayFlickr-null');
+       };
+      const url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=ead20d55cac86a7c2b92802520507b81&tags=${timeOfDayFlickr}&extras=url_l&format=json&nojsoncallback=1`;
       const res = await fetch(url);
       const data = await res.json();
       console.log(data);
@@ -541,6 +550,7 @@ async function getLinkToImageUnsplash(changeImageAPI) {
       img.onload = () => {      
          body.style.background = `url(${data.photos.photo[ranNum].url_l}) center/cover, rgba(0, 0, 0, 0.5)`;
       }; 
+      console.log('timeOfDayFlickr');
       }
    if (changeImageAPI.value == 'github') {
       setBg();
@@ -609,13 +619,13 @@ tagBtn1.addEventListener('click', tests1);
 tagBtn2.addEventListener('click', tests2);
 
 function tests1 () {
-   timeOfDayAPI = prompt('Введите тег 1111');
+   timeOfDayUnsplash = prompt('Введите тег 1111');
    getLinkToImageUnsplash(changeImageAPI.value);
    console.log(timeOfDayAPI);
 }
 
 function tests2 () {
-   timeOfDayAPI = prompt('Введите тег 22222');
+   timeOfDayFlickr = prompt('Введите тег 22222');
    getLinkToImageUnsplash(changeImageAPI.value);
    console.log(timeOfDayAPI);
 }
