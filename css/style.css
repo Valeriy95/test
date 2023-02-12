@@ -485,6 +485,10 @@ body {
   transition: 1s;
 }
 
+button {
+  transition: 1s;
+}
+
 @media (max-width: 768px) {
   .time {
     min-height: 80px;
