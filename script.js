@@ -134,9 +134,17 @@ const slidePrev = document.querySelector('.slide-prev');
 slidePrev.addEventListener('click', getSlidePrev);
 
 function getSlidePrev() {
-   (randomNum > 1) ? randomNum-- : randomNum = 20;
-   console.log(randomNum.toString().padStart(2, '0'));
-   setBg();
+   if (changeImageAPI.value == 'github') {
+      (randomNum > 1) ? randomNum-- : randomNum = 20;
+      console.log(randomNum.toString().padStart(2, '0'));
+      setBg();
+   };
+   if (changeImageAPI.value == 'unsplash') {
+      getLinkToImageUnsplash(changeImageAPI.value);
+   };
+   if (changeImageAPI.value == 'flickr') {
+      getLinkToImageUnsplash(changeImageAPI.value);  
+   };
 };
 
 // Виджет погоды
@@ -544,39 +552,36 @@ async function getLinkToImageUnsplash(changeImageAPI) {
  }
 
 
-async function getLinkToImageFlickr() {
- const url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=ead20d55cac86a7c2b92802520507b81&tags=${timeOfDay}&extras=url_l&format=json&nojsoncallback=1`;
- const res = await fetch(url);
- const data = await res.json();
-   console.log(data);
-   console.log(data.photos);
-   console.log(data.photos.photo);
-  let ranNum = Math.floor(Math.random() * 97 + 1);
- console.log(data.photos.photo[ranNum].url_l);
- const body = document.querySelector('body');
- let img = new Image();
- img.src = data.photos.photo[ranNum].url_l;
- img.onload = () => {      
-      body.style.background = `url(${data.photos.photo[ranNum].url_l}) center/cover, rgba(0, 0, 0, 0.5)`;
-  }; 
- }
+// async function getLinkToImageFlickr() {
+//  const url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=ead20d55cac86a7c2b92802520507b81&tags=${timeOfDay}&extras=url_l&format=json&nojsoncallback=1`;
+//  const res = await fetch(url);
+//  const data = await res.json();
+//    console.log(data);
+//    console.log(data.photos);
+//    console.log(data.photos.photo);
+//   let ranNum = Math.floor(Math.random() * 97 + 1);
+//  console.log(data.photos.photo[ranNum].url_l);
+//  const body = document.querySelector('body');
+//  let img = new Image();
+//  img.src = data.photos.photo[ranNum].url_l;
+//  img.onload = () => {      
+//       body.style.background = `url(${data.photos.photo[ranNum].url_l}) center/cover, rgba(0, 0, 0, 0.5)`;
+//   }; 
+//  }
 
 const changeImageAPI = document.querySelectorAll('input[type=radio][name="imgcollection"]');
 changeImageAPI.forEach(changeImageAPI => changeImageAPI.addEventListener('change', function changeAPI () {
    if(changeImageAPI.value == 'github') {
-//       changeLanguagesEnRu (chancelanguage.value);
       localStorage.setItem('changeImageAPI', changeImageAPI.value);
       getLocalImageAPI();
 //       setBg();
       console.log('github');
    } else if (changeImageAPI.value == 'unsplash') {
-//       changeLanguagesEnRu (chancelanguage.value);
       localStorage.setItem('changeImageAPI', changeImageAPI.value);
       getLinkToImageUnsplash(changeImageAPI.value);
       getLocalImageAPI();
       console.log('unsplash');
    } else if (changeImageAPI.value == 'flickr') {
-//       changeLanguagesEnRu (chancelanguage.value);
       localStorage.setItem('changeImageAPI', changeImageAPI.value);
       getLinkToImageUnsplash(changeImageAPI.value);
       getLocalImageAPI();
