@@ -581,10 +581,10 @@ changeImageAPI.forEach(changeImageAPI => changeImageAPI.addEventListener('change
    }
 }));
 
-function getLocalLanguage() {
+function getLocalImageAPI() {
    if(localStorage.getItem('changeImageAPI')) {
      changeImageAPI.value = localStorage.getItem('changeImageAPI');
      getLinkToImageUnsplash(changeImageAPI.value);
    }
  };
-window.addEventListener('load', getLocalLanguage);
+window.addEventListener('load', getLocalImageAPI);
