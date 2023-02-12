@@ -508,11 +508,10 @@ async function getLinkToImage2() {
  const url = 'https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=ead20d55cac86a7c2b92802520507b81&tags=nature&extras=url_l&format=json&nojsoncallback=1';
  const res = await fetch(url);
  const data = await res.json();
-//  console.log(data.photos.0.url_l);
    console.log(data);
    console.log(data.photos);
    console.log(data.photos.photo);
-  let ranNum = Math.floor(Math.random() * 20 + 1);
+  let ranNum = Math.floor(Math.random() * 97 + 1);
  console.log(data.photos.photo[ranNum].url_l);
  const body = document.querySelector('body');
  let img = new Image();
@@ -523,5 +522,21 @@ async function getLinkToImage2() {
  }
 getLinkToImage2()
 
+const changeImageAPI = document.querySelectorAll('input[type=radio][name="imgcollection"]');
+changeImageAPI.forEach(changeImageAPI => changeImageAPI.addEventListener('change', function changeAPI () {
+   if(changeImageAPI.value == 'github') {
+//       changeLanguagesEnRu (chancelanguage.value);
+//       localStorage.setItem('chancelanguage', chancelanguage.value);
+      console.log('github');
+   } else if (changeImageAPI.value == 'unsplash') {
+//       changeLanguagesEnRu (chancelanguage.value);
+//       localStorage.setItem('chancelanguage', chancelanguage.value);
+      console.log('unsplash');
+   } else if (changeImageAPI.value == 'flickr') {
+//       changeLanguagesEnRu (chancelanguage.value);
+//       localStorage.setItem('chancelanguage', chancelanguage.value);
+      console.log('flickr');
+   }
+}));
 
 
