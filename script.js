@@ -605,15 +605,15 @@ window.addEventListener('load', getLocalImageAPI);
 const tagBtn1 = document.querySelector('.tagBtn1');
 const tagBtn2 = document.querySelector('.tagBtn2');
 tagBtn1.addEventListener('click', tests1);
-tagBtn1.addEventListener('click', tests2);
+tagBtn2.addEventListener('click', tests2);
 
 function tests1 () {
- let a = prompt('Введите число');
+ let a = prompt('11111111111');
   console.log(a);
 }
 
 function tests2 () {
- let a = prompt('Введите число');
+ let a = prompt('2222222222222');
   console.log(a);
 }
 
