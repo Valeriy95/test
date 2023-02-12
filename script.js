@@ -529,6 +529,9 @@ async function getLinkToImageUnsplash(changeImageAPI) {
          body.style.background = `url(${data.photos.photo[ranNum].url_l}) center/cover, rgba(0, 0, 0, 0.5)`;
       }; 
       }
+   if (changeImageAPI.value == 'github') {
+      setBg();
+   }
 //  const res = await fetch(url);
 //  const data = await res.json();
 //  console.log(data.urls.regular);
@@ -578,4 +581,10 @@ changeImageAPI.forEach(changeImageAPI => changeImageAPI.addEventListener('change
    }
 }));
 
-
+function getLocalLanguage() {
+   if(localStorage.getItem('changeImageAPI')) {
+     changeImageAPI.value = localStorage.getItem('changeImageAPI');
+     getLinkToImageUnsplash(changeImageAPI.value);
+   }
+ };
+window.addEventListener('load', getLocalLanguage);
