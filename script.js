@@ -600,3 +600,21 @@ function getLocalImageAPI() {
    }
  };
 window.addEventListener('load', getLocalImageAPI);
+
+
+const tagBtn1 = document.querySelector('.tagBtn1');
+const tagBtn2 = document.querySelector('.tagBtn2');
+tagBtn1.addEventListener('click', tests1);
+tagBtn1.addEventListener('click', tests2);
+
+function tests1 () {
+ let a = prompt('Введите число');
+  console.log(a);
+}
+
+function tests1 () {
+ let a = prompt('Введите число');
+  console.log(a);
+}
+
+
