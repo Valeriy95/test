@@ -460,6 +460,26 @@ body {
   justify-content: space-between;
 }
 
+.tagBtn1 {
+  width: 60px;
+  height: 20px;
+  transition: 1s;
+}
+
+.tagBtn2 {
+  width: 60px;
+  height: 20px;
+  transition: 1s;
+}
+
+.tagBtn1:hover,
+.tagBtn2:hover {
+  color: white;
+  background: black;
+  cursor: pointer;
+  transition: 1s;
+}
+
 @media (max-width: 768px) {
   .time {
     min-height: 80px;
