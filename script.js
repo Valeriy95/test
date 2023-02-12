@@ -410,6 +410,8 @@ function changeLanguagesEnRu (str) {
    const languages = document.querySelector('.languages');
    const imageCollection = document.querySelector('.image-collection');
    const hideBlock = document.querySelector('.hide-block');
+   const tagBtn1 = document.querySelector('.tagBtn1');
+   const tagBtn2 = document.querySelector('.tagBtn2');
    if (str == 'ru') {
       isRus = true;
       showGreeting('ru');
@@ -426,6 +428,8 @@ function changeLanguagesEnRu (str) {
       languages.textContent = 'Язык';
       imageCollection.textContent = 'Коллекция изображений';
       hideBlock.textContent = 'Скрыть/показать блоки';
+      tagBtn1.textContent = 'Тег';
+      tagBtn2.textContent = 'Тег';
       };
    if (str == 'en') {
       isRus = false;
@@ -443,6 +447,8 @@ function changeLanguagesEnRu (str) {
       languages.textContent = 'Language';
       imageCollection.textContent = 'Image collection';
       hideBlock.textContent = 'Hide/show blocks';
+      tagBtn1.textContent = 'Tag';
+      tagBtn2.textContent = 'Tag';
       }
 //    isRus = true;
 //    showGreeting('ru');
@@ -511,10 +517,6 @@ let timeOfDayUnsplash;
 let timeOfDayFlickr;
 
 async function getLinkToImageUnsplash(changeImageAPI) {
-//    if(timeOfDayUnsplash == null || timeOfDayUnsplash == '' || timeOfDayUnsplash == undefined) {
-//    timeOfDayUnsplash = timeOfDay;
-//     console.log('ZALLLLUUUPPAAAA');
-//    }
    if (changeImageAPI == 'unsplash') {
       if(timeOfDayUnsplash == null || timeOfDayUnsplash == '' || timeOfDayUnsplash == undefined) {
          timeOfDayUnsplash = timeOfDay;
@@ -553,43 +555,13 @@ async function getLinkToImageUnsplash(changeImageAPI) {
       }; 
       console.log('timeOfDayFlickr');
       }
-   if (changeImageAPI.value == 'github') {
-      setBg();
-   }
-//  const res = await fetch(url);
-//  const data = await res.json();
-//  console.log(data.urls.regular);
-//  const body = document.querySelector('body');
-//  let img = new Image();
-//  img.src = data.urls.regular;
-//  img.onload = () => {      
-//       body.style.background = `url(${data.urls.regular}) center/cover, rgba(0, 0, 0, 0.5)`;
-//   }; 
- }
+ };
 
-
-// async function getLinkToImageFlickr() {
-//  const url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=ead20d55cac86a7c2b92802520507b81&tags=${timeOfDay}&extras=url_l&format=json&nojsoncallback=1`;
-//  const res = await fetch(url);
-//  const data = await res.json();
-//    console.log(data);
-//    console.log(data.photos);
-//    console.log(data.photos.photo);
-//   let ranNum = Math.floor(Math.random() * 97 + 1);
-//  console.log(data.photos.photo[ranNum].url_l);
-//  const body = document.querySelector('body');
-//  let img = new Image();
-//  img.src = data.photos.photo[ranNum].url_l;
-//  img.onload = () => {      
-//       body.style.background = `url(${data.photos.photo[ranNum].url_l}) center/cover, rgba(0, 0, 0, 0.5)`;
-//   }; 
-//  }
 
 const changeImageAPI = document.querySelectorAll('input[type=radio][name="imgcollection"]');
 changeImageAPI.forEach(changeImageAPI => changeImageAPI.addEventListener('change', function changeAPI () {
    if(changeImageAPI.value == 'github') {
       localStorage.setItem('changeImageAPI', changeImageAPI.value);
-//       getLinkToImageUnsplash(changeImageAPI.value);
       getLocalImageAPI();
       setBg();
       console.log('github');
