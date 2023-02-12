@@ -593,13 +593,25 @@ tagBtn1.addEventListener('click', tests1);
 tagBtn2.addEventListener('click', tests2);
 
 function tests1 () {
-   timeOfDayUnsplash = prompt('Введите тег 1111');
+   if (chancelanguage.value == 'ru') {
+      timeOfDayUnsplash = prompt('Введите тег для Unsplash API');
+   }
+   if (chancelanguage.value == 'en') {
+      timeOfDayUnsplash = prompt('Enter tag for Unsplash API');
+   }
+//    timeOfDayUnsplash = prompt('Введите тег для Unsplash API');
    getLinkToImageUnsplash(changeImageAPI.value);
    console.log(timeOfDayUnsplash);
 }
 
 function tests2 () {
-   timeOfDayFlickr = prompt('Введите тег 22222');
+   if (chancelanguage.value == 'ru') {
+      timeOfDayFlickr = prompt('Введите тег для Flickr API');
+   }
+   if (chancelanguage.value == 'en') {
+      timeOfDayFlickr = prompt('Enter tag for Flickr API');
+   }
+//    timeOfDayFlickr = prompt('Введите тег для Flickr API');
    getLinkToImageUnsplash(changeImageAPI.value);
    console.log(timeOfDayFlickr);
 }
