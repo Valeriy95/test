@@ -585,15 +585,11 @@ changeImageAPI.forEach(changeImageAPI => changeImageAPI.addEventListener('change
       localStorage.setItem('changeImageAPI', changeImageAPI.value);
       getLinkToImageUnsplash(changeImageAPI.value);
       getLocalImageAPI();
-      let a = prompt('Введите что-то');
-      alert(a);
       console.log('unsplash');
    } else if (changeImageAPI.value == 'flickr') {
       localStorage.setItem('changeImageAPI', changeImageAPI.value);
       getLinkToImageUnsplash(changeImageAPI.value);
       getLocalImageAPI();
-      let a = prompt('Введите что-то');
-      alert(a);
       console.log('flickr');
    }
 }));
@@ -613,13 +609,15 @@ tagBtn1.addEventListener('click', tests1);
 tagBtn2.addEventListener('click', tests2);
 
 function tests1 () {
- timeOfDayAPI = prompt('Введите тег 1111');
-  console.log(timeOfDayAPI);
+   timeOfDayAPI = prompt('Введите тег 1111');
+   getLinkToImageUnsplash(changeImageAPI.value);
+   console.log(timeOfDayAPI);
 }
 
 function tests2 () {
- timeOfDayAPI = prompt('Введите тег 22222');
-  console.log(timeOfDayAPI);
+   timeOfDayAPI = prompt('Введите тег 22222');
+   getLinkToImageUnsplash(changeImageAPI.value);
+   console.log(timeOfDayAPI);
 }
 
 
