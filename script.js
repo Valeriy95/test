@@ -590,6 +590,7 @@ changeImageAPI.forEach(changeImageAPI => changeImageAPI.addEventListener('change
    if(changeImageAPI.value == 'github') {
       localStorage.setItem('changeImageAPI', changeImageAPI.value);
       getLocalImageAPI();
+      getLinkToImageUnsplash(changeImageAPI.value);
 //       setBg();
       console.log('github');
    } else if (changeImageAPI.value == 'unsplash') {
