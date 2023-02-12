@@ -566,17 +566,20 @@ changeImageAPI.forEach(changeImageAPI => changeImageAPI.addEventListener('change
    if(changeImageAPI.value == 'github') {
 //       changeLanguagesEnRu (chancelanguage.value);
       localStorage.setItem('changeImageAPI', changeImageAPI.value);
-      setBg();
+      getLocalImageAPI();
+//       setBg();
       console.log('github');
    } else if (changeImageAPI.value == 'unsplash') {
 //       changeLanguagesEnRu (chancelanguage.value);
       localStorage.setItem('changeImageAPI', changeImageAPI.value);
       getLinkToImageUnsplash(changeImageAPI.value);
+      getLocalImageAPI();
       console.log('unsplash');
    } else if (changeImageAPI.value == 'flickr') {
 //       changeLanguagesEnRu (chancelanguage.value);
       localStorage.setItem('changeImageAPI', changeImageAPI.value);
       getLinkToImageUnsplash(changeImageAPI.value);
+      getLocalImageAPI();
       console.log('flickr');
    }
 }));
