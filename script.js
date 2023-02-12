@@ -589,9 +589,9 @@ const changeImageAPI = document.querySelectorAll('input[type=radio][name="imgcol
 changeImageAPI.forEach(changeImageAPI => changeImageAPI.addEventListener('change', function changeAPI () {
    if(changeImageAPI.value == 'github') {
       localStorage.setItem('changeImageAPI', changeImageAPI.value);
-      getLinkToImageUnsplash(changeImageAPI.value);
+//       getLinkToImageUnsplash(changeImageAPI.value);
       getLocalImageAPI();
-//       setBg();
+      setBg();
       console.log('github');
    } else if (changeImageAPI.value == 'unsplash') {
       localStorage.setItem('changeImageAPI', changeImageAPI.value);
