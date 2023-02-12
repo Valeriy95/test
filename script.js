@@ -489,17 +489,44 @@ window.addEventListener('load', getLocalLanguage);
 
 //  9. Получение фонового изображения от API
 
-async function getLinkToImageUnsplash() {
- const url = `https://api.unsplash.com/photos/random?query=${timeOfDay}&client_id=TjmnzbgMoc-UhW_LILGZgsS9p_rcXLjTsy9L22RGQ6Y`;
- const res = await fetch(url);
- const data = await res.json();
- console.log(data.urls.regular);
- const body = document.querySelector('body');
- let img = new Image();
- img.src = data.urls.regular;
- img.onload = () => {      
-      body.style.background = `url(${data.urls.regular}) center/cover, rgba(0, 0, 0, 0.5)`;
-  }; 
+async function getLinkToImageUnsplash(changeImageAPI) {
+   if (changeImageAPI == 'unsplash') {
+      const url = `https://api.unsplash.com/photos/random?query=${timeOfDay}&client_id=TjmnzbgMoc-UhW_LILGZgsS9p_rcXLjTsy9L22RGQ6Y`;
+      const res = await fetch(url);
+      const data = await res.json();
+      console.log(data.urls.regular);
+      const body = document.querySelector('body');
+      let img = new Image();
+      img.src = data.urls.regular;
+      img.onload = () => {      
+         body.style.background = `url(${data.urls.regular}) center/cover, rgba(0, 0, 0, 0.5)`;
+      }; 
+   }
+   if (changeImageAPI == 'flickr') {
+      url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=ead20d55cac86a7c2b92802520507b81&tags=${timeOfDay}&extras=url_l&format=json&nojsoncallback=1`;
+      const res = await fetch(url);
+      const data = await res.json();
+      console.log(data);
+      console.log(data.photos);
+      console.log(data.photos.photo);
+      let ranNum = Math.floor(Math.random() * 97 + 1);
+      console.log(data.photos.photo[ranNum].url_l);
+      const body = document.querySelector('body');
+      let img = new Image();
+      img.src = data.photos.photo[ranNum].url_l;
+      img.onload = () => {      
+         body.style.background = `url(${data.photos.photo[ranNum].url_l}) center/cover, rgba(0, 0, 0, 0.5)`;
+      }; 
+      }
+//  const res = await fetch(url);
+//  const data = await res.json();
+//  console.log(data.urls.regular);
+//  const body = document.querySelector('body');
+//  let img = new Image();
+//  img.src = data.urls.regular;
+//  img.onload = () => {      
+//       body.style.background = `url(${data.urls.regular}) center/cover, rgba(0, 0, 0, 0.5)`;
+//   }; 
  }
 
 
@@ -530,12 +557,12 @@ changeImageAPI.forEach(changeImageAPI => changeImageAPI.addEventListener('change
    } else if (changeImageAPI.value == 'unsplash') {
 //       changeLanguagesEnRu (chancelanguage.value);
       localStorage.setItem('changeImageAPI', changeImageAPI.value);
-      getLinkToImageUnsplash()
+      getLinkToImageUnsplash(changeImageAPI.value);
       console.log('unsplash');
    } else if (changeImageAPI.value == 'flickr') {
 //       changeLanguagesEnRu (chancelanguage.value);
       localStorage.setItem('changeImageAPI', changeImageAPI.value);
-      getLinkToImageFlickr()
+      getLinkToImageUnsplash(changeImageAPI.value);
       console.log('flickr');
    }
 }));
