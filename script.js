@@ -501,7 +501,6 @@ async function getLinkToImageUnsplash() {
       body.style.background = `url(${data.urls.regular}) center/cover, rgba(0, 0, 0, 0.5)`;
   }; 
  }
-// getLinkToImage()
 
 
 async function getLinkToImageFlickr() {
@@ -520,23 +519,22 @@ async function getLinkToImageFlickr() {
       body.style.background = `url(${data.photos.photo[ranNum].url_l}) center/cover, rgba(0, 0, 0, 0.5)`;
   }; 
  }
-// getLinkToImage2()
 
 const changeImageAPI = document.querySelectorAll('input[type=radio][name="imgcollection"]');
 changeImageAPI.forEach(changeImageAPI => changeImageAPI.addEventListener('change', function changeAPI () {
    if(changeImageAPI.value == 'github') {
 //       changeLanguagesEnRu (chancelanguage.value);
-//       localStorage.setItem('chancelanguage', chancelanguage.value);
+      localStorage.setItem('changeImageAPI', changeImageAPI.value);
       setBg();
       console.log('github');
    } else if (changeImageAPI.value == 'unsplash') {
 //       changeLanguagesEnRu (chancelanguage.value);
-//       localStorage.setItem('chancelanguage', chancelanguage.value);
+      localStorage.setItem('changeImageAPI', changeImageAPI.value);
       getLinkToImageUnsplash()
       console.log('unsplash');
    } else if (changeImageAPI.value == 'flickr') {
 //       changeLanguagesEnRu (chancelanguage.value);
-//       localStorage.setItem('chancelanguage', chancelanguage.value);
+      localStorage.setItem('changeImageAPI', changeImageAPI.value);
       getLinkToImageFlickr()
       console.log('flickr');
    }
