@@ -114,9 +114,20 @@ const slideNext = document.querySelector('.slide-next');
 slideNext.addEventListener('click', getSlideNext);
 
 function getSlideNext() {
-   (randomNum < 20) ? randomNum++ : randomNum = 1;
-   console.log(randomNum.toString().padStart(2, '0'));
-   setBg();
+   if (changeImageAPI.value == 'github') {
+     (randomNum < 20) ? randomNum++ : randomNum = 1;
+      console.log(randomNum.toString().padStart(2, '0'));
+      setBg(); 
+   };
+   if (changeImageAPI.value == 'unsplash') {
+      getLinkToImageUnsplash(changeImageAPI.value);
+   };
+   if (changeImageAPI.value == 'flickr') {
+      getLinkToImageUnsplash(changeImageAPI.value);  
+   };
+//    (randomNum < 20) ? randomNum++ : randomNum = 1;
+//    console.log(randomNum.toString().padStart(2, '0'));
+//    setBg();
 };
 
 const slidePrev = document.querySelector('.slide-prev');
