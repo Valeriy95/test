@@ -580,11 +580,15 @@ changeImageAPI.forEach(changeImageAPI => changeImageAPI.addEventListener('change
       localStorage.setItem('changeImageAPI', changeImageAPI.value);
       getLinkToImageUnsplash(changeImageAPI.value);
       getLocalImageAPI();
+      let a = prompt('Введите что-то');
+      alert(a);
       console.log('unsplash');
    } else if (changeImageAPI.value == 'flickr') {
       localStorage.setItem('changeImageAPI', changeImageAPI.value);
       getLinkToImageUnsplash(changeImageAPI.value);
       getLocalImageAPI();
+      let a = prompt('Введите что-то');
+      alert(a);
       console.log('flickr');
    }
 }));
