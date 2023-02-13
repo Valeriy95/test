@@ -443,6 +443,10 @@ body {
   padding-right: 30px;
 }
 
+.langBtnSet:hover {
+  cursor: pointer;
+}
+
 .imgBtn {
   display: flex;
   flex-direction: column;
