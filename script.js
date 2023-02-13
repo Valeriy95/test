@@ -643,7 +643,7 @@ function hideBlocClose () {
 
 
 const changeHideBlocs = document.querySelectorAll('input[type=checkbox][name="hide-bloc"]');
-changeHideBlocs.forEach(changeHideBlocs => changeHideBlocs.addEventListener('change', changeHide () {
+changeHideBlocs.forEach(changeHideBlocs => changeHideBlocs.addEventListener('change', function changeHide () {
    if(changeHideBlocs.value == 'time') {
       const time = document.querySelector('.time');
       time.classList.toggle('opacity-bloc');
