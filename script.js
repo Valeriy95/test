@@ -633,3 +633,13 @@ function hideBlocClose () {
    hideContainer.classList.add('hidden');
 }
 
+const hideBlocTimeBtn = document.querySelector('.hide-bloc-time');
+hideBlocTimeBtn.addEventListener('click', hideBlocOpenCloseTime);
+
+function hideBlocOpenCloseTime () {
+   const time = document.querySelector('.time');
+   time.classList.toggle('.opacity-bloc');
+}
+
+
+
