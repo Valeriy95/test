@@ -766,6 +766,7 @@ function getchangeHideTime() {
    }
  };
 window.addEventListener('load', getchangeHideTime);
+window.addEventListener('load', changeHideTime);
 
 function getchangeHideDate() {
    if(localStorage.getItem('chHideDate')) {
