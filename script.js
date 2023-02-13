@@ -641,7 +641,7 @@ function hideBlocClose () {
 //    time.classList.toggle('opacity-bloc');
 // }
 
-let isHideTime = true;
+// let isHideTime = true;
 
 const chHideTime = document.querySelector('input[type=checkbox][name="time"]');
 chHideTime.addEventListener('change', changeHideTime);
@@ -670,11 +670,11 @@ function changeHideTime () {
 //    isHideTime = true;
    const time = document.querySelector('.time');
    time.classList.toggle('opacity-bloc');
-   if (isHideTime == false) {
+   if (isHideTime.value == false) {
       isHideTime = true;
       time.classList.add('opacity-bloc');
       localStorage.setItem('isHideTime', true);
-   } else if (isHideTime == true) {
+   } else if (isHideTime.value == true) {
       isHideTime = false;
       time.classList.remove('opacity-bloc');
       localStorage.setItem('isHideTime', false);
