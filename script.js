@@ -589,10 +589,10 @@ window.addEventListener('load', getLocalImageAPI);
 
 const tagBtn1 = document.querySelector('.tagBtn1');
 const tagBtn2 = document.querySelector('.tagBtn2');
-tagBtn1.addEventListener('click', tests1);
-tagBtn2.addEventListener('click', tests2);
+tagBtn1.addEventListener('click', tagChangeUnsplash);
+tagBtn2.addEventListener('click', tagChangeFlickr);
 
-function tests1 () {
+function tagChangeUnsplash () {
    getLocalLanguage()
    if (chancelanguage.value == 'ru') {
       timeOfDayUnsplash = prompt('Введите тег для Unsplash API. Например: природа')
@@ -605,7 +605,7 @@ function tests1 () {
    console.log(timeOfDayUnsplash);
 }
 
-function tests2 () {
+function tagChangeFlickr () {
    getLocalLanguage()
    if (chancelanguage.value == 'ru') {
       timeOfDayFlickr = prompt('Введите тег для Flickr API. Например: природа');
@@ -618,4 +618,11 @@ function tests2 () {
    console.log(timeOfDayFlickr);
 }
 
+
+const hideBlocBtn = document.querySelector('.hide-block');
+hideBlocBtn.addEventListener('click', hideBlocOpenClose);
+
+function hideBlocOpenClose () {
+   console.log('click');
+}
 
