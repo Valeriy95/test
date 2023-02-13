@@ -669,7 +669,7 @@ chHideAudio.addEventListener('change', changeHideAudio);
 function changeHideTime () {
 //    isHideTime = true;
    const time = document.querySelector('.time');
-   time.classList.toggle('opacity-bloc');
+//    time.classList.toggle('opacity-bloc');
    if (isHideTime.value == false) {
       isHideTime = true;
       time.classList.add('opacity-bloc');
