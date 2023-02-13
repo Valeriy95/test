@@ -373,8 +373,8 @@ body {
   background: darkgrey;;
   width: 350px;
   height: 400px;
-  margin-left: 85%;
-  margin-top: -380px;
+  margin-left: 637px;
+  margin-top: -120%;
   border-radius: 26px 26px 0px 26px;
   transition: 1s;
 }
@@ -419,7 +419,6 @@ body {
   font-size: 24px;
 }
 
-.image-collection:hover,
 .hide-block:hover {
   cursor: pointer;
   color: #ab9422;
@@ -434,7 +433,7 @@ body {
 } 
 
 .hide {
-  margin-left: 637px;
+  margin-top: -380px;
   transition: 1s;
 }
 
@@ -472,14 +471,6 @@ body {
   border-radius: 10px;
   transition: 1s;
 }
-
-/* .tagBtn2 {
-  width: 60px;
-  height: 20px;
-  border-radius: 10px;
-  border-color: white;
-  transition: 1s;
-} */
 
 .tagBtn1:hover,
 .tagBtn2:hover {
