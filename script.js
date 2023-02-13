@@ -652,5 +652,25 @@ changeHideBlocs.forEach(changeHideBlocs => changeHideBlocs.addEventListener('cha
       const date = document.querySelector('.date');
       date.classList.toggle('opacity-bloc');
    };
+   if(changeHideBlocs.value == 'greeting') {
+      const greeting = document.querySelector('.greeting-container');
+      greeting.classList.toggle('opacity-bloc');
+   };
+   if(changeHideBlocs.value == 'quote') {
+      const quote = document.querySelector('.quote');
+      const author = document.querySelector('.author');
+      quote.classList.toggle('opacity-bloc');
+      author.classList.toggle('opacity-bloc');
+   };
+   if(changeHideBlocs.value == 'weather') {
+      const weather = document.querySelector('.weather');
+      weather.classList.toggle('opacity-bloc');
+   };
+   if(changeHideBlocs.value == 'audio') {
+      const player = document.querySelector('.player');
+      const wrapperPlayer = document.querySelector('.wrapper-player');
+      player.classList.toggle('opacity-bloc');
+      wrapperPlayer.classList.toggle('opacity-bloc');
+   };
    
 }));
