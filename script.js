@@ -621,9 +621,15 @@ function tagChangeFlickr () {
 
 const hideBlocBtn = document.querySelector('.hide-block');
 const hideContainer = document.querySelector('.hide-block-container');
-hideBlocBtn.addEventListener('click', hideBlocOpenClose);
+const hideBlocCloseBtn = document.querySelector(.'hide-bloc-close');
+hideBlocBtn.addEventListener('click', hideBlocOpen);
+hideBlocCloseBtn.addEventListener('click', hideBlocClose);
 
-function hideBlocOpenClose () {
+function hideBlocOpen () {
    hideContainer.classList.remove('hidden');
+};
+
+function hideBlocClose () {
+   hideContainer.classList.add('hidden');
 }
 
