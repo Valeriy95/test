@@ -686,7 +686,7 @@ changeHideBlocs.forEach(changeHideBlocs => changeHideBlocs.addEventListener('cha
 
 function getchangeHideTime() {
    if(localStorage.getItem('changeHideTime')) {
-     changeHideTime.value = localStorage.getItem('changeHideTime');
+     changeHideBlocs.value = localStorage.getItem('changeHideTime');
      changeHide ()
    }
  };
@@ -694,7 +694,7 @@ window.addEventListener('load', getchangeHideTime);
 
 function getchangeHideDate() {
    if(localStorage.getItem('changeHideDate')) {
-     changeHideDate.value = localStorage.getItem('changeHideDate');
+     changeHideBlocs.value = localStorage.getItem('changeHideDate');
      changeHide ()
    }
  };
@@ -702,7 +702,7 @@ window.addEventListener('load', getchangeHideDate);
 
 function getchangeHideGreeting() {
    if(localStorage.getItem('changeHideGreeting')) {
-     changeHideGreeting.value = localStorage.getItem('changeHideGreeting');
+     changeHideBlocs.value = localStorage.getItem('changeHideGreeting');
      changeHide ()
    }
  };
@@ -710,7 +710,7 @@ window.addEventListener('load', getchangeHideGreeting);
 
 function getchangeHideQuote() {
    if(localStorage.getItem('changeHideQuote')) {
-     changeHideQuote.value = localStorage.getItem('changeHideQuote');
+     changeHideBlocs.value = localStorage.getItem('changeHideQuote');
      changeHide ()
    }
  };
@@ -718,7 +718,7 @@ window.addEventListener('load', getchangeHideQuote);
 
 function getchangeHideWeather() {
    if(localStorage.getItem('changeHideWeather')) {
-     changeHideWeather.value = localStorage.getItem('changeHideWeather');
+     changeHideBlocs.value = localStorage.getItem('changeHideWeather');
      changeHide ()
    }
  };
@@ -726,7 +726,7 @@ window.addEventListener('load', getchangeHideWeather);
 
 function getchangeHideAudio() {
    if(localStorage.getItem('changeHideAudio')) {
-     changeHideAudio.value = localStorage.getItem('changeHideAudio');
+    changeHideBlocs.value = localStorage.getItem('changeHideAudio');
      changeHide ()
    }
  };
