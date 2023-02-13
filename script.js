@@ -649,17 +649,17 @@ function changeHide () {
    if(changeHideBlocs.value == 'time') {
       const time = document.querySelector('.time');
       time.classList.toggle('opacity-bloc');
-      localStorage.setItem('changeHideBlocs', changeHideBlocs.value);
+      localStorage.setItem('changeHideTime', changeHideTime.value);
    }
    if(changeHideBlocs.value == 'date') {
       const date = document.querySelector('.date');
       date.classList.toggle('opacity-bloc');
-      localStorage.setItem('changeHideBlocs', changeHideBlocs.value);
+      localStorage.setItem('changeHideDate', changeHideDate.value);
    };
    if(changeHideBlocs.value == 'greeting') {
       const greeting = document.querySelector('.greeting-container');
       greeting.classList.toggle('opacity-bloc');
-      localStorage.setItem('changeHideBlocs', changeHideBlocs.value);
+      localStorage.setItem('changeHideGreeting', changeHideGreeting.value);
    };
    if(changeHideBlocs.value == 'quote') {
       const quote = document.querySelector('.quote');
@@ -668,27 +668,67 @@ function changeHide () {
       quote.classList.toggle('opacity-bloc');
       author.classList.toggle('opacity-bloc');
       changeQuote.classList.toggle('opacity-bloc');
-      localStorage.setItem('changeHideBlocs', changeHideBlocs.value);
+      localStorage.setItem('changeHideQuote', changeHideQuote.value);
    };
    if(changeHideBlocs.value == 'weather') {
       const weather = document.querySelector('.weather');
       weather.classList.toggle('opacity-bloc');
-      localStorage.setItem('changeHideBlocs', changeHideBlocs.value);
+      localStorage.setItem('changeHideWeather', changeHideWeather.value);
    };
    if(changeHideBlocs.value == 'audio') {
       const player = document.querySelector('.player');
       const wrapperPlayer = document.querySelector('.wrapper-player');
       player.classList.toggle('opacity-bloc');
       wrapperPlayer.classList.toggle('opacity-bloc');
-      localStorage.setItem('changeHideBlocs', changeHideBlocs.value);
+      localStorage.setItem('changeHideAudio', changeHideAudio.value);
    };  
 };
 
-function getChangeHideBlocs() {
-   if(localStorage.getItem('changeHideBlocs')) {
-     changeHideBlocs.value = localStorage.getItem('changeHideBlocs');
-     getLinkToImageUnsplash(changeHideBlocs.value);
+function getchangeHideTime() {
+   if(localStorage.getItem('changeHideTime')) {
+     changeHideTime.value = localStorage.getItem('changeHideTime');
      changeHide ()
    }
  };
-window.addEventListener('load', getChangeHideBlocs);
+window.addEventListener('load', getchangeHideTime);
+
+function getchangeHideDate() {
+   if(localStorage.getItem('changeHideDate')) {
+     changeHideDate.value = localStorage.getItem('changeHideDate');
+     changeHide ()
+   }
+ };
+window.addEventListener('load', getchangeHideDate);
+
+function getchangeHideGreeting() {
+   if(localStorage.getItem('changeHideGreeting')) {
+     changeHideGreeting.value = localStorage.getItem('changeHideGreeting');
+     changeHide ()
+   }
+ };
+window.addEventListener('load', getchangeHideGreeting);
+
+function getchangeHideQuote() {
+   if(localStorage.getItem('changeHideQuote')) {
+     changeHideQuote.value = localStorage.getItem('changeHideQuote');
+     changeHide ()
+   }
+ };
+window.addEventListener('load', getchangeHideQuote);
+
+function getchangeHideWeather() {
+   if(localStorage.getItem('changeHideWeather')) {
+     changeHideWeather.value = localStorage.getItem('changeHideWeather');
+     changeHide ()
+   }
+ };
+window.addEventListener('load', getchangeHideWeather);
+
+function getchangeHideAudio() {
+   if(localStorage.getItem('changeHideAudio')) {
+     changeHideAudio.value = localStorage.getItem('changeHideAudio');
+     changeHide ()
+   }
+ };
+window.addEventListener('load', getchangeHideAudio);
+
