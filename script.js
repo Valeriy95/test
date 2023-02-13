@@ -647,17 +647,17 @@ changeHideBlocs.forEach(changeHideBlocs => changeHideBlocs.addEventListener('cha
    if(changeHideBlocs.value == 'time') {
       const time = document.querySelector('.time');
       time.classList.toggle('opacity-bloc');
-      localStorage.setItem('changeHideTime', changeHideTime.value);
+      localStorage.setItem('changeHideTime', changeHideBlocs.value);
    }
    if(changeHideBlocs.value == 'date') {
       const date = document.querySelector('.date');
       date.classList.toggle('opacity-bloc');
-      localStorage.setItem('changeHideDate', changeHideDate.value);
+      localStorage.setItem('changeHideDate', changeHideBlocs.value);
    };
    if(changeHideBlocs.value == 'greeting') {
       const greeting = document.querySelector('.greeting-container');
       greeting.classList.toggle('opacity-bloc');
-      localStorage.setItem('changeHideGreeting', changeHideGreeting.value);
+      localStorage.setItem('changeHideGreeting', changeHideBlocs.value);
    };
    if(changeHideBlocs.value == 'quote') {
       const quote = document.querySelector('.quote');
@@ -666,19 +666,19 @@ changeHideBlocs.forEach(changeHideBlocs => changeHideBlocs.addEventListener('cha
       quote.classList.toggle('opacity-bloc');
       author.classList.toggle('opacity-bloc');
       changeQuote.classList.toggle('opacity-bloc');
-      localStorage.setItem('changeHideQuote', changeHideQuote.value);
+      localStorage.setItem('changeHideQuote', changeHideBlocs.value);
    };
    if(changeHideBlocs.value == 'weather') {
       const weather = document.querySelector('.weather');
       weather.classList.toggle('opacity-bloc');
-      localStorage.setItem('changeHideWeather', changeHideWeather.value);
+      localStorage.setItem('changeHideWeather', changeHideBlocs.value);
    };
    if(changeHideBlocs.value == 'audio') {
       const player = document.querySelector('.player');
       const wrapperPlayer = document.querySelector('.wrapper-player');
       player.classList.toggle('opacity-bloc');
       wrapperPlayer.classList.toggle('opacity-bloc');
-      localStorage.setItem('changeHideAudio', changeHideAudio.value);
+      localStorage.setItem('changeHideAudio', changeHideBlocs.value);
    };  
 }));
 
