@@ -633,13 +633,24 @@ function hideBlocClose () {
    hideContainer.classList.add('hidden');
 }
 
-const hideBlocTimeBtn = document.querySelector('.hide-bloc-time');
-hideBlocTimeBtn.addEventListener('click', hideBlocOpenCloseTime);
+// const hideBlocTimeBtn = document.querySelector('.hide-bloc-time');
+// hideBlocTimeBtn.addEventListener('click', hideBlocOpenCloseTime);
 
-function hideBlocOpenCloseTime () {
-   const time = document.querySelector('.time');
-   time.classList.toggle('opacity-bloc');
-}
+// function hideBlocOpenCloseTime () {
+//    const time = document.querySelector('.time');
+//    time.classList.toggle('opacity-bloc');
+// }
 
 
-
+const changeHideBlocs = document.querySelectorAll('input[type=checkbox][name="hide-bloc"]');
+changeHideBlocs.forEach(changeHideBlocs => changeHideBlocs.addEventListener('change', function changeHide () {
+   if(changeHideBlocs.value == 'time') {
+      const time = document.querySelector('.time');
+      time.classList.toggle('opacity-bloc');
+   }
+   if(changeHideBlocs.value == 'date') {
+      const date = document.querySelector('.date');
+      date.classList.toggle('opacity-bloc');
+   };
+   
+}));
