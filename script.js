@@ -595,10 +595,10 @@ tagBtn2.addEventListener('click', tests2);
 function tests1 () {
    getLocalLanguage()
    if (chancelanguage.value == 'ru') {
-      timeOfDayUnsplash = prompt('Введите тег для Unsplash API');
+      timeOfDayUnsplash = prompt('Введите тег для Unsplash API. Например: природа')
    }
    if (chancelanguage.value == 'en') {
-      timeOfDayUnsplash = prompt('Enter tag for Unsplash API');
+      timeOfDayUnsplash = prompt('Enter tag for Unsplash API. For example: nature');
    }
 //    timeOfDayUnsplash = prompt('Введите тег для Unsplash API');
    getLinkToImageUnsplash(changeImageAPI.value);
@@ -608,10 +608,10 @@ function tests1 () {
 function tests2 () {
    getLocalLanguage()
    if (chancelanguage.value == 'ru') {
-      timeOfDayFlickr = prompt('Введите тег для Flickr API');
+      timeOfDayFlickr = prompt('Введите тег для Flickr API.Например: природа');
    }
    if (chancelanguage.value == 'en') {
-      timeOfDayFlickr = prompt('Enter tag for Flickr API');
+      timeOfDayFlickr = prompt('Enter tag for Flickr API. For example: nature);
    }
 //    timeOfDayFlickr = prompt('Введите тег для Flickr API');
    getLinkToImageUnsplash(changeImageAPI.value);
