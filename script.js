@@ -621,7 +621,7 @@ function tagChangeFlickr () {
 
 const hideBlocBtn = document.querySelector('.hide-block');
 const hideContainer = document.querySelector('.hide-block-container');
-const hideBlocCloseBtn = document.querySelector(.'hide-bloc-close');
+const hideBlocCloseBtn = document.querySelector('.hide-bloc-close');
 hideBlocBtn.addEventListener('click', hideBlocOpen);
 hideBlocCloseBtn.addEventListener('click', hideBlocClose);
 
