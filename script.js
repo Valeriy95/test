@@ -670,10 +670,14 @@ function changeHideTime () {
 //    isHideTime = true;
    const time = document.querySelector('.time');
    time.classList.toggle('opacity-bloc');
-   if (time.classList.contains('opacity-bloc') == true) {
-      localStorage.setItem('chHideTime', true);
-   } else if (time.classList.contains('opacity-bloc') == false) {
-      localStorage.setItem('chHideTime', false);
+   if (isHideTime == false) {
+      isHideTime = true;
+      time.classList.add('opacity-bloc');
+      localStorage.setItem('isHideTime', true);
+   } else if (isHideTime == true) {
+      isHideTime = false;
+      time.classList.remove('opacity-bloc');
+      localStorage.setItem('isHideTime', false);
    }
 //    localStorage.setItem('chHideTime', chHideTime.value);
 };
