@@ -379,7 +379,8 @@ body {
   transition: 1s;
 }
 
-.close-icon {
+.close-icon,
+.hide-bloc-close{
   width: 30px;
   height: 30px;
   position: absolute;
@@ -387,7 +388,8 @@ body {
   margin-left: 280px
 }
 
-.close-icon1 {
+.close-icon1,
+.close-icon-hide1 {
   position: absolute;
   width: 100%;
   height: 0px;
@@ -395,7 +397,8 @@ body {
   transform: rotate(45deg); 
 }
 
-.close-icon2 {
+.close-icon2,
+.close-icon-hide1 {
   position: absolute;
   width: 100%;
   height: 0px;
