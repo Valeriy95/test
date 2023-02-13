@@ -641,7 +641,7 @@ function hideBlocClose () {
 //    time.classList.toggle('opacity-bloc');
 // }
 
-let isHideTime = false;
+let isHideTime = true;
 
 const chHideTime = document.querySelector('input[type=checkbox][name="time"]');
 chHideTime.addEventListener('change', changeHideTime);
