@@ -445,6 +445,7 @@ body {
 
 .langBtnSet:hover {
   cursor: pointer;
+  color: white; 
 }
 
 .imgBtn {
