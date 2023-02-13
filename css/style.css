@@ -498,6 +498,15 @@ div {
   flex-direction: row;
 }
 
+.hide-block-container {
+  position: absolute;
+  margin-top: -361px;
+  width: 350px;
+  background: darkgrey;
+  height: 400px;
+  border-radius: 26px 26px 0px 26px;
+}
+  
 @media (max-width: 768px) {
   .time {
     min-height: 80px;
