@@ -641,6 +641,7 @@ function hideBlocClose () {
 //    time.classList.toggle('opacity-bloc');
 // }
 
+let isHideTime = false;
 
 const chHideTime = document.querySelector('input[type=checkbox][name="time"]');
 chHideTime.addEventListener('change', changeHideTime);
@@ -666,9 +667,15 @@ chHideAudio.addEventListener('change', changeHideAudio);
 // chHideTodolist.addEventListener('change', changeHide);
 
 function changeHideTime () {
+//    isHideTime = true;
    const time = document.querySelector('.time');
    time.classList.toggle('opacity-bloc');
-   localStorage.setItem('chHideTime', chHideTime.value);
+   if (time.classList.contains('opacity-bloc') == true) {
+      localStorage.setItem('chHideTime', true);
+   } else if (time.classList.contains('opacity-bloc') == false) {
+      localStorage.setItem('chHideTime', false);
+   }
+//    localStorage.setItem('chHideTime', chHideTime.value);
 };
 
 function changeHideDate () {
