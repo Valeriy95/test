@@ -608,10 +608,10 @@ function tests1 () {
 function tests2 () {
    getLocalLanguage()
    if (chancelanguage.value == 'ru') {
-      timeOfDayFlickr = prompt('Введите тег для Flickr API.Например: природа');
+      timeOfDayFlickr = prompt('Введите тег для Flickr API. Например: природа');
    }
    if (chancelanguage.value == 'en') {
-      timeOfDayFlickr = prompt('Enter tag for Flickr API. For example: nature);
+      timeOfDayFlickr = prompt('Enter tag for Flickr API. For example: nature');
    }
 //    timeOfDayFlickr = prompt('Введите тег для Flickr API');
    getLinkToImageUnsplash(changeImageAPI.value);
