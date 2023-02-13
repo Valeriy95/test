@@ -638,7 +638,7 @@ hideBlocTimeBtn.addEventListener('click', hideBlocOpenCloseTime);
 
 function hideBlocOpenCloseTime () {
    const time = document.querySelector('.time');
-   time.classList.toggle('.opacity-bloc');
+   time.classList.toggle('opacity-bloc');
 }
 
 
