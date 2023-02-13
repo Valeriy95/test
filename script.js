@@ -643,7 +643,9 @@ function hideBlocClose () {
 
 
 const changeHideBlocs = document.querySelectorAll('input[type=checkbox][name="hide-bloc"]');
-changeHideBlocs.forEach(changeHideBlocs => changeHideBlocs.addEventListener('change', function changeHide () {
+changeHideBlocs.forEach(changeHideBlocs => changeHideBlocs.addEventListener('change', changeHide));
+                                                                            
+function changeHide () {
    if(changeHideBlocs.value == 'time') {
       const time = document.querySelector('.time');
       time.classList.toggle('opacity-bloc');
@@ -662,8 +664,10 @@ changeHideBlocs.forEach(changeHideBlocs => changeHideBlocs.addEventListener('cha
    if(changeHideBlocs.value == 'quote') {
       const quote = document.querySelector('.quote');
       const author = document.querySelector('.author');
+      const changeQuote = document.querySelector('.change-quote');
       quote.classList.toggle('opacity-bloc');
       author.classList.toggle('opacity-bloc');
+      changeQuote.classList.toggle('opacity-bloc');
       localStorage.setItem('changeHideBlocs', changeHideBlocs.value);
    };
    if(changeHideBlocs.value == 'weather') {
@@ -677,14 +681,14 @@ changeHideBlocs.forEach(changeHideBlocs => changeHideBlocs.addEventListener('cha
       player.classList.toggle('opacity-bloc');
       wrapperPlayer.classList.toggle('opacity-bloc');
       localStorage.setItem('changeHideBlocs', changeHideBlocs.value);
-   };
-   
-}));
+   };  
+};
 
 function getChangeHideBlocs() {
    if(localStorage.getItem('changeHideBlocs')) {
      changeHideBlocs.value = localStorage.getItem('changeHideBlocs');
      getLinkToImageUnsplash(changeHideBlocs.value);
+     changeHide ()
    }
  };
 window.addEventListener('load', getChangeHideBlocs);
