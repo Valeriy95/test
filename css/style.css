@@ -421,7 +421,7 @@ body {
 
 .hide-block:hover {
   cursor: pointer;
-  color: #ab9422;
+  color: #ffffff;
   transition: 1s;
 } 
 
@@ -441,11 +441,13 @@ body {
   font-size: 24px;
   color: black; 
   padding-right: 30px;
+  transition: 1s;
 }
 
 .langBtnSet:hover {
   cursor: pointer;
   color: white; 
+  transition: 1s;
 }
 
 .imgBtn {
