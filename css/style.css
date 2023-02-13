@@ -507,6 +507,10 @@ div {
   border-radius: 26px 26px 0px 26px;
 }
   
+.opacity-bloc {
+  opacity: 0;  
+}
+
 @media (max-width: 768px) {
   .time {
     min-height: 80px;
