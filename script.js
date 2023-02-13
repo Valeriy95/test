@@ -633,8 +633,8 @@ function hideBlocClose () {
    hideContainer.classList.add('hidden');
 }
 
-// const hideBlocTimeBtn = document.querySelector('.hide-bloc-time');
-// hideBlocTimeBtn.addEventListener('click', hideBlocOpenCloseTime);
+const hideBlocTimeBtn = document.querySelector('.hide-bloc-time');
+hideBlocTimeBtn.addEventListener('click', hideBlocOpenCloseTime);
 
 // function hideBlocOpenCloseTime () {
 //    const time = document.querySelector('.time');
@@ -642,94 +642,156 @@ function hideBlocClose () {
 // }
 
 
-const changeHideBlocs = document.querySelectorAll('input[type=checkbox][name="hide-bloc"]');
-changeHideBlocs.forEach(changeHideBlocs => changeHideBlocs.addEventListener('click', changeHide)) 
+const chHideTime = document.querySelector('input[type=checkbox][name="time"]');
+chHideTime.addEventListener('click', changeHideTime);
+// const changeHideBlocs = document.querySelectorAll('input[type=checkbox][name="hide-bloc"]');
+// changeHideBlocs.forEach(changeHideBlocs => changeHideBlocs.addEventListener('click', changeHide)) 
                                                                             
-function changeHide () {
-   if(changeHideBlocs.value == 'time') {
-      const time = document.querySelector('.time');
-      time.classList.toggle('opacity-bloc');
-      localStorage.setItem('changeHideTime', changeHideBlocs.value);
-   }
-   if(changeHideBlocs.value == 'date') {
-      const date = document.querySelector('.date');
-      date.classList.toggle('opacity-bloc');
-      localStorage.setItem('changeHideDate', changeHideBlocs.value);
-   };
-   if(changeHideBlocs.value == 'greeting') {
-      const greeting = document.querySelector('.greeting-container');
-      greeting.classList.toggle('opacity-bloc');
-      localStorage.setItem('changeHideGreeting', changeHideBlocs.value);
-   };
-   if(changeHideBlocs.value == 'quote') {
-      const quote = document.querySelector('.quote');
-      const author = document.querySelector('.author');
-      const changeQuote = document.querySelector('.change-quote');
-      quote.classList.toggle('opacity-bloc');
-      author.classList.toggle('opacity-bloc');
-      changeQuote.classList.toggle('opacity-bloc');
-      localStorage.setItem('changeHideQuote', changeHideBlocs.value);
-   };
-   if(changeHideBlocs.value == 'weather') {
-      const weather = document.querySelector('.weather');
-      weather.classList.toggle('opacity-bloc');
-      localStorage.setItem('changeHideWeather', changeHideBlocs.value);
-   };
-   if(changeHideBlocs.value == 'audio') {
-      const player = document.querySelector('.player');
-      const wrapperPlayer = document.querySelector('.wrapper-player');
-      player.classList.toggle('opacity-bloc');
-      wrapperPlayer.classList.toggle('opacity-bloc');
-      localStorage.setItem('changeHideAudio', changeHideBlocs.value);
-   };  
+const chHideDate = document.querySelector('input[type=checkbox][name="date"]');
+chHideDate.addEventListener('click', changeHideDate);
+
+const chHideGreeting = document.querySelector('input[type=checkbox][name="greeting"]');
+chHideGreeting.addEventListener('click', changeHideGreeting);
+
+const chHideQuote = document.querySelector('input[type=checkbox][name="quote"]');
+chHideQuote.addEventListener('click', changeHideQuote);
+
+const chHideWeather = document.querySelector('input[type=checkbox][name="weather"]');
+chHideWeather.addEventListener('click', changeHideWeather);
+
+const chHideAudio = document.querySelector('input[type=checkbox][name="audio"]');
+chHideAudio.addEventListener('click', changeHideAudio);
+
+const chHideTodolist = document.querySelector('input[type=checkbox][name="todolist"]');
+chHideTodolist.addEventListener('click', changeHide);
+
+function changeHideTime () {
+   const time = document.querySelector('.time');
+   time.classList.toggle('opacity-bloc');
+   localStorage.setItem('chHideTime', chHideTime.value);
 };
+
+function changeHideDate () {
+   const date = document.querySelector('.date');
+   date.classList.toggle('opacity-bloc');
+   localStorage.setItem('chHideDate', chHideDate.value);
+};
+
+function changeHideGreeting () {
+   const greeting = document.querySelector('.greeting-container');
+   greeting.classList.toggle('opacity-bloc');
+   localStorage.setItem('chHideGreeting', chHideGreeting.value);
+};
+
+function changeHideQuote () {
+   const quote = document.querySelector('.quote');
+   const author = document.querySelector('.author');
+   const changeQuote = document.querySelector('.change-quote');
+   quote.classList.toggle('opacity-bloc');
+   author.classList.toggle('opacity-bloc');
+   changeQuote.classList.toggle('opacity-bloc');
+   localStorage.setItem('chHideQuote', chHideQuote.value);
+};
+
+function changeHideWeather () {
+   const weather = document.querySelector('.weather');
+   weather.classList.toggle('opacity-bloc');
+   localStorage.setItem('chHideWeather', chHideWeather.value);
+};
+
+function changeHideAudio () {
+   const player = document.querySelector('.player');
+   const wrapperPlayer = document.querySelector('.wrapper-player');
+   player.classList.toggle('opacity-bloc');
+   wrapperPlayer.classList.toggle('opacity-bloc');
+   localStorage.setItem('chHideAudio', chHideAudio.value);
+};
+
+// function changeTime () {
+//    if(changeHideBlocs.value == 'time') {
+//       const time = document.querySelector('.time');
+//       time.classList.toggle('opacity-bloc');
+//       localStorage.setItem('changeHideTime', changeHideBlocs.value);
+//    }
+//    if(changeHideBlocs.value == 'date') {
+//       const date = document.querySelector('.date');
+//       date.classList.toggle('opacity-bloc');
+//       localStorage.setItem('changeHideDate', changeHideBlocs.value);
+//    };
+//    if(changeHideBlocs.value == 'greeting') {
+//       const greeting = document.querySelector('.greeting-container');
+//       greeting.classList.toggle('opacity-bloc');
+//       localStorage.setItem('changeHideGreeting', changeHideBlocs.value);
+//    };
+//    if(changeHideBlocs.value == 'quote') {
+//       const quote = document.querySelector('.quote');
+//       const author = document.querySelector('.author');
+//       const changeQuote = document.querySelector('.change-quote');
+//       quote.classList.toggle('opacity-bloc');
+//       author.classList.toggle('opacity-bloc');
+//       changeQuote.classList.toggle('opacity-bloc');
+//       localStorage.setItem('changeHideQuote', changeHideBlocs.value);
+//    };
+//    if(changeHideBlocs.value == 'weather') {
+//       const weather = document.querySelector('.weather');
+//       weather.classList.toggle('opacity-bloc');
+//       localStorage.setItem('changeHideWeather', changeHideBlocs.value);
+//    };
+//    if(changeHideBlocs.value == 'audio') {
+//       const player = document.querySelector('.player');
+//       const wrapperPlayer = document.querySelector('.wrapper-player');
+//       player.classList.toggle('opacity-bloc');
+//       wrapperPlayer.classList.toggle('opacity-bloc');
+//       localStorage.setItem('changeHideAudio', changeHideBlocs.value);
+//    };  
+// };
 
 
 
 function getchangeHideTime() {
-   if(localStorage.getItem('changeHideTime')) {
-     changeHideBlocs.value = localStorage.getItem('changeHideTime');
-     changeHide ()
+   if(localStorage.getItem('chHideTime')) {
+     chHideTime.value = localStorage.getItem('chHideTime');
+//     changeHideTime ()
    }
  };
 window.addEventListener('load', getchangeHideTime);
 
 function getchangeHideDate() {
-   if(localStorage.getItem('changeHideDate')) {
-     changeHideBlocs.value = localStorage.getItem('changeHideDate');
-     changeHide ()
+   if(localStorage.getItem('chHideDate')) {
+     chHideDate.value = localStorage.getItem('chHideDate');
+//      changeHideDate ()
    }
  };
 window.addEventListener('load', getchangeHideDate);
 
 function getchangeHideGreeting() {
-   if(localStorage.getItem('changeHideGreeting')) {
-     changeHideBlocs.value = localStorage.getItem('changeHideGreeting');
-     changeHide ()
+   if(localStorage.getItem('chHideGreeting')) {
+     chHideGreeting.value = localStorage.getItem('chHideGreeting');
+//      changeHideGreeting ()
    }
  };
 window.addEventListener('load', getchangeHideGreeting);
 
 function getchangeHideQuote() {
-   if(localStorage.getItem('changeHideQuote')) {
-     changeHideBlocs.value = localStorage.getItem('changeHideQuote');
-     changeHide ()
+   if(localStorage.getItem('chHideQuote')) {
+     chHideQuote.value = localStorage.getItem('chHideQuote');
+//      changeHideQuote ()
    }
  };
 window.addEventListener('load', getchangeHideQuote);
 
 function getchangeHideWeather() {
-   if(localStorage.getItem('changeHideWeather')) {
-     changeHideBlocs.value = localStorage.getItem('changeHideWeather');
-     changeHide ()
+   if(localStorage.getItem('chHideWeather')) {
+     chHideWeather.value = localStorage.getItem('chHideWeather');
+     changeHideWeather ()
    }
  };
 window.addEventListener('load', getchangeHideWeather);
 
 function getchangeHideAudio() {
-   if(localStorage.getItem('changeHideAudio')) {
-    changeHideBlocs.value = localStorage.getItem('changeHideAudio');
-     changeHide ()
+   if(localStorage.getItem('chHideAudio')) {
+    chHideAudio.value = localStorage.getItem('chHideAudio');
+//      changeHideAudio ()
    }
  };
 window.addEventListener('load', getchangeHideAudio);
