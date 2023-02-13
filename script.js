@@ -643,27 +643,27 @@ function hideBlocClose () {
 
 
 const chHideTime = document.querySelector('input[type=checkbox][name="time"]');
-chHideTime.addEventListener('click', changeHideTime);
+chHideTime.addEventListener('change', changeHideTime);
 // const changeHideBlocs = document.querySelectorAll('input[type=checkbox][name="hide-bloc"]');
 // changeHideBlocs.forEach(changeHideBlocs => changeHideBlocs.addEventListener('click', changeHide)) 
                                                                             
 const chHideDate = document.querySelector('input[type=checkbox][name="date"]');
-chHideDate.addEventListener('click', changeHideDate);
+chHideDate.addEventListener('change', changeHideDate);
 
 const chHideGreeting = document.querySelector('input[type=checkbox][name="greeting"]');
-chHideGreeting.addEventListener('click', changeHideGreeting);
+chHideGreeting.addEventListener('change', changeHideGreeting);
 
 const chHideQuote = document.querySelector('input[type=checkbox][name="quote"]');
-chHideQuote.addEventListener('click', changeHideQuote);
+chHideQuote.addEventListener('change', changeHideQuote);
 
 const chHideWeather = document.querySelector('input[type=checkbox][name="weather"]');
-chHideWeather.addEventListener('click', changeHideWeather);
+chHideWeather.addEventListener('change', changeHideWeather);
 
 const chHideAudio = document.querySelector('input[type=checkbox][name="audio"]');
-chHideAudio.addEventListener('click', changeHideAudio);
+chHideAudio.addEventListener('change', changeHideAudio);
 
-const chHideTodolist = document.querySelector('input[type=checkbox][name="todolist"]');
-chHideTodolist.addEventListener('click', changeHide);
+// const chHideTodolist = document.querySelector('input[type=checkbox][name="todolist"]');
+// chHideTodolist.addEventListener('change', changeHide);
 
 function changeHideTime () {
    const time = document.querySelector('.time');
