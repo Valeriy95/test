@@ -643,7 +643,9 @@ function hideBlocClose () {
 
 
 const changeHideBlocs = document.querySelectorAll('input[type=checkbox][name="hide-bloc"]');
-changeHideBlocs.forEach(changeHideBlocs => changeHideBlocs.addEventListener('change', function changeHide () {
+changeHideBlocs.forEach(changeHideBlocs => changeHideBlocs.addEventListener('click', changeHide)) 
+                                                                            
+function changeHide () {
    if(changeHideBlocs.value == 'time') {
       const time = document.querySelector('.time');
       time.classList.toggle('opacity-bloc');
@@ -680,7 +682,7 @@ changeHideBlocs.forEach(changeHideBlocs => changeHideBlocs.addEventListener('cha
       wrapperPlayer.classList.toggle('opacity-bloc');
       localStorage.setItem('changeHideAudio', changeHideBlocs.value);
    };  
-}));
+};
 
 
 
