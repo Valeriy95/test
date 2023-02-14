@@ -702,15 +702,17 @@ function changeHideTime () {
 function changeHideDate () { 
    
    const date = document.querySelector('.date');
-   
-   if( localStorage.getItem('chHideDate') == 'date') {
+
+   if(this.checked || localStorage.getItem('chHideDate') == 'date') {
       date.classList.add('opacity-bloc');
-      localStorage.removeItem('chHideDate');
+      localStorage.setItem('chHideDate', chHideDate.value);
+//       localStorage.removeItem('chHideDate');
       console.log('YEEEEEEEESSS')
 //    localStorage.setItem('chHideDate', chHideDate.value);
    } else {
       date.classList.remove('opacity-bloc');
-      localStorage.setItem('chHideDate', chHideDate.value);
+      localStorage.removeItem('chHideDate');
+//       localStorage.setItem('chHideDate', chHideDate.value);
       console.log('NNOOOOOOOOOOOOOOOO')
    }
 };
