@@ -699,10 +699,18 @@ function changeHideTime () {
 //    localStorage.setItem('chHideTime', chHideTime.value);
 };
 
-function changeHideDate () {
+function changeHideDate () { 
+   
    const date = document.querySelector('.date');
-   date.classList.toggle('opacity-bloc');
-   localStorage.setItem('chHideDate', chHideDate.value);
+   
+   if( chHideDate.value == date) {
+   date.classList.remove('opacity-bloc');
+      localStorage.removeItem('chHideDate');
+//    localStorage.setItem('chHideDate', chHideDate.value);
+   } else {
+      date.classList.add('opacity-bloc');
+      localStorage.setItem('chHideDate', chHideDate.value);
+   }
 };
 
 function changeHideGreeting () {
