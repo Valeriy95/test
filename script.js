@@ -759,7 +759,7 @@ function changeHideAudio () {
 function getchangeHideDate() {
    if(localStorage.getItem('chHideDate')) {
      chHideDate.value = localStorage.getItem('chHideDate');
-//      changeHideDate ()
+     changeHideDate ()
    }
  };
 window.addEventListener('load', getchangeHideDate);
