@@ -743,7 +743,13 @@ function changeHideQuote () {
 function changeHideWeather () {
    const weather = document.querySelector('.weather');
    weather.classList.toggle('opacity-bloc');
-   localStorage.setItem('chHideWeather', chHideWeather.value);
+   if(weather.classList.contains('opacity-bloc') == true) {
+      weather.classList.add('opacity-bloc');
+      localStorage.setItem('chHideWeather', chHideWeather.value);
+   } else {
+      weather.classList.remove('opacity-bloc');
+      localStorage.removeItem('chHideWeather');
+   }
 };
 
 function changeHideAudio () {
@@ -791,7 +797,7 @@ window.addEventListener('load', getchangeHideQuote);
 function getchangeHideWeather() {
    if(localStorage.getItem('chHideWeather')) {
      chHideWeather.value = localStorage.getItem('chHideWeather');
-//      changeHideWeather ()
+     changeHideWeather ()
    }
  };
 window.addEventListener('load', getchangeHideWeather);
