@@ -389,8 +389,8 @@ body {
 
 .hide-bloc-close {
   position: absolute;
-  margin-left: 280px;
-  margin-top: 30px;
+  margin-left: 80%;
+  margin-top: -80%;
   width: 30px;
   height: 30px;
 }
@@ -510,6 +510,9 @@ div {
 
 .hide-block-container {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   margin-top: -361px;
   width: 350px;
   background: darkgrey;
