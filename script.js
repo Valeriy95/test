@@ -799,11 +799,11 @@ function getchangeHideAudio() {
 window.addEventListener('load', getchangeHideAudio);
 
 
-const hideBlocClose = document.querySelector('.hide-bloc-close');
+const hideBlocCloseBtn1 = document.querySelector('.hide-bloc-close');
 const closeIconHide1 = document.querySelector('.close-icon-hide1');
 const closeIconHide2 = document.querySelector('.close-icon-hide2');
 
-hideBlocClose.addEventListener('click', hideBlocOpen);
+hideBlocCloseBtn1.addEventListener('click', hideBlocOpen);
 closeIconHide1.addEventListener('click', hideBlocOpen);
 closeIconHide2.addEventListener('click', hideBlocOpen);
 
