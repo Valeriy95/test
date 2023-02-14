@@ -671,16 +671,16 @@ function changeHideTime () {
    const time = document.querySelector('.time');
 //    time.classList.toggle('opacity-bloc');
 //    if (isHideTime.value == false) {
-   if (chHideAudio.value == false) {
+   if (chHideTime.value == false) {
       isHideTime = true;
       time.classList.add('opacity-bloc');
-       localStorage.setItem('ichHideAudio', true);
+       localStorage.setItem('chHideTime', true);
 //       localStorage.setItem('isHideTime', true);
 //    } else if (isHideTime.value == true) {
-      } else if (chHideAudio.value == true) {
+      } else if (chHideTime.value == true) {
 //       isHideTime = false;
       time.classList.remove('opacity-bloc');
-      localStorage.setItem('chHideAudio', false);
+      localStorage.setItem('chHideTime', false);
 //       localStorage.setItem('isHideTime', false);
    }
 //    localStorage.setItem('chHideTime', chHideTime.value);
