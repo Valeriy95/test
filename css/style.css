@@ -379,13 +379,17 @@ body {
   transition: 1s;
 }
 
-.close-icon,
-.hide-bloc-close{
+.close-icon{
   width: 30px;
   height: 30px;
   position: absolute;
   margin-top: -285px;
   margin-left: 280px
+}
+
+.hide-bloc-close {
+  width: 30px;
+  height: 30px;
 }
 
 .close-icon1,
