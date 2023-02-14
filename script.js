@@ -651,13 +651,13 @@ function hideBlocClose () {
 // let isHideTime = true;
 
 
-function getchangeHideTime() {
-   if(localStorage.getItem('chHideTime')) {
-     chHideTime.value = localStorage.getItem('chHideTime');
-//     changeHideTime ()
-   }
- };
-window.addEventListener('load', getchangeHideTime);
+// function getchangeHideTime() {
+//    if(localStorage.getItem('chHideTime')) {
+//      chHideTime.value = localStorage.getItem('chHideTime');
+// //     changeHideTime ()
+//    }
+//  };
+// window.addEventListener('load', getchangeHideTime);
 
 
 const chHideTime = document.querySelector('input[type=checkbox][name="time"]');
