@@ -682,14 +682,14 @@ function changeHideTime () {
    console.log('Нихуя');
 //    time.classList.toggle('opacity-bloc');
 //    if (isHideTime.value == false) {
-   if (chHideTime.value == false) {
+   if (Storage[chHideTime] == false) {
       isHideTime = true;
       time.classList.add('opacity-bloc');
       localStorage.setItem('chHideTime', true);
       console.log('chHideTime - true');
 //       localStorage.setItem('isHideTime', true);
 //    } else if (isHideTime.value == true) {
-      } else if (chHideTime.value == true) {
+      } else if (Storage[chHideTime] == true) {
 //       isHideTime = false;
       time.classList.remove('opacity-bloc');
       localStorage.setItem('chHideTime', false);
