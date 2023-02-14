@@ -696,10 +696,8 @@ function changeHideTime () {
 
 
 function changeHideDate () { 
-   
    const date = document.querySelector('.date');
    date.classList.toggle('opacity-bloc');
-
    if(date.classList.contains('opacity-bloc') == true) {
       date.classList.add('opacity-bloc');
       localStorage.setItem('chHideDate', chHideDate.value);
@@ -713,7 +711,13 @@ function changeHideDate () {
 function changeHideGreeting () {
    const greeting = document.querySelector('.greeting-container');
    greeting.classList.toggle('opacity-bloc');
-   localStorage.setItem('chHideGreeting', chHideGreeting.value);
+   if(greeting.classList.contains('opacity-bloc') == true) {
+      greeting.classList.add('opacity-bloc');
+      localStorage.setItem('chHideGreetinge', chHideGreeting.value);
+   } else {
+      greeting.classList.remove('opacity-bloc');
+      localStorage.removeItem('chHideGreeting');
+   }
 };
 
 function changeHideQuote () {
@@ -762,7 +766,7 @@ window.addEventListener('load', getchangeHideDate);
 function getchangeHideGreeting() {
    if(localStorage.getItem('chHideGreeting')) {
      chHideGreeting.value = localStorage.getItem('chHideGreeting');
-//      changeHideGreeting ()
+     changeHideGreeting ()
    }
  };
 window.addEventListener('load', getchangeHideGreeting);
