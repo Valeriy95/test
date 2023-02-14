@@ -622,8 +622,15 @@ function tagChangeFlickr () {
 const hideBlocBtn = document.querySelector('.hide-block');
 const hideContainer = document.querySelector('.hide-block-container');
 const hideBlocCloseBtn = document.querySelector('.hide-bloc-close');
+const closeIconHide1 = document.querySelector('.close-icon-hide1');
+const closeIconHide2 = document.querySelector('.close-icon-hide2');
+
+hideBlocCloseBtn1.addEventListener('click', hideBlocClose);
+closeIconHide1.addEventListener('click', hideBlocClose);
+closeIconHide2.addEventListener('click', hideBlocClose);
+
 hideBlocBtn.addEventListener('click', hideBlocOpen);
-hideBlocCloseBtn.addEventListener('click', hideBlocClose);
+
 
 function hideBlocOpen () {
    hideContainer.classList.remove('hidden');
@@ -799,16 +806,5 @@ function getchangeHideAudio() {
 window.addEventListener('load', getchangeHideAudio);
 
 
-const hideBlocCloseBtn1 = document.querySelector('.hide-bloc-close');
-const closeIconHide1 = document.querySelector('.close-icon-hide1');
-const closeIconHide2 = document.querySelector('.close-icon-hide2');
-
-hideBlocCloseBtn1.addEventListener('click', hideBlocOpen);
-closeIconHide1.addEventListener('click', hideBlocOpen);
-closeIconHide2.addEventListener('click', hideBlocOpen);
-
-// function closeHideIcon () {
-   
-// }
 
 
