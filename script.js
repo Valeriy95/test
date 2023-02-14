@@ -655,8 +655,6 @@ window.addEventListener('load', getchangeHideTime);
 
 const chHideTime = document.querySelector('input[type=checkbox][name="time"]');
 chHideTime.addEventListener('change', changeHideTime);
-// const changeHideBlocs = document.querySelectorAll('input[type=checkbox][name="hide-bloc"]');
-// changeHideBlocs.forEach(changeHideBlocs => changeHideBlocs.addEventListener('click', changeHide)) 
                                                                             
 const chHideDate = document.querySelector('input[type=checkbox][name="date"]');
 chHideDate.addEventListener('change', changeHideDate);
@@ -699,7 +697,8 @@ function changeHideTime () {
 //    localStorage.setItem('chHideTime', chHideTime.value);
 };
 
-function changeHideDate () { 
+
+function changeHideDate (e) { 
    
    const date = document.querySelector('.date');
 
