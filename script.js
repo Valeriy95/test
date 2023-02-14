@@ -706,10 +706,12 @@ function changeHideDate () {
    if( chHideDate.value == date) {
    date.classList.remove('opacity-bloc');
       localStorage.removeItem('chHideDate');
+      console.log('localStorage.removeItem(chHideDate)')
 //    localStorage.setItem('chHideDate', chHideDate.value);
    } else {
       date.classList.add('opacity-bloc');
       localStorage.setItem('chHideDate', chHideDate.value);
+      console.log('localStorage.setItem(chHideDate, chHideDate.value')
    }
 };
 
