@@ -703,15 +703,15 @@ function changeHideDate () {
    
    const date = document.querySelector('.date');
    
-   if( localStorage.getItem(chHideDate) == 'date') {
+   if( localStorage.getItem('chHideDate') == 'date') {
    date.classList.remove('opacity-bloc');
       localStorage.removeItem('chHideDate');
-      console.log('localStorage.removeItem(chHideDate)')
+      console.log('YEEEEEEEESSS')
 //    localStorage.setItem('chHideDate', chHideDate.value);
    } else {
       date.classList.add('opacity-bloc');
       localStorage.setItem('chHideDate', chHideDate.value);
-      console.log('localStorage.setItem(chHideDate, chHideDate.value')
+      console.log('NNOOOOOOOOOOOOOOOO')
    }
 };
 
