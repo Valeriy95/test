@@ -708,9 +708,9 @@ function changeHideTime () {
 function changeHideDate () { 
    
    const date = document.querySelector('.date');
-   let a = localStorage.getItem('chHideDate');
+   date.classList.toggle('opacity-bloc');
 
-   if(this.checked || a == 'date') {
+   if(date.classList.contains('opacity-bloc') == true) {
       date.classList.add('opacity-bloc');
       localStorage.setItem('chHideDate', chHideDate.value);
 //       localStorage.removeItem('chHideDate');
@@ -723,6 +723,7 @@ function changeHideDate () {
       console.log('NNOOOOOOOOOOOOOOOO')
    }
 };
+
 
 function changeHideGreeting () {
    const greeting = document.querySelector('.greeting-container');
