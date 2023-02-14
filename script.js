@@ -727,7 +727,17 @@ function changeHideQuote () {
    quote.classList.toggle('opacity-bloc');
    author.classList.toggle('opacity-bloc');
    changeQuote.classList.toggle('opacity-bloc');
-   localStorage.setItem('chHideQuote', chHideQuote.value);
+   if(quote.classList.contains('opacity-bloc') == true && author.classList.contains('opacity-bloc') == true && changeQuote.classList.contains('opacity-bloc') == true) {
+      quote.classList.add('opacity-bloc');
+      author.classList.add('opacity-bloc');
+      changeQuote.classList.add('opacity-bloc');
+      localStorage.setItem('chHideQuote', chHideQuote.value);
+   } else {
+      quote.classList.remove('opacity-bloc');
+      author.classList.remove('opacity-bloc');
+      changeQuote.classList.remove('opacity-bloc');
+      localStorage.removeItem('chHideQuote');
+   }
 };
 
 function changeHideWeather () {
@@ -753,7 +763,6 @@ function getchangeHideTime() {
    }
  };
 window.addEventListener('load', getchangeHideTime);
-// window.addEventListener('load', changeHideTime);
 
 function getchangeHideDate() {
    if(localStorage.getItem('chHideDate')) {
@@ -774,7 +783,7 @@ window.addEventListener('load', getchangeHideGreeting);
 function getchangeHideQuote() {
    if(localStorage.getItem('chHideQuote')) {
      chHideQuote.value = localStorage.getItem('chHideQuote');
-//      changeHideQuote ()
+     changeHideQuote ()
    }
  };
 window.addEventListener('load', getchangeHideQuote);
