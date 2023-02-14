@@ -524,6 +524,13 @@ div {
   opacity: 0;  
 }
 
+.hide-bloc-close:hover,
+.close-icon-hide1:hover,
+.close-icon-hide2:hover {
+  cursor: pointer;
+}
+
+
 @media (max-width: 768px) {
   .time {
     min-height: 80px;
