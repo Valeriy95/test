@@ -819,6 +819,6 @@ function getchangeHideAudio() {
 window.addEventListener('load', getchangeHideAudio);
 
 
-localStorage.removeItem('changeHideDate')
-localStorage.removeItem('changeHideGreeting')
-localStorage.removeItem('changeHideQuote')
+localStorage.removeItem('isHideTime')
+localStorage.removeItem('chHideGreetinge')
+localStorage.removeItem('changeHideBlocs')
