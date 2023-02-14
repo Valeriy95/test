@@ -299,10 +299,6 @@ body {
  justify-content: space-around;
 }
 
-.hidden {
- display:none; 
-}
-
 .volume {
   width: 32px;
   height: 32px;
@@ -530,6 +526,9 @@ div {
   cursor: pointer;
 }
 
+.hidden {
+ display:none; 
+}
 
 @media (max-width: 768px) {
   .time {
