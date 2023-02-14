@@ -625,7 +625,7 @@ const hideBlocCloseBtn = document.querySelector('.hide-bloc-close');
 const closeIconHide1 = document.querySelector('.close-icon-hide1');
 const closeIconHide2 = document.querySelector('.close-icon-hide2');
 
-hideBlocCloseBtn1.addEventListener('click', hideBlocClose);
+hideBlocCloseBtn.addEventListener('click', hideBlocClose);
 closeIconHide1.addEventListener('click', hideBlocClose);
 closeIconHide2.addEventListener('click', hideBlocClose);
 
