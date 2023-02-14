@@ -818,7 +818,3 @@ function getchangeHideAudio() {
  };
 window.addEventListener('load', getchangeHideAudio);
 
-
-localStorage.removeItem('isHideTime')
-localStorage.removeItem('chHideGreetinge')
-localStorage.removeItem('changeHideBlocs')
