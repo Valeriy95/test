@@ -657,7 +657,7 @@ const chHideTime = document.querySelector('input[type=checkbox][name="time"]');
 chHideTime.addEventListener('change', changeHideTime);
                                                                             
 const chHideDate = document.querySelector('input[type=checkbox][name="date"]');
-chHideDate.addEventListener('change', changeHideDate);
+chHideDate.addEventListener('click', changeHideDate);
 
 const chHideGreeting = document.querySelector('input[type=checkbox][name="greeting"]');
 chHideGreeting.addEventListener('change', changeHideGreeting);
@@ -698,7 +698,7 @@ function changeHideTime () {
 };
 
 
-function changeHideDate (e) { 
+function changeHideDate () { 
    
    const date = document.querySelector('.date');
 
