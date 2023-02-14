@@ -643,6 +643,16 @@ function hideBlocClose () {
 
 // let isHideTime = true;
 
+
+function getchangeHideTime() {
+   if(localStorage.getItem('chHideTime')) {
+     chHideTime.value = localStorage.getItem('chHideTime');
+//     changeHideTime ()
+   }
+ };
+window.addEventListener('load', getchangeHideTime);
+
+
 const chHideTime = document.querySelector('input[type=checkbox][name="time"]');
 chHideTime.addEventListener('change', changeHideTime);
 // const changeHideBlocs = document.querySelectorAll('input[type=checkbox][name="hide-bloc"]');
@@ -763,14 +773,14 @@ function changeHideAudio () {
 
 
 
-function getchangeHideTime() {
-   if(localStorage.getItem('chHideTime')) {
-     chHideTime.value = localStorage.getItem('chHideTime');
-//     changeHideTime ()
-   }
- };
-window.addEventListener('load', getchangeHideTime);
-window.addEventListener('load', changeHideTime);
+// function getchangeHideTime() {
+//    if(localStorage.getItem('chHideTime')) {
+//      chHideTime.value = localStorage.getItem('chHideTime');
+// //     changeHideTime ()
+//    }
+//  };
+// window.addEventListener('load', getchangeHideTime);
+// window.addEventListener('load', changeHideTime);
 
 function getchangeHideDate() {
    if(localStorage.getItem('chHideDate')) {
