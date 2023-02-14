@@ -757,7 +757,15 @@ function changeHideAudio () {
    const wrapperPlayer = document.querySelector('.wrapper-player');
    player.classList.toggle('opacity-bloc');
    wrapperPlayer.classList.toggle('opacity-bloc');
-   localStorage.setItem('chHideAudio', chHideAudio.value);
+   if(player.classList.contains('opacity-bloc') == true && wrapperPlayer.classList.contains('opacity-bloc') == true) {
+      player.classList.add('opacity-bloc');
+      wrapperPlayer.classList.add('opacity-bloc');
+      localStorage.setItem('chHideAudio', chHideAudio.value);
+   } else {
+      player.classList.remove('opacity-bloc');
+      wrapperPlayer.classList.remove('opacity-bloc');
+      localStorage.removeItem('chHideAudio');
+   }
 };
 
 
@@ -805,7 +813,7 @@ window.addEventListener('load', getchangeHideWeather);
 function getchangeHideAudio() {
    if(localStorage.getItem('chHideAudio')) {
     chHideAudio.value = localStorage.getItem('chHideAudio');
-//      changeHideAudio ()
+     changeHideAudio ()
    }
  };
 window.addEventListener('load', getchangeHideAudio);
