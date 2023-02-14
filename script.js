@@ -713,7 +713,7 @@ function changeHideGreeting () {
    greeting.classList.toggle('opacity-bloc');
    if(greeting.classList.contains('opacity-bloc') == true) {
       greeting.classList.add('opacity-bloc');
-      localStorage.setItem('chHideGreetinge', chHideGreeting.value);
+      localStorage.setItem('chHideGreeting', chHideGreeting.value);
    } else {
       greeting.classList.remove('opacity-bloc');
       localStorage.removeItem('chHideGreeting');
