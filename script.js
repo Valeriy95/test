@@ -702,7 +702,8 @@ function changeHideDate () {
    
    const date = document.querySelector('.date');
 
-   if(this.checked || localStorage.getItem('chHideDate') == 'date') {
+//    if(this.checked || localStorage.getItem('chHideDate') == 'date') {
+     if(this.checked) {
       date.classList.add('opacity-bloc');
       localStorage.setItem('chHideDate', chHideDate.value);
 //       localStorage.removeItem('chHideDate');
