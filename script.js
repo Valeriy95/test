@@ -679,6 +679,7 @@ chHideAudio.addEventListener('change', changeHideAudio);
 function changeHideTime () {
 //    isHideTime = true;
    const time = document.querySelector('.time');
+   console.log('Нихуя');
 //    time.classList.toggle('opacity-bloc');
 //    if (isHideTime.value == false) {
    if (chHideTime.value == false) {
