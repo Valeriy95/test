@@ -689,7 +689,7 @@ function changeHideTime () {
       time.classList.add('opacity-bloc');
       localStorage.setItem('chHideTime', chHideTime.value);
    } else {
-      date.classList.remove('opacity-bloc');
+      time.classList.remove('opacity-bloc');
       localStorage.removeItem('chHideTime');
    }
 };
