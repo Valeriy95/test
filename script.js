@@ -682,26 +682,16 @@ chHideAudio.addEventListener('change', changeHideAudio);
 // chHideTodolist.addEventListener('change', changeHide);
 
 function changeHideTime () {
-//    isHideTime = true;
    const time = document.querySelector('.time');
-   console.log('Нихуя');
-//    time.classList.toggle('opacity-bloc');
-//    if (isHideTime.value == false) {
-   if (Storage[chHideTime] == false) {
-      isHideTime = true;
+   time.classList.toggle('opacity-bloc');
+
+   if (time.classList.contains('opacity-bloc') == true) {
       time.classList.add('opacity-bloc');
-      localStorage.setItem('chHideTime', true);
-      console.log('chHideTime - true');
-//       localStorage.setItem('isHideTime', true);
-//    } else if (isHideTime.value == true) {
-      } else if (Storage[chHideTime] == true) {
-//       isHideTime = false;
-      time.classList.remove('opacity-bloc');
-      localStorage.setItem('chHideTime', false);
-      console.log('chHideTime - false');
-//       localStorage.setItem('isHideTime', false);
+      localStorage.setItem('chHideTime', chHideTime.value);
+   } else {
+      date.classList.remove('opacity-bloc');
+      localStorage.removeItem('chHideTime');
    }
-//    localStorage.setItem('chHideTime', chHideTime.value);
 };
 
 
@@ -752,13 +742,13 @@ function changeHideAudio () {
 
 
 
-// function getchangeHideTime() {
-//    if(localStorage.getItem('chHideTime')) {
-//      chHideTime.value = localStorage.getItem('chHideTime');
-// //     changeHideTime ()
-//    }
-//  };
-// window.addEventListener('load', getchangeHideTime);
+function getchangeHideTime() {
+   if(localStorage.getItem('chHideTime')) {
+     chHideTime.value = localStorage.getItem('chHideTime');
+     changeHideTime ()
+   }
+ };
+window.addEventListener('load', getchangeHideTime);
 // window.addEventListener('load', changeHideTime);
 
 function getchangeHideDate() {
