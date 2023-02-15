@@ -818,3 +818,17 @@ function getchangeHideAudio() {
  };
 window.addEventListener('load', getchangeHideAudio);
 
+
+// 11. Todo list
+
+const todoListIcon = document.querySelctor('.todo-icon');
+const todoListContainer = document.querySelctor('.todo-container');
+todolist.addEventListener('click', openCloseTodoList);
+
+function openCloseTodoList () {
+   todoListContainer.classList.toggle('hidden');
+}
+
+      
+      
+
