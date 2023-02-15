@@ -494,8 +494,10 @@ body {
   transition: 1s;
 }
 
-div {
-  transition: 1s;
+div,
+date, 
+time {
+  transition: 0.5s;
 }
 
 .unsplash-container,
