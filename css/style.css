@@ -510,6 +510,7 @@ time {
   position: absolute;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   justify-content: space-evenly;
   margin-top: -361px;
   width: 350px;
@@ -526,6 +527,10 @@ time {
 .close-icon-hide1:hover,
 .close-icon-hide2:hover {
   cursor: pointer;
+}
+
+.hide-bloc-mar {
+  margin-left: 120px;
 }
 
 .hidden {
