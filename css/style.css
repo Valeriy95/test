@@ -348,7 +348,7 @@ body {
 .setting-icon {
   position: absolute;
   margin-top: -45px;
-  margin-left: 66%;
+  margin-left: -23%;;
   width: 26px;
   height: 26px;
   background-image: url("../assets/svg/icons8-настройки-26.png");
@@ -369,9 +369,9 @@ body {
   background: darkgrey;;
   width: 350px;
   height: 400px;
-  margin-left: 637px;
-  margin-top: -150%;
-  border-radius: 26px 26px 0px 26px;
+  margin-left: -28%;
+  margin-top: -380px;
+  border-radius: 26px 26px 26px 0px;
   transition: 1s;
 }
 
@@ -439,7 +439,7 @@ body {
 } 
 
 .hide {
-  margin-top: -380px;
+  margin-left: -100%;
   transition: 1s;
 }
 
