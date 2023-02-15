@@ -369,7 +369,7 @@ body {
   background: darkgrey;;
   width: 350px;
   height: 400px;
-  margin-left: -28%;
+  margin-left: 100%;
   margin-top: -380px;
   border-radius: 26px 26px 26px 0px;
   transition: 1s;
@@ -439,7 +439,7 @@ body {
 } 
 
 .hide {
-  margin-left: -100%;
+  margin-left: -28%;
   transition: 1s;
 }
 
