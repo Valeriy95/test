@@ -1,6 +1,6 @@
 "use strict"
 
-import playList from './playList.js';
+// import playList from './playList.js';
 
 const todoInput = document.querySelector(".todo-input input");
 const btnPenComp = document.querySelectorAll(".btn-pen-comp span");
