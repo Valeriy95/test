@@ -852,6 +852,19 @@ doneBtn.addEventListener("click", () => {
    showList("done");
 });
 
+function statusff(selected) {
+   let blocName = selected.parentElement.lastElementChild;
+   if(selected.checked) {
+      blocName.classList.add("checked");
+      todoListArr[selected.id].status = "done";
+   } else {
+      blocName.classList.remove("checked");
+      todoListArr[selected.id].status = "progress";
+   }
+   localStorage.setItem("todoList", JSON.stringify(todoListArr)); 
+};
+
+
 function showList(btn) {
    let li = "";
    if(todoListArr) {
@@ -860,7 +873,7 @@ function showList(btn) {
          if(btn == value.status) {
             li += `<li class="item ">
                      <label for="${index}">
-                        <input onclick="status(this)" type="checkbox" id="${index}" ${isDone}>
+                        <input onclick="statusff(this)" type="checkbox" id="${index}" ${isDone}>
                         <p class="${isDone}">${value.name}</p>
                      </label>
                      <div class="settings-todo">
@@ -906,17 +919,17 @@ clearBtn.addEventListener("click", () => {
    showList("progress");
 });
 
-function status(selected) {
-   let blocName = selected.parentElement.lastElementChild;
-   if(selected.checked) {
-      blocName.classList.add("checked");
-      todoListArr[selected.id].status = "done";
-   } else {
-      blocName.classList.remove("checked");
-      todoListArr[selected.id].status = "progress";
-   }
-   localStorage.setItem("todoList", JSON.stringify(todoListArr)); 
-};
+// function statusff(selected) {
+//    let blocName = selected.parentElement.lastElementChild;
+//    if(selected.checked) {
+//       blocName.classList.add("checked");
+//       todoListArr[selected.id].status = "done";
+//    } else {
+//       blocName.classList.remove("checked");
+//       todoListArr[selected.id].status = "progress";
+//    }
+//    localStorage.setItem("todoList", JSON.stringify(todoListArr)); 
+// };
 
 todoInput.addEventListener("keyup", e => {
    let userInput = todoInput.value.trim();
