@@ -542,6 +542,160 @@ time {
   background-image: url("../assets/svg/to-do.png");
 }
 
+/* TodoList */
+::-webkit-scrollbar {
+   width: 13px; /* ширина для вертикального скролла */
+   height: 10px; /* высота для горизонтального скролла */
+   background-color: #fff;
+   border-radius: 10px;
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+   background-color: #918e90;
+   border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+   background-color: #313235;
+}
+
+ .wrapper-todo {
+   max-width: 405px;
+   max-height: 345px;
+   overflow-x: auto;
+   margin: 135px auto;
+   background: #fff;
+   border-radius: 10px;
+}
+
+.todo-container {
+   position: fixed;
+   width: 405px;
+   background: #fff;
+   border-radius: 10px
+}
+
+ .todo-input {
+   height: 52px;
+   padding: 7px;
+}
+
+ .todo-input input{
+   height: 100%;
+   width: 100%;
+   font-size: 20px;
+   border-radius: 5px;
+   border: 1px solid #999;
+   outline: none;
+}
+
+.todo-input input::placeholder {
+   color:#999;
+}
+
+.buttons {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px 10px;
+   border-bottom: 1px solid #ccc;
+}
+
+.btn-pen-comp span {
+   cursor: pointer;
+   margin: 0 8px;
+   font-size: 22px;
+}
+
+.buttons .btn-clear {
+   outline: none;
+   border: none;
+   color:#fff;
+   border-radius: 5px;
+   padding: 5px 12px;
+   font-size: 20px;
+   background: #000000;
+   cursor: pointer;
+}
+
+.btn-pen-comp span.active {
+   color:#999;
+   font-weight: bold;
+}
+
+.btn-pen-comp span:first-child {
+   margin-left: 0;
+}
+
+.list-container {
+   margin: 20px 25px;
+   margin-top: 114px;
+   list-style: none;
+}
+
+.list-container span {
+   font-size: 22px
+}
+
+.item label {
+   display:flex;
+}
+
+.item  label p.checked {
+   text-decoration: line-through;
+}
+
+.item  {
+   display: flex;
+   justify-content: space-between; 
+   margin-bottom: 18px;
+   padding-bottom: 16px;
+   border-bottom: 1px solid #ccc;
+   cursor: pointer;
+   font-size: 22px;
+} 
+
+.item  label input {
+   margin-right: 10px;
+}
+
+.settings-todo {
+   cursor: pointer;
+}
+
+.item-menu {
+   position: absolute;
+   margin-left: -55px;
+   margin-top: 9px;
+   padding: 5px 0;
+   list-style: none;
+   background-color: #e2dcdc;
+   border-radius: 5px;
+   box-shadow: 0 0 10px rgba(0,0,0,0.15);
+   transform: scale(0);
+   transform-origin: top;
+   transition: transform 0.2s;
+}
+
+.settings-todo .item-menu.show{
+   transform: scale(1);
+}
+
+.item-menu li {
+   text-align: center;
+   width: 95px;
+   height: 30px;
+   padding: 4px 15px;
+   margin-bottom: 2px;
+   justify-content: flex-start;
+}
+
+.item-menu li:hover {
+   background-color: rgb(241, 234, 234);
+}
+
+
 .hidden {
  display:none; 
 }
