@@ -123,17 +123,17 @@ ru : [['Доброй ночи'], ['Доброе утро'], ['Добрый де�
 };
 // Часы и календарь;
 
-function status(selected) {
-   let blocName = selected.parentElement.lastElementChild;
-   if(selected.checked) {
-      blocName.classList.add("checked");
-      todoListArr[selected.id].status = "done";
-   } else {
-      blocName.classList.remove("checked");
-      todoListArr[selected.id].status = "progress";
-   }
-   localStorage.setItem("todoList", JSON.stringify(todoListArr)); 
-};
+// function status(selected) {
+//    let blocName = selected.parentElement.lastElementChild;
+//    if(selected.checked) {
+//       blocName.classList.add("checked");
+//       todoListArr[selected.id].status = "done";
+//    } else {
+//       blocName.classList.remove("checked");
+//       todoListArr[selected.id].status = "progress";
+//    }
+//    localStorage.setItem("todoList", JSON.stringify(todoListArr)); 
+// };
 
 
 
