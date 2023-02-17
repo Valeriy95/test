@@ -874,7 +874,7 @@ function showList(btn) {
          if(btn == value.status) {
             li += `<li class="item ">
                      <label for="${index}">
-                        <input onclick="alert('Клик!')" type="checkbox" id="${index}" ${isDone}>
+                        <input onclick="statusss" type="checkbox" id="${index}" ${isDone}>
                         <p class="${isDone}">${value.name}</p>
                      </label>
                      <div class="settings-todo">
@@ -891,6 +891,10 @@ function showList(btn) {
    list.innerHTML = li || `<span>No todos yet</span>`;
 }
 showList("progress");
+
+function statusss () {
+   alert('Hello')
+}
 
 function showMenu(selected) {
    let containerMenu = selected.parentElement.lastElementChild;
