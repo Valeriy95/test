@@ -821,8 +821,8 @@ window.addEventListener('load', getchangeHideAudio);
 
 // 11. Todo list
 
-const todoListIcon = document.querySelctor('.todo-icon');
-const todoListContainer = document.querySelctor('.wrapper-todo');
+const todoListIcon = document.querySelector('.todo-icon');
+const todoListContainer = document.querySelector('.wrapper-todo');
 todolist.addEventListener('click', openCloseTodoList);
 
 function openCloseTodoList () {
@@ -830,7 +830,6 @@ function openCloseTodoList () {
 }
 
 const todoInput = document.querySelector(".todo-input input");
-const btnPenComp = document.querySelectorAll(".btn-pen-comp span");
 const list = document.querySelector(".list-container");
 const clearBtn = document.querySelector(".btn-clear");
 const progressBtn = document.querySelector(".progress-btn");
