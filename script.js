@@ -37,7 +37,7 @@ function showList(btn) {
          if(btn == value.status) {
             li += `<li class="item ">
                      <label for="${index}">
-                        <input onclick=" function sss (this) { 
+                        <input onclick=" function sss (${this}) { 
                         let blocName = selected.parentElement.lastElementChild;
                         if(selected.checked) {
                            blocName.classList.add("checked");      
