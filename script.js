@@ -852,7 +852,7 @@ doneBtn.addEventListener("click", () => {
    showList("done");
 });
 
-function statusff(selected) {
+function statusff() {
    let blocName = selected.parentElement.lastElementChild;
    if(selected.checked) {
       blocName.classList.add("checked");
@@ -873,7 +873,7 @@ function showList(btn) {
          if(btn == value.status) {
             li += `<li class="item ">
                      <label for="${index}">
-                        <input onclick="statusff(this)" type="checkbox" id="${index}" ${isDone}>
+                        <input onclick="statusff()" type="checkbox" id="${index}" ${isDone}>
                         <p class="${isDone}">${value.name}</p>
                      </label>
                      <div class="settings-todo">
