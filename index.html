@@ -144,7 +144,21 @@
         </div>
       </div>
       <div class='todo-icon'></div>
-      <div class='todo-container'></div>
+      <div class="wrapper-todo hidden">
+        <div class="todo-container">
+          <div class="todo-input">
+              <input type="text" placeholder="New ToDo">
+          </div>
+          <div class="buttons">
+              <div class="btn-pen-comp">
+                <span id="progress" class="progress-btn active">In progress</span>
+                <span id="done" class="done-btn">Done</span>
+              </div>
+              <button class="btn-clear">Clear All</button>
+          </div>
+        </div>
+        <ul class="list-container"></ul>
+      </div>
     </div>
   </footer>
 <!--   <script type="module" src="index.js"></script> -->
