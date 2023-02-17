@@ -830,6 +830,7 @@ function openCloseTodoList () {
 }
 
 const todoInput = document.querySelector(".todo-input input");
+const btnPenComp = document.querySelectorAll(".btn-pen-comp span");
 const list = document.querySelector(".list-container");
 const clearBtn = document.querySelector(".btn-clear");
 const progressBtn = document.querySelector(".progress-btn");
@@ -937,5 +938,3 @@ todoInput.addEventListener("keyup", e => {
       showList("progress");
    }
 });
-      
-
