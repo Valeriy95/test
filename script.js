@@ -37,7 +37,16 @@ function showList(btn) {
          if(btn == value.status) {
             li += `<li class="item ">
                      <label for="${index}">
-                        <input onclick=" function sss () { alert('hello!')}" type="checkbox" id="${index}" ${isDone}>
+                        <input onclick=" function sss (this) { 
+                        let blocName = selected.parentElement.lastElementChild;
+                        if(selected.checked) {
+                           blocName.classList.add("checked");      
+                           todoListArr[selected.id].status = "done";
+                        } else {
+                           blocName.classList.remove("checked");
+                           todoListArr[selected.id].status = "progress";
+                        }
+                           localStorage.setItem("todoList", JSON.stringify(todoListArr)) }" type="checkbox" id="${index}" ${isDone}>
                         <p class="${isDone}">${value.name}</p>
                      </label>
                      <div class="settings-todo">
