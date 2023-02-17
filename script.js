@@ -866,6 +866,10 @@ doneBtn.addEventListener("click", () => {
    showList("done");
 });
 
+function statusss () {
+   alert('Hello')
+}
+
 function showList(btn) {
    let li = "";
    if(todoListArr) {
@@ -891,10 +895,6 @@ function showList(btn) {
    list.innerHTML = li || `<span>No todos yet</span>`;
 }
 showList("progress");
-
-function statusss () {
-   alert('Hello')
-}
 
 function showMenu(selected) {
    let containerMenu = selected.parentElement.lastElementChild;
