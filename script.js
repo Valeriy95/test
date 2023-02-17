@@ -823,7 +823,7 @@ window.addEventListener('load', getchangeHideAudio);
 
 const todoListIcon = document.querySelector('.todo-icon');
 const todoListContainer = document.querySelector('.wrapper-todo');
-todolist.addEventListener('click', openCloseTodoList);
+todoListIcon.addEventListener('click', openCloseTodoList);
 
 function openCloseTodoList () {
    todoListContainer.classList.toggle('hidden');
