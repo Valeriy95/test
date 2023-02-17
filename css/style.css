@@ -568,6 +568,7 @@ time {
    margin: 135px auto;
    background: #fff;
    border-radius: 10px;
+   color: black;
 }
 
 .todo-container {
@@ -633,6 +634,7 @@ time {
    margin: 20px 25px;
    margin-top: 114px;
    list-style: none;
+   width: 342px;
 }
 
 .list-container span {
