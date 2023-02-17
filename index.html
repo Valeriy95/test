@@ -7,21 +7,6 @@
   <link rel="stylesheet" href="css/owfont-regular.css" />
   <link rel="stylesheet" href="css/style.css" />
   <title>momentum</title>
-  <script>
-let todoListArr = JSON.parse(localStorage.getItem("todoList"));
-
-function status(selected) {
-   let blocName = selected.parentElement.lastElementChild;
-   if(selected.checked) {
-      blocName.classList.add("checked");
-      todoListArr[selected.id].status = "done";
-   } else {
-      blocName.classList.remove("checked");
-      todoListArr[selected.id].status = "progress";
-   }
-   localStorage.setItem("todoList", JSON.stringify(todoListArr)); 
-};
-  </script>
 </head>
 <body>
   <header class="header">
