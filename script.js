@@ -868,7 +868,7 @@ function showList(btn) {
                         <p class="${isDone}">${value.name}</p>
                      </label>
                      <div class="settings-todo">
-                        <p onclick="showMenu()">...</p>
+                        <p onclick="alert(this)">...</p>
                         <ul class="item-menu">
                            <li onclick="editInput(${index}, '${value.name}')">Edit</li>
                            <li onclick="deleteInput(${index})">Delete</li>
