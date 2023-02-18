@@ -566,7 +566,7 @@ time {
    margin-top: -420px;
    margin-left: 599px;
    max-width: 321px;
-   max-height: 330px;
+   max-height: 323px;
    overflow-x: auto;
    background: #fff;
    border-radius: 10px;
@@ -654,8 +654,8 @@ time {
 .item  {
    display: flex;
    justify-content: space-between; 
-   margin-bottom: 18px;
-   padding-bottom: 16px;
+   margin-bottom: 10px;
+   padding-bottom: 10px;
    border-bottom: 1px solid #ccc;
    cursor: pointer;
    font-size: 18px;
