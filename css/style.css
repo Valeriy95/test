@@ -563,11 +563,10 @@ time {
 
  .wrapper-todo {
    position: absolute;
-   margin-top: -420px;
-   margin-left: 599px;
+   margin-top: -390px;
+   margin-left: 650px;
    max-width: 321px;
    max-height: 323px;
-   overflow-x: auto;
    background: #fff;
    border-radius: 10px;
    color: black;
@@ -641,7 +640,7 @@ time {
 }
 
 .list-container span {
-   font-size: 22px
+   font-size: 18px
 }
 
 .item label {
