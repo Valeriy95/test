@@ -870,7 +870,7 @@ function showList(btn) {
                      <div class="settings-todo">
                         <p>...</p>
                         <ul class="item-menu">
-                           <li onclick="editInput(${index}, '${value.name}')">Edit</li>
+                           <li class="edits">Edit</li>
                            <li onclick="deleteInput(${index})">Delete</li>
                         </ul>
                      </div>
