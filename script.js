@@ -942,3 +942,13 @@ todoInput.addEventListener("keyup", e => {
       showList("progress");
    }
 });
+
+list.addEventListener("click", deleteTask)
+
+function deleteTask (e) {
+   if (e.target.tagName == 'P') {
+      const parentNode = e.target.closest('.settings-todo');
+      parentNode.remove();
+   }
+}
+
