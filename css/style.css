@@ -701,8 +701,12 @@ time {
    transition: transform 0.2s;
 }
 
-.settings-todo .item-menu.show{
+.settings-todo {
    transform: scale(1);
+}
+
+.show {
+  transform: scale(1);
 }
 
 .item-menu li {
