@@ -545,7 +545,7 @@ time {
 
 /* TodoList */
 ::-webkit-scrollbar {
-   width: 13px; /* ширина для вертикального скролла */
+   width: 7px; /* ширина для вертикального скролла */
    height: 10px; /* высота для горизонтального скролла */
    background-color: #fff;
    border-radius: 10px;
@@ -571,6 +571,7 @@ time {
    background: #fff;
    border-radius: 10px;
    color: black;
+   overflow-x: hidden;
 }
 
 .todo-container {
