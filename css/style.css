@@ -370,10 +370,10 @@ body {
   background: darkgrey;;
   width: 350px;
   height: 400px;
-  margin-left: -90%;;
+  margin-left: -28%;
   margin-top: -380px;
   border-radius: 26px 26px 26px 0px;
-  transition: 1s;
+  transform: scale(0);
 }
 
 .close-icon{
@@ -583,7 +583,7 @@ time {
 
 .show-container {
   transform: scale(1);
-   transition: 0.3s;
+  transition: 0.3s;
 }
 
 .todo-container {
@@ -634,6 +634,10 @@ time {
    font-size: 17px;
    background: #000000;
    cursor: pointer;
+}
+
+.btn-clear:hover {
+  color: #ccc;
 }
 
 .btn-pen-comp span.active {
