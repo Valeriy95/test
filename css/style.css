@@ -428,8 +428,8 @@ body {
 
 .hide-block:hover {
   cursor: pointer;
-  color: #ffffff;
-  transition: 1s;
+  color: #ccc;
+  transition: 0.5s;
 } 
 
 .languages:hover,
