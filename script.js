@@ -830,7 +830,7 @@ const todoListContainer = document.querySelector('.wrapper-todo');
 todoListIcon.addEventListener('click', openCloseTodoList);
 
 function openCloseTodoList () {
-   todoListContainer.classList.toggle('hidden');
+   todoListContainer.classList.toggle('show-container');
 }
 
 const todoInput = document.querySelector(".todo-input input");
