@@ -367,9 +367,9 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   position: absolute;
-  background: darkgrey;;
-  width: 350px;
-  height: 400px;
+  background: white;
+  width: 310px;
+  height: 326px;
   margin-left: -28%;
   margin-top: -380px;
   border-radius: 26px 26px 26px 0px;
@@ -412,18 +412,18 @@ body {
 
 .languages {
   color: #000000; 
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .image-collection {
   color: #000000; 
-  font-size: 24px;
+  font-size: 22px;
   margin-bottom: 15px;
 }
 
 .hide-block {
   color: #000000; 
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .hide-block:hover {
@@ -445,7 +445,7 @@ body {
 }
 
 .langBtnSet {
-  font-size: 24px;
+  font-size: 20px;
   color: black; 
   padding-right: 30px;
   transition: 1s;
@@ -477,22 +477,22 @@ body {
 .tagBtn2 {
   text-align: center;
   border: 1px solid black;
-  background: white;
-  color: black;
+  background: black;
+  color: white;
   font-size: 18px;
   width: 70px;
   height: 24px;
   border-radius: 10px;
-  transition: 1s;
+  transition: 0.5s;
 }
 
 .tagBtn1:hover,
 .tagBtn2:hover {
   color: white;
-  background: black;
-  border-color: black;
+  background: #ccc;
+  border-color: #ccc;
   cursor: pointer;
-  transition: 1s;
+  transition: 0.5s;
 }
 
 div,
