@@ -864,7 +864,7 @@ function showList(btn) {
          if(btn == value.status) {
             li += `<li class="item ">
                      <label for="${index}">
-                        <input onclick="status(this)" type="checkbox" id="${index}" ${isDone}>
+                        <input onclick="${status(this)}" type="checkbox" id="${index}" ${isDone}>
                         <p class="${isDone}">${value.name}</p>
                      </label>
                      <div class="settings-todo">
