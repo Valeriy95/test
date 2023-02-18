@@ -868,7 +868,7 @@ function showList(btn) {
                         <p class="${isDone}">${value.name}</p>
                      </label>
                      <div class="settings-todo">
-                        <p>...</p>
+                        <p class="todo-menu-p">...</p>
                         <ul class="item-menu">
                            <li class="edit-toDo">Edit</li>
                            <li class="delete-toDo">Delete</li>
@@ -946,7 +946,7 @@ todoInput.addEventListener("keyup", e => {
 list.addEventListener("click", deleteEditCheckedTask)
 
 function deleteEditCheckedTask (e) {
-   if (e.target.tagName == 'P') {
+   if (e.target.classList == 'todo-menu-p') {
       const parentNode = e.target.closest('p');
       showMenu(parentNode);
    }
