@@ -482,11 +482,11 @@ closeIcon1.addEventListener('click', closeSetCont);
 closeIcon2.addEventListener('click', closeSetCont);
 
 function showSetCont () {
-   settingContainer.classList.add('hide');
+   settingContainer.classList.add('show-container');
 };
 
 function closeSetCont () {
-   settingContainer.classList.remove('hide');
+   settingContainer.classList.remove('show-container');
 };
 
 const chancelanguage = document.querySelectorAll('input[type=radio][name="lang"]');
