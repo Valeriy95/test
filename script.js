@@ -948,7 +948,7 @@ list.addEventListener("click", deleteEditCheckedTask)
 function deleteEditCheckedTask (e) {
    if (e.target.classList == 'todo-menu-p') {
       const parentNode = e.target.closest('p');
-      showMenu(parentNode);
+//       showMenu(parentNode);
    }
    if (e.target.tagName == 'INPUT') {
       const parentNode = e.target.closest('input');
