@@ -864,7 +864,7 @@ function showList(btn) {
          if(btn == value.status) {
             li += `<li class="item ">
                      <label for="${index}">
-                        <input onclick="statusNew(this)" type="checkbox" id="${index}" ${isDone}>
+                        <input type="checkbox" id="${index}" ${isDone}>
                         <p class="${isDone}">${value.name}</p>
                      </label>
                      <div class="settings-todo">
@@ -910,7 +910,7 @@ clearBtn.addEventListener("click", () => {
    showList("progress");
 });
 
-function statusNew(selected) {
+function statuss(selected) {
    let blocName = selected.parentElement.lastElementChild;
    if(selected.checked) {
       blocName.classList.add("checked");
@@ -950,7 +950,11 @@ function deleteTask (e) {
       const parentNode = e.target.closest('p');
       console.log(parentNode)
       showMenu(parentNode)
-      // parentNode.remove();
+   }
+      if (e.target.tagName == 'INPUT') {
+      const parentNode = e.target.closest('input');
+      console.log(parentNode)
+      statuss(parentNode)
    }
 }
 
