@@ -870,8 +870,8 @@ function showList(btn) {
                      <div class="settings-todo">
                         <p>...</p>
                         <ul class="item-menu">
-                           <li class="edits">Edit</li>
-                           <li class="deletes">Delete</li>
+                           <li class="edit-toDo">Edit</li>
+                           <li class="delete-toDo">Delete</li>
                         </ul>
                      </div>
                   </li>`;
@@ -910,7 +910,7 @@ clearBtn.addEventListener("click", () => {
    showList("progress");
 });
 
-function statuss(selected) {
+function statusChecked(selected) {
    let blocName = selected.parentElement.lastElementChild;
    if(selected.checked) {
       blocName.classList.add("checked");
@@ -943,32 +943,26 @@ todoInput.addEventListener("keyup", e => {
    }
 });
 
-list.addEventListener("click", deleteTask)
+list.addEventListener("click", deleteEditCheckedTask)
 
-function deleteTask (e) {
+function deleteEditCheckedTask (e) {
    if (e.target.tagName == 'P') {
       const parentNode = e.target.closest('p');
-      console.log(parentNode)
-      showMenu(parentNode)
+      showMenu(parentNode);
    }
    if (e.target.tagName == 'INPUT') {
       const parentNode = e.target.closest('input');
-      console.log(parentNode)
-      statuss(parentNode)
+      statusChecked(parentNode);
    }
-   if (e.target.classList == 'edits') {
-      console.log(e.target);
-      const test = e.target.parentNode.parentNode.previousElementSibling;
-      const test2 = test.firstElementChild;
-      const test3 = test.lastElementChild
-      console.log(test2.id);
-      console.log(test3.textContent);
-      editInput(test2.id, test3.textContent);
+   if (e.target.classList == 'edit-toDo') {
+      const editParentNode = e.target.parentNode.parentNode.previousElementSibling;
+      const editNumber = editParentNode.firstElementChild;
+      const editValueToDo = editParentNode.lastElementChild;
+      editInput(editNumber.id, editValueToDo.textContent);
    }
-   if (e.target.classList == 'deletes') {
-      const test = e.target.parentNode.parentNode.previousElementSibling.firstElementChild;
-      console.log(test.id);
-      deleteInput(test.id)
+   if (e.target.classList == 'delete-toDo') {
+      const deleteToDoBtn = e.target.parentNode.parentNode.previousElementSibling.firstElementChild;
+      deleteInput(deleteToDoBtn.id);
    }
-}
+};
 
