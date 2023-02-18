@@ -587,6 +587,7 @@ time {
 }
 
 .todo-container {
+   z-index: 2;
    position: fixed;
    width: 320px;
    background: #fff;
