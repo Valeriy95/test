@@ -951,10 +951,21 @@ function deleteTask (e) {
       console.log(parentNode)
       showMenu(parentNode)
    }
-      if (e.target.tagName == 'INPUT') {
+   if (e.target.tagName == 'INPUT') {
       const parentNode = e.target.closest('input');
       console.log(parentNode)
       statuss(parentNode)
+   }
+   if (e.target.classList == 'edits') {
+      console.log(e.target);
+      const test = e.target.parentNode;
+      const test2 = test.parentNode;
+      const test3 = test2.previousElementSibling;
+      const test4 = test3.firstElementChild
+      const test5 = test3.lastElementChild
+      console.log(test4.id);
+      console.log(test5.textContent);
+      editInput(test4.id, test5.textContent);
    }
 }
 
