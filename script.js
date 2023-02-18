@@ -871,7 +871,7 @@ function showList(btn) {
                         <p>...</p>
                         <ul class="item-menu">
                            <li class="edits">Edit</li>
-                           <li onclick="deleteInput(${index})">Delete</li>
+                           <li class="deletes">Delete</li>
                         </ul>
                      </div>
                   </li>`;
@@ -958,14 +958,17 @@ function deleteTask (e) {
    }
    if (e.target.classList == 'edits') {
       console.log(e.target);
-      const test = e.target.parentNode;
-      const test2 = test.parentNode;
-      const test3 = test2.previousElementSibling;
-      const test4 = test3.firstElementChild
-      const test5 = test3.lastElementChild
-      console.log(test4.id);
-      console.log(test5.textContent);
-      editInput(test4.id, test5.textContent);
+      const test = e.target.parentNode.parentNode.previousElementSibling;
+      const test2 = test.firstElementChild;
+      const test3 = test.lastElementChild
+      console.log(test2.id);
+      console.log(test3.textContent);
+      editInput(test2.id, test3.textContent);
+   }
+   if (e.target.classList == 'deletes') {
+      const test = e.target.parentNode.parentNode.previousElementSibling.firstElementChild;
+      console.log(test.id);
+      deleteInput(test.id)
    }
 }
 
