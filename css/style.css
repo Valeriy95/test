@@ -540,7 +540,9 @@ time {
   margin-left: 63%;
   width: 32px;
   height: 32px;
-  background-image: url("../assets/svg/to-do.png");
+  color: white;
+  font-size: 30px;
+/*   background-image: url("../assets/svg/to-do.png"); */
 }
 
 /* TodoList */
