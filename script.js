@@ -868,7 +868,7 @@ function showList(btn) {
                         <p class="${isDone}">${value.name}</p>
                      </label>
                      <div class="settings-todo">
-                        <p onclick="alert(this)">...</p>
+                        <p>...</p>
                         <ul class="item-menu">
                            <li onclick="editInput(${index}, '${value.name}')">Edit</li>
                            <li onclick="deleteInput(${index})">Delete</li>
@@ -947,8 +947,10 @@ list.addEventListener("click", deleteTask)
 
 function deleteTask (e) {
    if (e.target.tagName == 'P') {
-      const parentNode = e.target.closest('.settings-todo');
-      parentNode.remove();
+      const parentNode = e.target.closest('p');
+      console.log(parentNode)
+      showMenu(parentNode)
+      // parentNode.remove();
    }
 }
 
