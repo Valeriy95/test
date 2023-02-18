@@ -453,8 +453,8 @@ body {
 
 .langBtnSet:hover {
   cursor: pointer;
-  color: white; 
-  transition: 1s;
+  color: #ccc; 
+  transition: 0.3s;
 }
 
 .imgBtn {
