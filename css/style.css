@@ -672,8 +672,8 @@ time {
 .item-menu {
    position: absolute;
    margin-left: -55px;
-   margin-top: 9px;
-   padding: 5px 0;
+   margin-top: -32px;
+   padding: 2px 0;
    list-style: none;
    background-color: #e2dcdc;
    border-radius: 5px;
@@ -689,11 +689,11 @@ time {
 
 .item-menu li {
    text-align: center;
-   width: 95px;
-   height: 30px;
+   width: 80px;
+   height: 20px;
    padding: 4px 15px;
    margin-bottom: 2px;
-   justify-content: flex-start;
+   font-size: 16px;
 }
 
 .item-menu li:hover {
