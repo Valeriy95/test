@@ -578,6 +578,12 @@ time {
    border-radius: 10px;
    color: black;
    overflow-x: hidden;
+   transform: scale(0);
+}
+
+.show-container {
+  transform: scale(1);
+   transition: 0.3s;
 }
 
 .todo-container {
