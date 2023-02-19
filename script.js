@@ -588,6 +588,7 @@ async function getLinkToImageUnsplash(changeImageAPI) {
       img.onload = () => {      
          body.style.background = `url(${data.urls.regular}) center/cover, rgba(0, 0, 0, 0.5)`;
       }; 
+      changeImageAPI[1].checked = true;
       console.log('timeOfDayUnsplash');
    } 
    if (changeImageAPI == 'flickr') {
@@ -609,6 +610,7 @@ async function getLinkToImageUnsplash(changeImageAPI) {
       img.onload = () => {      
          body.style.background = `url(${data.photos.photo[ranNum].url_l}) center/cover, rgba(0, 0, 0, 0.5)`;
       }; 
+      changeImageAPI[2].checked = true;
       console.log('timeOfDayFlickr');
       }
  };
@@ -620,6 +622,7 @@ changeImageAPI.forEach(changeImageAPI => changeImageAPI.addEventListener('change
       localStorage.setItem('changeImageAPI', changeImageAPI.value);
       getLocalImageAPI();
       setBg();
+      changeImageAPI[0].checked = true;
       console.log('github');
    } else if (changeImageAPI.value == 'unsplash') {
       localStorage.setItem('changeImageAPI', changeImageAPI.value);
