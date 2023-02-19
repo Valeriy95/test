@@ -838,7 +838,7 @@ function changeHideAudio () {
    } else {
       player.classList.remove('opacity-bloc');
       wrapperPlayer.classList.remove('opacity-bloc');
-      chHideAudio.checked = true;
+      chHideAudio.checked = false;
       localStorage.removeItem('chHideAudio');
    }
 };
