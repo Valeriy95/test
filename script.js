@@ -458,6 +458,7 @@ function changeLanguagesEnRu (str) {
       inputQuote.textContent = 'Цитата';
       inputWeather.textContent = 'Погода';
       inputAudio.textContent = 'Аудио';
+      chancelanguage[1].checked = true;
 	   
       for (let i = 0; i < editToDo.length; i++) { 
 	   editToDo[i].textContent = 'Редак.';
@@ -494,6 +495,7 @@ function changeLanguagesEnRu (str) {
       inputQuote.textContent = 'Quote';
       inputWeather.textContent = 'Weather';
       inputAudio.textContent = 'Audio';
+      chancelanguage[1].checked = true;
       
       for(let i = 0; i < editToDo.length; i++) { 
 	  editToDo[i].textContent = 'Edit';
@@ -541,12 +543,12 @@ const chancelanguage = document.querySelectorAll('input[type=radio][name="lang"]
 chancelanguage.forEach(chancelanguage => chancelanguage.addEventListener('change', function sur () {
    if(chancelanguage.value == 'ru') {
       changeLanguagesEnRu (chancelanguage.value);
-      chancelanguage.checked = true;
+//       chancelanguage.checked = true;
       localStorage.setItem('chancelanguage', chancelanguage.value);
       console.log('RU');
    } else if (chancelanguage.value == 'en') {
       changeLanguagesEnRu (chancelanguage.value);
-      chancelanguage.checked = true;
+//       chancelanguage.checked = true;
       localStorage.setItem('chancelanguage', chancelanguage.value);
       console.log('EN');
    }
