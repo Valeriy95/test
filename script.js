@@ -428,7 +428,7 @@ function changeLanguagesEnRu (str) {
    const inputAudio = document.querySelector('.input-audio-h');
    const inputTodolist = document.querySelector('.input-todolist-h');
 	
-   const editToDo = document.querySelectorAll('.edit-ToDo');
+   const editToDo = document.querySelectorAll('.edit-toDo');
 //    const deleteToDo = document.querySelectorAll('.delete-ToDo');
    
    if (str == 'ru') {
