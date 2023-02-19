@@ -445,8 +445,8 @@ function changeLanguagesEnRu (str) {
       doneBtn.textContent = 'Сделанные';
       clearBtn.textContent = 'Очистить';
       inputToDo.placeholder = 'Новый ToDo';
-      editToDo.textContent = 'Редактировать';
-      deleteToDo.textContent = 'Удалить';
+      editToDo.innerText  = 'Редактировать';
+      deleteToDo.innerText  = 'Удалить';
       };
    if (str == 'en') {
       isRus = false;
@@ -470,8 +470,8 @@ function changeLanguagesEnRu (str) {
       doneBtn.textContent = 'Done';
       clearBtn.textContent = 'Clear all';
       inputToDo.placeholder = 'New ToDo';
-      editToDo.textContent = 'Edit';
-      deleteToDo.textContent = 'Delete';
+      editToDo.innerText  = 'Edit';
+      deleteToDo.innerText  = 'Delete';
       }
 //    isRus = true;
 //    showGreeting('ru');
