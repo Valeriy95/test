@@ -420,8 +420,8 @@ function changeLanguagesEnRu (str) {
    const doneBtn = document.querySelector('.done-btn');
    const clearBtn = document.querySelector('.btn-clear');
    const inputToDo = document.querySelector('.input-ToDo');
-   const editToDo = document.querySelector('.edit-ToDo');
-   const deleteToDo = document.querySelector('.delete-ToDo');
+   const editToDo = document.querySelectorAll('.edit-ToDo');
+   const deleteToDo = document.querySelectorAll('.delete-ToDo');
    
    if (str == 'ru') {
       isRus = true;
