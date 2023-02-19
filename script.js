@@ -446,7 +446,7 @@ function changeLanguagesEnRu (str) {
       clearBtn.textContent = 'Очистить';
       inputToDo.placeholder = 'Новый ToDo';
       for(let i = 0; i < editToDo.length; i++) { 
-	    editToDo[i].textContent = 'Редактировать';
+	    editToDo[i].innerText = 'Редактировать';
 	   }
       
 //       editToDo.innerText  = 'Редактировать';
@@ -476,7 +476,7 @@ function changeLanguagesEnRu (str) {
       inputToDo.placeholder = 'New ToDo';
       
       for(let i = 0; i < editToDo.length; i++) { 
-	    editToDo[i].textContent = 'Edit';
+	    editToDo[i].innerText = 'Edit';
 	   }
 //       editToDo.innerText  = 'Edit';
       deleteToDo.innerText  = 'Delete';
