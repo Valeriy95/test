@@ -419,6 +419,7 @@ function changeLanguagesEnRu (str) {
    const progressBtn = document.querySelector('.progress-btn');
    const doneBtn = document.querySelector('.done-btn');
    const clearBtn = document.querySelector('.btn-clear');
+   const inputToDo = document.querySelector('.input-ToDo');
    
    if (str == 'ru') {
       isRus = true;
@@ -441,6 +442,7 @@ function changeLanguagesEnRu (str) {
       progressBtn.textContent = 'В процессе';
       doneBtn.textContent = 'Сделанные';
       clearBtn.textContent = 'Очистить';
+      inputToDo.placeholder = 'Новый ToDo';
       };
    if (str == 'en') {
       isRus = false;
@@ -463,6 +465,7 @@ function changeLanguagesEnRu (str) {
       progressBtn.textContent = 'In progress';
       doneBtn.textContent = 'Done';
       clearBtn.textContent = 'Clear all';
+      inputToDo.placeholder = 'New ToDo';
       }
 //    isRus = true;
 //    showGreeting('ru');
