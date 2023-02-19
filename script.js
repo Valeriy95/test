@@ -420,7 +420,7 @@ function changeLanguagesEnRu (str) {
    const doneBtn = document.querySelector('.done-btn');
    const clearBtn = document.querySelector('.btn-clear');
    const inputToDo = document.querySelector('.input-ToDo');
-   const inputTime = document.querySelector('.input[name="time"]');
+   const inputTime = document.querySelector('input[name="time"]');
 	
 //    const editToDo = document.querySelectorAll('.edit-ToDo');
 //    const deleteToDo = document.querySelectorAll('.delete-ToDo');
