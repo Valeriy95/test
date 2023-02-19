@@ -767,13 +767,14 @@ window.addEventListener('load', getchangeHideToDo);
 function changeHideTime () {
    const time = document.querySelector('.time');
    time.classList.toggle('opacity-bloc');
-   chHideTime.checked = true;
 
    if (time.classList.contains('opacity-bloc') == true) {
       time.classList.add('opacity-bloc');
+      chHideTime.checked = true;
       localStorage.setItem('chHideTime', chHideTime.value);
    } else {
       time.classList.remove('opacity-bloc');
+      chHideTime.checked = false;
       localStorage.removeItem('chHideTime');
    }
 };
