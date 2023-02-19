@@ -729,40 +729,20 @@ const chHideDate = document.querySelector('input[type=checkbox][name="date"]');
 chHideDate.addEventListener('click', changeHideDate);
 
 const chHideGreeting = document.querySelector('input[type=checkbox][name="greeting"]');
-chHideGreeting.addEventListener('change', changeHideGreeting);
+chHideGreeting.addEventListener('click', changeHideGreeting);
 
 const chHideQuote = document.querySelector('input[type=checkbox][name="quote"]');
-chHideQuote.addEventListener('change', changeHideQuote);
+chHideQuote.addEventListener('click', changeHideQuote);
 
 const chHideWeather = document.querySelector('input[type=checkbox][name="weather"]');
-chHideWeather.addEventListener('change', changeHideWeather);
+chHideWeather.addEventListener('click', changeHideWeather);
 
 const chHideAudio = document.querySelector('input[type=checkbox][name="audio"]');
-chHideAudio.addEventListener('change', changeHideAudio);
+chHideAudio.addEventListener('click', changeHideAudio);
 
 const chHideTodolist = document.querySelector('input[type=checkbox][name="todolist"]');
-chHideTodolist.addEventListener('change', changeHideToDo);
+chHideTodolist.addEventListener('click', changeHideToDo);
 
-function changeHideToDo () {
-   const wrapperTodo = document.querySelector('.wrapper-todo');
-   wrapperTodo.classList.toggle('opacity-bloc');
-
-   if (wrapperTodo.classList.contains('opacity-bloc') == true) {
-      wrapperTodo.classList.add('opacity-bloc');
-      localStorage.setItem('chHideTodolist', chHideTodolist.value);
-   } else {
-      wrapperTodo.classList.remove('opacity-bloc');
-      localStorage.removeItem('chHideTodolist');
-   }
-};
-
-function getchangeHideToDo() {
-   if(localStorage.getItem('chHideTodolist')) {
-     chHideTodolist.value = localStorage.getItem('chHideTodolist');
-     changeHideToDo ();
-   }
- };
-window.addEventListener('load', getchangeHideToDo);
 
 function changeHideTime () {
    const time = document.querySelector('.time');
@@ -785,9 +765,11 @@ function changeHideDate () {
    date.classList.toggle('opacity-bloc');
    if(date.classList.contains('opacity-bloc') == true) {
       date.classList.add('opacity-bloc');
+      chHideDate.checked = true;
       localStorage.setItem('chHideDate', chHideDate.value);
    } else {
       date.classList.remove('opacity-bloc');
+      chHideDate.checked = false;
       localStorage.removeItem('chHideDate');
    }
 };
@@ -798,9 +780,11 @@ function changeHideGreeting () {
    greeting.classList.toggle('opacity-bloc');
    if(greeting.classList.contains('opacity-bloc') == true) {
       greeting.classList.add('opacity-bloc');
+      chHideGreeting.checked = true;
       localStorage.setItem('chHideGreeting', chHideGreeting.value);
    } else {
       greeting.classList.remove('opacity-bloc');
+      chHideGreeting.checked = false;
       localStorage.removeItem('chHideGreeting');
    }
 };
@@ -816,11 +800,13 @@ function changeHideQuote () {
       quote.classList.add('opacity-bloc');
       author.classList.add('opacity-bloc');
       changeQuote.classList.add('opacity-bloc');
+      chHideQuote.checked = true;
       localStorage.setItem('chHideQuote', chHideQuote.value);
    } else {
       quote.classList.remove('opacity-bloc');
       author.classList.remove('opacity-bloc');
       changeQuote.classList.remove('opacity-bloc');
+      chHideQuote.checked = false;
       localStorage.removeItem('chHideQuote');
    }
 };
@@ -830,9 +816,11 @@ function changeHideWeather () {
    weather.classList.toggle('opacity-bloc');
    if(weather.classList.contains('opacity-bloc') == true) {
       weather.classList.add('opacity-bloc');
+      chHideWeather.checked = true;
       localStorage.setItem('chHideWeather', chHideWeather.value);
    } else {
       weather.classList.remove('opacity-bloc');
+      chHideWeather.checked = false;
       localStorage.removeItem('chHideWeather');
    }
 };
@@ -845,15 +833,30 @@ function changeHideAudio () {
    if(player.classList.contains('opacity-bloc') == true && wrapperPlayer.classList.contains('opacity-bloc') == true) {
       player.classList.add('opacity-bloc');
       wrapperPlayer.classList.add('opacity-bloc');
+      chHideAudio.checked = true;
       localStorage.setItem('chHideAudio', chHideAudio.value);
    } else {
       player.classList.remove('opacity-bloc');
       wrapperPlayer.classList.remove('opacity-bloc');
+      chHideAudio.checked = true;
       localStorage.removeItem('chHideAudio');
    }
 };
 
+function changeHideToDo () {
+   const wrapperTodo = document.querySelector('.wrapper-todo');
+   wrapperTodo.classList.toggle('opacity-bloc');
 
+   if (wrapperTodo.classList.contains('opacity-bloc') == true) {
+      wrapperTodo.classList.add('opacity-bloc');
+      chHideTodolist.checked = true;
+      localStorage.setItem('chHideTodolist', chHideTodolist.value);
+   } else {
+      wrapperTodo.classList.remove('opacity-bloc');
+      chHideTodolist.checked = false;
+      localStorage.removeItem('chHideTodolist');
+   }
+};
 
 function getchangeHideTime() {
    if(localStorage.getItem('chHideTime')) {
@@ -902,6 +905,14 @@ function getchangeHideAudio() {
    }
  };
 window.addEventListener('load', getchangeHideAudio);
+
+function getchangeHideToDo() {
+   if(localStorage.getItem('chHideTodolist')) {
+     chHideTodolist.value = localStorage.getItem('chHideTodolist');
+     changeHideToDo ();
+   }
+ };
+window.addEventListener('load', getchangeHideToDo);
 
 
 // 11. Todo list
