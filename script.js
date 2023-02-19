@@ -573,6 +573,9 @@ let timeOfDayUnsplash;
 let timeOfDayFlickr;
 
 async function getLinkToImageUnsplash(changeImageAPI) {
+   if (changeImageAPI == 'github') {
+      changeImageAPI[0].checked = true;
+   };
    if (changeImageAPI == 'unsplash') {
       if(timeOfDayUnsplash == null || timeOfDayUnsplash == '' || timeOfDayUnsplash == undefined) {
          timeOfDayUnsplash = timeOfDay;
@@ -620,9 +623,9 @@ const changeImageAPI = document.querySelectorAll('input[type=radio][name="imgcol
 changeImageAPI.forEach(changeImageAPI => changeImageAPI.addEventListener('change', function changeAPI () {
    if(changeImageAPI.value == 'github') {
       localStorage.setItem('changeImageAPI', changeImageAPI.value);
+      getLinkToImageUnsplash(changeImageAPI.value);
       getLocalImageAPI();
       setBg();
-      changeImageAPI[0].checked = true;
       console.log('github');
    } else if (changeImageAPI.value == 'unsplash') {
       localStorage.setItem('changeImageAPI', changeImageAPI.value);
