@@ -723,7 +723,7 @@ function hideBlocClose () {
 
 
 const chHideTime = document.querySelector('input[type=checkbox][name="time"]');
-chHideTime.addEventListener('change', changeHideTime);
+chHideTime.addEventListener('click', changeHideTime);
                                                                             
 const chHideDate = document.querySelector('input[type=checkbox][name="date"]');
 chHideDate.addEventListener('click', changeHideDate);
