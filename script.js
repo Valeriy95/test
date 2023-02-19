@@ -682,8 +682,29 @@ chHideWeather.addEventListener('change', changeHideWeather);
 const chHideAudio = document.querySelector('input[type=checkbox][name="audio"]');
 chHideAudio.addEventListener('change', changeHideAudio);
 
-// const chHideTodolist = document.querySelector('input[type=checkbox][name="todolist"]');
-// chHideTodolist.addEventListener('change', changeHide);
+const chHideTodolist = document.querySelector('input[type=checkbox][name="todolist"]');
+chHideTodolist.addEventListener('change', changeHideToDo);
+
+function changeHideToDo () {
+   const wrapperTodo = document.querySelector('.wrapper-todo');
+   wrapperTodo.classList.toggle('opacity-bloc');
+
+   if (wrapperTodo.classList.contains('opacity-bloc') == true) {
+      wrapperTodo.classList.add('opacity-bloc');
+      localStorage.setItem('chHideTodolist', chHideTodolist.value);
+   } else {
+      wrapperTodo.classList.remove('opacity-bloc');
+      localStorage.removeItem('chHideTodolist');
+   }
+};
+
+function getchangeHideToDo() {
+   if(localStorage.getItem('chHideTodolist')) {
+     chHideTodolist.value = localStorage.getItem('chHideTodolist');
+     changeHideToDo ();
+   }
+ };
+window.addEventListener('load', getchangeHideToDo);
 
 function changeHideTime () {
    const time = document.querySelector('.time');
