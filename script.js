@@ -447,7 +447,7 @@ function changeLanguagesEnRu (str) {
       doneBtn.textContent = 'Сделанные';
       clearBtn.textContent = 'Очистить';
       inputToDo.placeholder = 'Новый ToDo';
-      inputTime.value = 'Время';  
+      inputTime.textContent = 'Время';  
 	   
 	   
 //       for (let j = 0; j < editToDo.length; j++) { 
@@ -477,7 +477,7 @@ function changeLanguagesEnRu (str) {
       doneBtn.textContent = 'Done';
       clearBtn.textContent = 'Clear all';
       inputToDo.placeholder = 'New ToDo';
-      inputTime.value = 'Time'; 
+      inputTime.textContent = 'Time'; 
       
 //       for(let i = 0; i < editToDo.length; i++) { 
 // 	  editToDo[i].textContent = 'Edit';
