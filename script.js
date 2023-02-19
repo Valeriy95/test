@@ -428,7 +428,7 @@ function changeLanguagesEnRu (str) {
    const inputAudio = document.querySelector('.input-audio-h');
    const inputTodolist = document.querySelector('.input-todolist-h');
 	
-//    const editToDo = document.querySelectorAll('.edit-ToDo');
+   const editToDo = document.querySelectorAll('.edit-ToDo');
 //    const deleteToDo = document.querySelectorAll('.delete-ToDo');
    
    if (str == 'ru') {
@@ -460,9 +460,9 @@ function changeLanguagesEnRu (str) {
       inputWeather.textContent = 'Погода';
       inputAudio.textContent = 'Аудио';
 	   
-//       for (let j = 0; j < editToDo.length; j++) { 
-// 	   editToDo[j].textContent = 'Редактировать';
-//       };
+      for (let j = 0; j < editToDo.length; j++) { 
+	   editToDo[j].textContent = 'Редактировать';
+      };
 //       deleteToDo.innerText  = 'Удалить';
       };
    if (str == 'en') {
@@ -494,9 +494,9 @@ function changeLanguagesEnRu (str) {
       inputWeather.textContent = 'Weather';
       inputAudio.textContent = 'Audio';
       
-//       for(let i = 0; i < editToDo.length; i++) { 
-// 	  editToDo[i].textContent = 'Edit';
-//       };
+      for(let i = 0; i < editToDo.length; i++) { 
+	  editToDo[i].textContent = 'Edit';
+      };
 //       deleteToDo.innerText  = 'Delete';
       }
 //    isRus = true;
