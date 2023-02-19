@@ -416,6 +416,10 @@ function changeLanguagesEnRu (str) {
    const hideBlock = document.querySelector('.hide-block');
    const tagBtn1 = document.querySelector('.tagBtn1');
    const tagBtn2 = document.querySelector('.tagBtn2');
+   const progressBtn = document.querySelector('.progress-btn');
+   const doneBtn = document.querySelector('.done-btn');
+   const clearBtn = document.querySelector('.btn-clear');
+   
    if (str == 'ru') {
       isRus = true;
       showGreeting('ru');
@@ -434,6 +438,9 @@ function changeLanguagesEnRu (str) {
       hideBlock.textContent = 'Скрыть/показать блоки';
       tagBtn1.textContent = 'Тег';
       tagBtn2.textContent = 'Тег';
+      progressBtn.textContent = 'В процессе';
+      doneBtn.textContent = 'Сделанные';
+      clearBtn.textContent = 'Очистить';
       };
    if (str == 'en') {
       isRus = false;
@@ -453,6 +460,9 @@ function changeLanguagesEnRu (str) {
       hideBlock.textContent = 'Hide/show blocks';
       tagBtn1.textContent = 'Tag';
       tagBtn2.textContent = 'Tag';
+      progressBtn.textContent = 'In progress';
+      doneBtn.textContent = 'Done';
+      clearBtn.textContent = 'Clear all';
       }
 //    isRus = true;
 //    showGreeting('ru');
