@@ -460,10 +460,10 @@ function changeLanguagesEnRu (str) {
       inputAudio.textContent = 'Аудио';
 	   
       for (let i = 0; i < editToDo.length; i++) { 
-	   editToDo[j].textContent = 'Редак.';
+	   editToDo[i].textContent = 'Редак.';
       };
       for (let i = 0; i < deleteToDo.length; i++) { 
-	   deleteToDo[j].textContent = 'Удалитm';
+	   deleteToDo[i].textContent = 'Удалить';
       };
       };
    if (str == 'en') {
