@@ -420,8 +420,10 @@ function changeLanguagesEnRu (str) {
    const doneBtn = document.querySelector('.done-btn');
    const clearBtn = document.querySelector('.btn-clear');
    const inputToDo = document.querySelector('.input-ToDo');
-   const editToDo = document.querySelectorAll('.edit-ToDo');
-   const deleteToDo = document.querySelectorAll('.delete-ToDo');
+   const inputTime = document.querySelector('.input[name="time"]');
+	
+//    const editToDo = document.querySelectorAll('.edit-ToDo');
+//    const deleteToDo = document.querySelectorAll('.delete-ToDo');
    
    if (str == 'ru') {
       isRus = true;
@@ -445,10 +447,12 @@ function changeLanguagesEnRu (str) {
       doneBtn.textContent = 'Сделанные';
       clearBtn.textContent = 'Очистить';
       inputToDo.placeholder = 'Новый ToDo';
-      for (let j = 0; j < editToDo.length; j++) { 
-	   editToDo[j].textContent = 'Редактировать';
-      };
-      
+      inputTime.value = 'Время';  
+	   
+	   
+//       for (let j = 0; j < editToDo.length; j++) { 
+// 	   editToDo[j].textContent = 'Редактировать';
+//       };
 //       deleteToDo.innerText  = 'Удалить';
       };
    if (str == 'en') {
@@ -473,10 +477,11 @@ function changeLanguagesEnRu (str) {
       doneBtn.textContent = 'Done';
       clearBtn.textContent = 'Clear all';
       inputToDo.placeholder = 'New ToDo';
+      inputTime.value = 'Time'; 
       
-      for(let i = 0; i < editToDo.length; i++) { 
-	  editToDo[i].textContent = 'Edit';
-      };
+//       for(let i = 0; i < editToDo.length; i++) { 
+// 	  editToDo[i].textContent = 'Edit';
+//       };
 //       deleteToDo.innerText  = 'Delete';
       }
 //    isRus = true;
