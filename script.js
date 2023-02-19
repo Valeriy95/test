@@ -420,7 +420,13 @@ function changeLanguagesEnRu (str) {
    const doneBtn = document.querySelector('.done-btn');
    const clearBtn = document.querySelector('.btn-clear');
    const inputToDo = document.querySelector('.input-ToDo');
-   const inputTime = document.querySelector('input[name="time"]');
+   const inputTime = document.querySelector('.input-time-h');
+   const inputDate = document.querySelector('.input-date-h');
+   const inputGreeting = document.querySelector('.input-greeting-h');
+   const inputQuote = document.querySelector('.input-quote-h');
+   const inputWeather = document.querySelector('.input-weather-h');
+   const inputAudio = document.querySelector('.input-audio-h');
+   const inputTodolist = document.querySelector('.input-todolist-h');
 	
 //    const editToDo = document.querySelectorAll('.edit-ToDo');
 //    const deleteToDo = document.querySelectorAll('.delete-ToDo');
@@ -447,8 +453,12 @@ function changeLanguagesEnRu (str) {
       doneBtn.textContent = 'Сделанные';
       clearBtn.textContent = 'Очистить';
       inputToDo.placeholder = 'Новый ToDo';
-      inputTime.textContent = 'Время';  
-	   
+      inputTime.textContent = 'Время';
+      inputDate.textContent = 'Дата';
+      inputGreeting.textContent = 'Приветствие';
+      inputQuote.textContent = 'Цитата';
+      inputWeather.textContent = 'Погода';
+      inputAudio.textContent = 'Аудио';
 	   
 //       for (let j = 0; j < editToDo.length; j++) { 
 // 	   editToDo[j].textContent = 'Редактировать';
@@ -477,7 +487,12 @@ function changeLanguagesEnRu (str) {
       doneBtn.textContent = 'Done';
       clearBtn.textContent = 'Clear all';
       inputToDo.placeholder = 'New ToDo';
-      inputTime.textContent = 'Time'; 
+      inputTime.textContent = 'Time';
+      inputDate.textContent = 'Date';
+      inputGreeting.textContent = 'Greeting';
+      inputQuote.textContent = 'Quote';
+      inputWeather.textContent = 'Weather';
+      inputAudio.textContent = 'Audio';
       
 //       for(let i = 0; i < editToDo.length; i++) { 
 // 	  editToDo[i].textContent = 'Edit';
