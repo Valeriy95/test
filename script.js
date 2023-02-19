@@ -572,11 +572,11 @@ window.addEventListener('load', getLocalLanguage);
 let timeOfDayUnsplash;
 let timeOfDayFlickr;
 
-async function getLinkToImageUnsplash(changeImageAPI) {
-   if (changeImageAPI == 'github') {
+async function getLinkToImageUnsplash(changeImage) {
+   if (changeImage == 'github') {
       changeImageAPI[0].checked = true;
    };
-   if (changeImageAPI == 'unsplash') {
+   if (changeImage == 'unsplash') {
       if(timeOfDayUnsplash == null || timeOfDayUnsplash == '' || timeOfDayUnsplash == undefined) {
          timeOfDayUnsplash = timeOfDay;
          console.log('timeOfDayUnsplash-null');
@@ -594,7 +594,7 @@ async function getLinkToImageUnsplash(changeImageAPI) {
       changeImageAPI[1].checked = true;
       console.log('timeOfDayUnsplash');
    } 
-   if (changeImageAPI == 'flickr') {
+   if (changeImage == 'flickr') {
       if(timeOfDayFlickr == null || timeOfDayFlickr == '' || timeOfDayFlickr == undefined) {
          timeOfDayFlickr = timeOfDay;
          console.log('timeOfDayFlickr-null');
