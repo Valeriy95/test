@@ -767,7 +767,7 @@ window.addEventListener('load', getchangeHideToDo);
 function changeHideTime () {
    const time = document.querySelector('.time');
    time.classList.toggle('opacity-bloc');
-   time.checked = true;
+   chHideTime.checked = true;
 
    if (time.classList.contains('opacity-bloc') == true) {
       time.classList.add('opacity-bloc');
