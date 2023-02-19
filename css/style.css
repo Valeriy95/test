@@ -572,7 +572,7 @@ time {
    position: absolute;
    margin-top: -390px;
    margin-left: 650px;
-   max-width: 321px;
+   max-width: 350px;
    max-height: 323px;
    background: #fff;
    border-radius: 10px;
@@ -589,7 +589,7 @@ time {
 .todo-container {
    z-index: 2;
    position: fixed;
-   width: 320px;
+   width: 350px;
    background: #fff;
    border-radius: 10px
 }
@@ -655,7 +655,7 @@ time {
    margin: 20px 25px;
    margin-top: 114px;
    list-style: none;
-   width: 270px;
+   width: 300px;
 }
 
 .list-container span {
