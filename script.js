@@ -495,7 +495,7 @@ function changeLanguagesEnRu (str) {
       inputQuote.textContent = 'Quote';
       inputWeather.textContent = 'Weather';
       inputAudio.textContent = 'Audio';
-      chancelanguage[1].checked = true;
+      chancelanguage[0].checked = true;
       
       for(let i = 0; i < editToDo.length; i++) { 
 	  editToDo[i].textContent = 'Edit';
