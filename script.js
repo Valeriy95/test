@@ -541,12 +541,12 @@ const chancelanguage = document.querySelectorAll('input[type=radio][name="lang"]
 chancelanguage.forEach(chancelanguage => chancelanguage.addEventListener('change', function sur () {
    if(chancelanguage.value == 'ru') {
       changeLanguagesEnRu (chancelanguage.value);
-      chancelanguage.checked = 'checked';
+      chancelanguage.checked;
       localStorage.setItem('chancelanguage', chancelanguage.value);
       console.log('RU');
    } else if (chancelanguage.value == 'en') {
       changeLanguagesEnRu (chancelanguage.value);
-      chancelanguage.checked = 'checked';
+      chancelanguage.checked;
       localStorage.setItem('chancelanguage', chancelanguage.value);
       console.log('EN');
    }
