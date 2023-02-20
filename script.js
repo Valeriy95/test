@@ -532,7 +532,7 @@ settingIcon.addEventListener('click', showSetCont);
 // closeIcon2.addEventListener('click', closeSetCont);
 
 function showSetCont () {
-   settingContainer.classList.toggle('hidden');
+   settingContainer.classList.toggle('show-container-set');
 };
 
 // function closeSetCont () {
@@ -922,7 +922,7 @@ const todoListContainer = document.querySelector('.wrapper-todo');
 todoListIcon.addEventListener('click', openCloseTodoList);
 
 function openCloseTodoList () {
-   todoListContainer.classList.toggle('show-container');
+   todoListContainer.classList.toggle('hidden');
 }
 
 const todoInput = document.querySelector(".todo-input input");
