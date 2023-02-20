@@ -587,11 +587,13 @@ time {
    border-radius: 10px;
    color: black;
    overflow-x: hidden;
-   transform: scale(0);
+/*    transform: scale(0); */
+   visibility: hidden;
 }
 
 .show-container {
-  transform: scale(1);
+/*   transform: scale(1); */
+  visibility: visible;
   transition: 0.3s;
 }
 
