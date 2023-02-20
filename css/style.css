@@ -588,7 +588,7 @@ time {
    color: black;
    overflow-x: hidden;
 /*    transform: scale(0); */
-   visibility: hidden;
+/*    visibility: hidden; */
 }
 
 .show-container {
