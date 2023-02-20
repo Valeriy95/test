@@ -532,7 +532,7 @@ settingIcon.addEventListener('click', showSetCont);
 // closeIcon2.addEventListener('click', closeSetCont);
 
 function showSetCont () {
-   settingContainer.classList.toggle('show-container');
+   settingContainer.classList.toggle('show-container-set');
 };
 
 // function closeSetCont () {
