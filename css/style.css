@@ -534,6 +534,7 @@ time {
 .todo-icon {
   width: 32px;
   height: 32px;
+  text-align: center;
   color: white;
   font-size: 20px;
 }
