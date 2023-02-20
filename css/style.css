@@ -594,6 +594,11 @@ time {
 .show-container {
 /*   transform: scale(1); */
   visibility: visible;
+/*   transition: 0.3s; */
+}
+
+.show-container-set {
+  transform: scale(1);
   transition: 0.3s;
 }
 
