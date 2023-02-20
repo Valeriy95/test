@@ -542,7 +542,6 @@ time {
   height: 32px;
   color: white;
   font-size: 20px;
-/*   background-image: url("../assets/svg/to-do.png"); */
 }
 
 .todo-icon:hover {
@@ -723,10 +722,16 @@ time {
    background-color: rgb(241, 234, 234);
 }
 
+.github-icon {
+  width: 30px;
+  height: 30px;
+  background-image: url("../assets/svg/icons8-github-30.png");
+}
 
 .hidden {
  display:none; 
 }
+
 
 @media (max-width: 768px) {
   .time {
