@@ -363,11 +363,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  position: absolute;
   background: white;
   width: 310px;
   height: 326px;
-  margin-left: -28%;
   margin-top: -380px;
   border-radius: 5px;
   transform: scale(0);
