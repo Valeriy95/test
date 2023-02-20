@@ -725,14 +725,17 @@ time {
 .github-icon {
   position: absolute;
   margin-top: -46px;
-  margin-left: -20%;
+  margin-left: -41%;
   width: 30px;
   height: 30px;
 }
 
 .rss-icon {
+  position: absolute;
+  margin-top: -48px;
+  margin-left: -36%;
   width: 50px;
-  height: 30px;
+  height: 35px;
 }
 
 .hidden {
