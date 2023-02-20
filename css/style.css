@@ -532,9 +532,6 @@ time {
 }
 
 .todo-icon {
-  position: absolute;
-  margin-top: -4%;
-  margin-left: 63%;
   width: 32px;
   height: 32px;
   color: white;
@@ -545,6 +542,23 @@ time {
   color: #cccccc;
   cursor: pointer;
 }
+
+
+.wrapper-footer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.wrapper-icon-todo {
+  width: 15%;
+}
+
+.wrapper-todo {
+  width: 15%;
+}
+
 
 /* TodoList */
 ::-webkit-scrollbar {
@@ -721,11 +735,8 @@ time {
 
 .icon-container {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  width: 16%;
-  position: absolute;
-  margin-left: -24%;
-  margin-top: -47px;
 }
 
 .github-icon {
