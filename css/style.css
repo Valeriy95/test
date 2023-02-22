@@ -791,6 +791,7 @@ time {
   
   .btn-pen-comp span {
     font-size: 16px;
+    margin: 0;
   }
   
   .buttons .btn-clear {
