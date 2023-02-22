@@ -950,6 +950,7 @@ time {
     max-width: 150px;
     max-height: 292px;
     margin-left: -57px;
+    margin-bottom: 73px;
   }
 
   .todo-container {
@@ -974,5 +975,21 @@ time {
   
   .list-container span {
     margin-left: -90px;
+  }
+  
+  .wrapper-player {
+    height: 170px;
+  }
+  
+  .greeting-container {
+    font-size: 24px
+  }
+  
+  .names {
+    font-size: 24px;
+  }
+  
+  .time {
+    font-size: 60px;
   }
 }
