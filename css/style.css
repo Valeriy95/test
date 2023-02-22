@@ -778,4 +778,32 @@ time {
     font-size: 32px;
     padding: 5px;
   }
+  
+   .wrapper-todo {
+     max-width: 200px;
+     max-height: 296px;
+  }
+  
+  .todo-container {
+    width: 200px;
+  }
+  
+  .btn-pen-comp span {
+    font-size: 16px;
+  }
+  
+  .buttons .btn-clear {
+    margin-left: 8px;
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+  
+  .list-container {
+    margin: 10px 25px;
+    width: 200px;
+  }
+  
+  .item {
+    font-size: 14px;
+  }
 }
