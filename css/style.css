@@ -894,4 +894,22 @@ time {
     display: flex;
     flex-direction: column;
   }
+  
+  .hide-block-container {
+    margin-top: -311px;
+    width: 158px;
+  }
+  
+  .hide-bloc-mar {
+    margin-left: 25px;
+  }
+  
+  .hide-bloc-close {
+    position: absolute;
+    margin-left: 75%;
+    margin-top: -165%;
+    width: 20px;
+    height: 20px;
+  }
+
 }
