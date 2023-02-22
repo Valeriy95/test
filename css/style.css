@@ -16,7 +16,6 @@ body {
   font-size: 16px;
   color: #fff;
   text-align: center;
-  /* background: url("../assets/img/bg.jpg") center/cover, rgba(0, 0, 0, 0.5); */
   background-blend-mode: multiply;
   transition: background-image 1s ease-in-out;
   overflow-x: hidden;
@@ -260,12 +259,10 @@ body {
 
 .quote {
   min-height: 32px;
-/*   width: 600px; */
 }
 
 .author {
   min-height: 20px;
-/*   width: 600px; */
 }
 
 .progress-container {
@@ -562,13 +559,12 @@ time {
 
 /* TodoList */
 ::-webkit-scrollbar {
-   width: 7px; /* ширина для вертикального скролла */
-   height: 10px; /* высота для горизонтального скролла */
+   width: 7px; 
+   height: 10px; 
    background-color: #fff;
    border-radius: 10px;
 }
 
-/* ползунок скроллбара */
 ::-webkit-scrollbar-thumb {
    background-color: #918e90;
    border-radius: 10px;
@@ -708,10 +704,6 @@ time {
    transform: scale(0);
    transform-origin: top;
    transition: transform 0.2s;
-}
-
-.settings-todo {
-/*    transform: scale(1); */
 }
 
 .show {
