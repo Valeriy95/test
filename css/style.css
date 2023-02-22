@@ -807,6 +807,17 @@ time {
   }
   
   .item {
+    width: 155px;
+    font-size: 14px;
+  }
+  
+  .list-container span {
+    margin-left: -40px;
+    font-size: 14px;
+  }
+  
+  .list-container span {
+    margin-left: -45px;
     font-size: 14px;
   }
 }
