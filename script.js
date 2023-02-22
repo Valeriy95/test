@@ -431,7 +431,7 @@ function changeLanguagesEnRu (str) {
    const deleteToDo = document.querySelectorAll('.delete-toDo');
 	
 	
-//    const spanListContainer = document.querySelectorAll('.todos-yet');
+   const spanListContainer = document.querySelectorAll('.todos-yet');
    
    if (str == 'ru') {
       isRus = true;
@@ -463,9 +463,9 @@ function changeLanguagesEnRu (str) {
       inputAudio.textContent = 'Аудио';
       chancelanguage[1].checked = true;
 	   
-//       for (let i = 0; i < spanListContainer.length; i++) { 
-// 	   spanListContainer[i].textContent = 'Задач пока нет';
-//       };
+      for (let i = 0; i < spanListContainer.length; i++) { 
+	   spanListContainer[i].textContent = 'Задач пока нет';
+      };
 	   
       for (let i = 0; i < editToDo.length; i++) { 
 	   editToDo[i].textContent = 'Редак.';
@@ -504,9 +504,9 @@ function changeLanguagesEnRu (str) {
       inputAudio.textContent = 'Audio';
       chancelanguage[0].checked = true;
 	   
-//       for (let i = 0; i < spanListContainer.length; i++) { 
-// 	   spanListContainer[i].textContent = 'No todos yet';
-//       };
+      for (let i = 0; i < spanListContainer.length; i++) { 
+	   spanListContainer[i].textContent = 'No todos yet';
+      };
       
       for(let i = 0; i < editToDo.length; i++) { 
 	  editToDo[i].textContent = 'Edit';
@@ -982,7 +982,11 @@ function showList(btn) {
       });
    }
 //    list.innerHTML = li || `<span class="todos-yet">No todos yet</span>`;
-	list.innerHTML = li || (chancelanguage.value == 'ru') ? `<span class="todos-yet">Пока задач нет</span>` : `<span class="todos-yet">No todos yet</span>`
+	list.innerHTML = li || if (chancelanguage.value == 'ru') { 
+		`<span class="todos-yet">Пока задач нет</span>` 
+	} else { 
+		`<span class="todos-yet">No todos yet</span>`
+	}
 }
 showList("progress");
 
