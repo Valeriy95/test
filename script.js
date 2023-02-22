@@ -988,7 +988,7 @@ function showList(btn) {
       });
    }
 //    list.innerHTML = li || `<span class="todos-yet">No todos yet</span>`;
-	function rrrr (str) {
+	function rrrr (str = 'en') {
 		if (str == 'ru') {
 		return `<span class="todos-yet">Пока задач нет</span>`
 		} else if (str == 'en') {
