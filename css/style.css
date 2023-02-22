@@ -945,5 +945,33 @@ time {
   .setting-container {
     margin-top: -340px;
   }
+  
+  .wrapper-todo {
+    max-width: 150px;
+    max-height: 292px;
+  }
 
+  .todo-container {
+    width: 150px;
+  }
+  
+  .buttons {
+    flex-direction: column;
+  }
+  
+  .btn-clear {
+    margin-top: 5px;
+  }
+  
+  .list-container {
+    margin-top: 145px;
+  }
+  
+  .item {
+    width: 100px;
+  }
+  
+  .list-container span {
+    margin-left: -90px;
+  }
 }
