@@ -467,9 +467,9 @@ function changeLanguagesEnRu (str) {
      
       atest = 'ru';
 	   
-      for (let i = 0; i < spanListContainer.length; i++) { 
-	   spanListContainer[i].textContent = 'Задач пока нет';
-      };
+//       for (let i = 0; i < spanListContainer.length; i++) { 
+// 	   spanListContainer[i].textContent = 'Задач пока нет';
+//       };
 	   
       for (let i = 0; i < editToDo.length; i++) { 
 	   editToDo[i].textContent = 'Редак.';
@@ -510,9 +510,9 @@ function changeLanguagesEnRu (str) {
 	   
       atest = 'en';
 	   
-      for (let i = 0; i < spanListContainer.length; i++) { 
-	   spanListContainer[i].textContent = 'No todos yet';
-      };
+//       for (let i = 0; i < spanListContainer.length; i++) { 
+// 	   spanListContainer[i].textContent = 'No todos yet';
+//       };
       
       for(let i = 0; i < editToDo.length; i++) { 
 	  editToDo[i].textContent = 'Edit';
