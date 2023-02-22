@@ -431,7 +431,7 @@ function changeLanguagesEnRu (str) {
    const deleteToDo = document.querySelectorAll('.delete-toDo');
 	
 	
-   const spanListContainer = document.querySelector('.list-container span');
+   const spanListContainer = document.querySelectorAll('.list-container span');
    
    if (str == 'ru') {
       isRus = true;
@@ -462,7 +462,10 @@ function changeLanguagesEnRu (str) {
       inputWeather.textContent = 'Погода';
       inputAudio.textContent = 'Аудио';
       chancelanguage[1].checked = true;
-      spanListContainer.textContent = 'Задач пока нет';
+	   
+      for (let i = 0; i < spanListContainer.length; i++) { 
+	   spanListContainer[i].textContent = 'Задач пока нет';
+      };
 	   
       for (let i = 0; i < editToDo.length; i++) { 
 	   editToDo[i].textContent = 'Редак.';
@@ -500,7 +503,10 @@ function changeLanguagesEnRu (str) {
       inputWeather.textContent = 'Weather';
       inputAudio.textContent = 'Audio';
       chancelanguage[0].checked = true;
-      spanListContainer.textContent = 'No todos yet';
+	   
+      for (let i = 0; i < spanListContainer.length; i++) { 
+	   spanListContainer[i].textContent = 'No todos yet';
+      };
       
       for(let i = 0; i < editToDo.length; i++) { 
 	  editToDo[i].textContent = 'Edit';
