@@ -781,7 +781,7 @@ time {
   
    .wrapper-todo {
      max-width: 200px;
-     max-height: 296px;
+     max-height: 300px;
   }
   
   .todo-container {
@@ -802,7 +802,7 @@ time {
   
   .list-container {
     margin: 10px 25px;
-    margin-top: 114px;
+    margin-top: 122px;
     width: 200px;
   }
   
@@ -818,6 +818,20 @@ time {
   
   .list-container span {
     margin-left: -45px;
+    font-size: 14px;
+  }
+  
+  .item-menu {
+    margin-left: -55px;
+    margin-top: -25px;
+    padding: 0px 0;
+  }
+  
+  .item-menu li {
+    width: 65px;
+    height: 18px;
+    padding: 0px 15px;
+    margin-bottom: 0px;
     font-size: 14px;
   }
 }
