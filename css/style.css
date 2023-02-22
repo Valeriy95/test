@@ -830,8 +830,12 @@ time {
   .item-menu li {
     width: 65px;
     height: 18px;
-    padding: 0px 15px;
+    padding: 0px 7px;
     margin-bottom: 0px;
     font-size: 14px;
+  }
+  
+  .todo-input input {
+    font-size: 16px;
   }
 }
