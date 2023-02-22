@@ -2,8 +2,7 @@
 
 import playList from './playList.js';
 
-let atest;
-
+let todosLang;
 let isRus = false;
 let timeOfDay;
 let timeOfDay1;
@@ -12,18 +11,14 @@ en : [['Good night'], ['Good morning'], ['Good afternoon'], ['Good evening']],
 ru : [['Доброй ночи'], ['Доброе утро'], ['Добрый день'], ['Добрый вечер']]
 };
 
-
 // Часы и календарь;
-
 
 function showTime() {
    const time = document.querySelector('.time');
    const dateNow = new Date();
    const currentTime = dateNow.toLocaleTimeString();
    time.textContent = currentTime;
-//    showDate();
    getTimeOfDay();
-//    showGreeting();
    setTimeout(showTime, 1000);
 };
 showTime();
@@ -64,12 +59,6 @@ function getTimeOfDay() {
       timeOfDay1 = 3;
    };
 };
-
-// function showGreeting(en) {
-//    const greetingText = document.querySelector('.greeting');
-//    greetingText.textContent = `Good ${timeOfDay}`;
-// }
-
 
 function showGreeting(lang = 'en') {
    const greetingText = document.querySelector('.greeting');
@@ -131,9 +120,6 @@ function getSlideNext() {
    if (changeImageAPI.value == 'flickr') {
       getLinkToImageUnsplash(changeImageAPI.value);  
    };
-//    (randomNum < 20) ? randomNum++ : randomNum = 1;
-//    console.log(randomNum.toString().padStart(2, '0'));
-//    setBg();
 };
 
 const slidePrev = document.querySelector('.slide-prev');
@@ -178,13 +164,6 @@ async function getWeather(lang = 'en') {
       humidity.textContent = '';
       weatherError.textContent = `Error! city not found for '${city.value}'`;
    } else {
-//       weatherIcon.className = 'weather-icon owf';
-//       weatherIcon.classList.add(`owf-${data.weather[0].id}`);
-//       temperature.textContent = `${Math.floor(data.main.temp)}°C`;
-//       weatherDescription.textContent = data.weather[0].description;
-//       wind.textContent = `Wind speed: ${Math.floor(data.wind.speed)} m/s`;
-//       humidity.textContent = `Humidity: ${data.main.humidity}%`;
-//       weatherError.textContent = '';
       weatherIcon.className = 'weather-icon owf';
       weatherIcon.classList.add(`owf-${data.weather[0].id}`);
       temperature.textContent = `${Math.floor(data.main.temp)}°C`;
@@ -230,15 +209,12 @@ changeQuote.addEventListener('click', getQuotes)
 
 
 async function getQuotes() {  
-//    const quote = document.querySelector('.quote');
-//    const author = document.querySelector('.author');
    let quotes;
    if (isRus == false) {
       quotes = 'data.json';
    } else {
       quotes = 'dataRus.json';
    }
-//    const quotes = 'data.json';
    const res = await fetch(quotes);
    const data = await res.json(); 
    num = Math.floor(Math.random() * 20);
@@ -276,11 +252,9 @@ const playPrevBtn = document.querySelector('.play-prev');
 const songname = document.querySelector('.song-name');
 const songDuraction = document.querySelector('.song-duraction');
 const wrapperPlayer = document.querySelector('.wrapper-player');
-
 const playBtnPl = document.querySelector('.btn-play-pl');
 const playNextBtnPl = document.querySelector('.btn-next-pl');
 const playPrevBtnPl = document.querySelector('.btn-prev-pl');
-
 
 playBtn.addEventListener('click', playAudio);
 playBtnPl.addEventListener('click', playAudio);
@@ -431,8 +405,6 @@ function changeLanguagesEnRu (str) {
    const inputTodolist = document.querySelector('.input-todolist-h');
    const editToDo = document.querySelectorAll('.edit-toDo');
    const deleteToDo = document.querySelectorAll('.delete-toDo');
-	
-	
    const spanListContainer = document.querySelectorAll('.todos-yet');
    
    if (str == 'ru') {
@@ -464,13 +436,10 @@ function changeLanguagesEnRu (str) {
       inputWeather.textContent = 'Погода';
       inputAudio.textContent = 'Аудио';
       chancelanguage[1].checked = true;
-     
-      atest = 'ru';
-	   
+      todosLang = 'ru';   
       for (let i = 0; i < spanListContainer.length; i++) { 
 	   spanListContainer[i].textContent = 'Пока задач нет';
       };
-	   
       for (let i = 0; i < editToDo.length; i++) { 
 	   editToDo[i].textContent = 'Редак.';
       };
@@ -507,13 +476,10 @@ function changeLanguagesEnRu (str) {
       inputWeather.textContent = 'Weather';
       inputAudio.textContent = 'Audio';
       chancelanguage[0].checked = true;
-	   
-      atest = 'en';
-	   
+      todosLang = 'en';
       for (let i = 0; i < spanListContainer.length; i++) { 
 	   spanListContainer[i].textContent = 'No todos yet';
       };
-      
       for(let i = 0; i < editToDo.length; i++) { 
 	  editToDo[i].textContent = 'Edit';
       };
@@ -521,18 +487,6 @@ function changeLanguagesEnRu (str) {
 	  deleteToDo[i].textContent = 'Delete';
       };
       }
-//    isRus = true;
-//    showGreeting('ru');
-//    getWeather('ru');
-//    showDate('ru')
-//    console.log('click');
-//    if (localStorage.getItem('names') == '[Enter name]' || localStorage.getItem('names') == '') {
-//       names.value = 'Введите имя';
-//    };
-//    if (localStorage.getItem('city') == 'Minsk' || localStorage.getItem('city') == '') {
-//       city.value = 'Минск';
-//    };
-//    getQuotesTest();
 };
    
 
@@ -540,41 +494,24 @@ function changeLanguagesEnRu (str) {
 
 const settingContainer = document.querySelector('.setting-container');
 const settingIcon = document.querySelector('.setting-icon');
-// const closeIcon = document.querySelector('.close-icon1');
-// const closeIcon1 = document.querySelector('.close-icon1');
-// const closeIcon2 = document.querySelector('.close-icon2');
 settingIcon.addEventListener('click', showSetCont);
-// closeIcon.addEventListener('click', closeSetCont);
-// closeIcon1.addEventListener('click', closeSetCont);
-// closeIcon2.addEventListener('click', closeSetCont);
 
 function showSetCont () {
    settingContainer.classList.toggle('show-container-set');
 };
 
-// function closeSetCont () {
-//    settingContainer.classList.remove('show-container');
-// };
-
 const chancelanguage = document.querySelectorAll('input[type=radio][name="lang"]');
 chancelanguage.forEach(chancelanguage => chancelanguage.addEventListener('change', function sur () {
    if(chancelanguage.value == 'ru') {
       changeLanguagesEnRu (chancelanguage.value);
-//       chancelanguage.checked = true;
       localStorage.setItem('chancelanguage', chancelanguage.value);
       console.log('RU');
    } else if (chancelanguage.value == 'en') {
       changeLanguagesEnRu (chancelanguage.value);
-//       chancelanguage.checked = true;
       localStorage.setItem('chancelanguage', chancelanguage.value);
       console.log('EN');
    }
 }));
-
-// function setLocalLanguage() {
-//    localStorage.setItem('chancelanguage', chancelanguage.value);
-//  };
-//  window.addEventListener('beforeunload', setLocalLanguage);
 
 function getLocalLanguage() {
    if(localStorage.getItem('chancelanguage')) {
@@ -586,6 +523,7 @@ window.addEventListener('load', getLocalLanguage);
    
 
 //  9. Получение фонового изображения от API
+
 let timeOfDayUnsplash;
 let timeOfDayFlickr;
 
@@ -679,7 +617,6 @@ function tagChangeUnsplash () {
    if (chancelanguage.value == 'en') {
       timeOfDayUnsplash = prompt('Enter tag for Unsplash API. For example: nature');
    }
-//    timeOfDayUnsplash = prompt('Введите тег для Unsplash API');
    getLinkToImageUnsplash(changeImageAPI.value);
    console.log(timeOfDayUnsplash);
 }
@@ -692,7 +629,6 @@ function tagChangeFlickr () {
    if (chancelanguage.value == 'en') {
       timeOfDayFlickr = prompt('Enter tag for Flickr API. For example: nature');
    }
-//    timeOfDayFlickr = prompt('Введите тег для Flickr API');
    getLinkToImageUnsplash(changeImageAPI.value);
    console.log(timeOfDayFlickr);
 }
@@ -718,26 +654,6 @@ function hideBlocOpen () {
 function hideBlocClose () {
    hideContainer.classList.add('hidden');
 }
-
-// const hideBlocTimeBtn = document.querySelector('.hide-bloc-time');
-// hideBlocTimeBtn.addEventListener('click', hideBlocOpenCloseTime);
-
-// function hideBlocOpenCloseTime () {
-//    const time = document.querySelector('.time');
-//    time.classList.toggle('opacity-bloc');
-// }
-
-// let isHideTime = true;
-
-
-// function getchangeHideTime() {
-//    if(localStorage.getItem('chHideTime')) {
-//      chHideTime.value = localStorage.getItem('chHideTime');
-// //     changeHideTime ()
-//    }
-//  };
-// window.addEventListener('load', getchangeHideTime);
-
 
 const chHideTime = document.querySelector('input[type=checkbox][name="time"]');
 chHideTime.addEventListener('click', changeHideTime);
@@ -987,8 +903,7 @@ function showList(btn) {
          }
       });
    }
-//    list.innerHTML = li || `<span class="todos-yet">No todos yet</span>`;
-	function rrrr (str = 'en') {
+	function noTodosYet (str = 'en') {
 		if (str == 'ru') {
 		return `<span class="todos-yet">Пока задач нет</span>`
 		} else if (str == 'en') {
@@ -996,7 +911,7 @@ function showList(btn) {
 		}
 	}
 	
-	list.innerHTML = li || rrrr(atest);
+	list.innerHTML = li || noTodosYet(todosLang);
 }
 showList("progress");
 
