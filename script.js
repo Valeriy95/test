@@ -982,11 +982,14 @@ function showList(btn) {
       });
    }
 //    list.innerHTML = li || `<span class="todos-yet">No todos yet</span>`;
-	list.innerHTML = li || if (chancelanguage.value == 'ru') { 
-		`<span class="todos-yet">Пока задач нет</span>` 
-	} else { 
-		`<span class="todos-yet">No todos yet</span>`
+	function rrrr () {
+		if chancelanguage.value == 'ru') {
+		return `<span class="todos-yet">Пока задач нет</span>`
+		} else {
+		return `<span class="todos-yet">No todos yet</span>`
+		}
 	}
+	list.innerHTML = li || function rrrr ()
 }
 showList("progress");
 
