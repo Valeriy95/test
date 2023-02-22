@@ -981,7 +981,8 @@ function showList(btn) {
          }
       });
    }
-   list.innerHTML = li || `<span class="todos-yet">No todos yet</span>`;
+//    list.innerHTML = li || `<span class="todos-yet">No todos yet</span>`;
+	list.innerHTML = li || (chancelanguage.value == 'ru') ? `<span class="todos-yet">Пока задач нет</span>` : `<span class="todos-yet">No todos yet</span>`
 }
 showList("progress");
 
