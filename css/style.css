@@ -921,3 +921,29 @@ time {
     flex-wrap: wrap;
   }
 }
+
+@media (max-width: 768px) {
+
+  .icon-container {
+    position: absolute;
+    margin-top: -70px;
+    flex-direction: column-reverse;
+  }
+  
+  .github-icon {
+    margin-left: -20px;
+  }
+  
+  .rss-icon {
+    margin-left: 0px;
+  }
+  
+  .year {
+    margin-left: -17px;
+  }
+
+  .setting-container {
+    margin-top: -340px;
+  }
+
+}
