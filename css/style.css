@@ -920,6 +920,11 @@ time {
     justify-content: space-around;
     flex-wrap: wrap;
   }
+  
+  .form-lang {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 380px) {
