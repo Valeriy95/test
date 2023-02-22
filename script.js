@@ -431,7 +431,7 @@ function changeLanguagesEnRu (str) {
    const deleteToDo = document.querySelectorAll('.delete-toDo');
 	
 	
-   const spanListContainer = document.querySelectorAll('.list-container span');
+   const spanListContainer = document.querySelectorAll('.todos-yet');
    
    if (str == 'ru') {
       isRus = true;
@@ -981,7 +981,7 @@ function showList(btn) {
          }
       });
    }
-   list.innerHTML = li || `<span>No todos yet</span>`;
+   list.innerHTML = li || `<span class="todos-yet">No todos yet</span>`;
 }
 showList("progress");
 
