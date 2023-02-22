@@ -260,12 +260,12 @@ body {
 
 .quote {
   min-height: 32px;
-  width: 600px;
+/*   width: 600px; */
 }
 
 .author {
   min-height: 20px;
-  width: 600px;
+/*   width: 600px; */
 }
 
 .progress-container {
