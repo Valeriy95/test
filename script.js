@@ -463,6 +463,8 @@ function changeLanguagesEnRu (str) {
       inputAudio.textContent = 'Аудио';
       chancelanguage[1].checked = true;
 	   
+      rrrr('ru');
+	   
       for (let i = 0; i < spanListContainer.length; i++) { 
 	   spanListContainer[i].textContent = 'Задач пока нет';
       };
@@ -503,6 +505,8 @@ function changeLanguagesEnRu (str) {
       inputWeather.textContent = 'Weather';
       inputAudio.textContent = 'Audio';
       chancelanguage[0].checked = true;
+	   
+      rrrr('en');
 	   
       for (let i = 0; i < spanListContainer.length; i++) { 
 	   spanListContainer[i].textContent = 'No todos yet';
@@ -574,7 +578,6 @@ function getLocalLanguage() {
    if(localStorage.getItem('chancelanguage')) {
      chancelanguage.value = localStorage.getItem('chancelanguage');
      changeLanguagesEnRu (chancelanguage.value);
-     rrrr(chancelanguage.value);
    }
  };
 window.addEventListener('load', getLocalLanguage);
@@ -983,14 +986,14 @@ function showList(btn) {
       });
    }
 //    list.innerHTML = li || `<span class="todos-yet">No todos yet</span>`;
-	function rrrr (str) {
+	let a = function rrrr (str) {
 		if (str == 'ru') {
 		return `<span class="todos-yet">Пока задач нет</span>`
-		} else {
+		} else if (str == 'en') {
 		return `<span class="todos-yet">No todos yet</span>`
 		}
 	}
-	list.innerHTML = li || function rrrr ()
+	list.innerHTML = li || a
 }
 showList("progress");
 
