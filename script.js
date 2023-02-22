@@ -2,6 +2,8 @@
 
 import playList from './playList.js';
 
+let atest;
+
 let isRus = false;
 let timeOfDay;
 let timeOfDay1;
@@ -462,8 +464,8 @@ function changeLanguagesEnRu (str) {
       inputWeather.textContent = 'Погода';
       inputAudio.textContent = 'Аудио';
       chancelanguage[1].checked = true;
-	   
-      rrrr('ru');
+     
+     atest = 'ru';
 	   
       for (let i = 0; i < spanListContainer.length; i++) { 
 	   spanListContainer[i].textContent = 'Задач пока нет';
@@ -506,7 +508,7 @@ function changeLanguagesEnRu (str) {
       inputAudio.textContent = 'Audio';
       chancelanguage[0].checked = true;
 	   
-      rrrr('en');
+      atest = 'en';
 	   
       for (let i = 0; i < spanListContainer.length; i++) { 
 	   spanListContainer[i].textContent = 'No todos yet';
@@ -986,14 +988,15 @@ function showList(btn) {
       });
    }
 //    list.innerHTML = li || `<span class="todos-yet">No todos yet</span>`;
-	let a = function rrrr (str) {
+	function rrrr (str) {
 		if (str == 'ru') {
 		return `<span class="todos-yet">Пока задач нет</span>`
 		} else if (str == 'en') {
 		return `<span class="todos-yet">No todos yet</span>`
 		}
 	}
-	list.innerHTML = li || a
+	
+	list.innerHTML = li || rrrr(atest);
 }
 showList("progress");
 
