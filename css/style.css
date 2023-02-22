@@ -922,7 +922,7 @@ time {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 380px) {
 
   .icon-container {
     position: absolute;
@@ -949,6 +949,7 @@ time {
   .wrapper-todo {
     max-width: 150px;
     max-height: 292px;
+    margin-left: -57px;
   }
 
   .todo-container {
