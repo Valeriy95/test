@@ -779,6 +779,11 @@ time {
     padding: 5px;
   }
   
+  
+  .setting-container {
+    width: 157px;
+  }
+  
    .wrapper-todo {
      max-width: 200px;
      max-height: 300px;
