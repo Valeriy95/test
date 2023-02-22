@@ -912,4 +912,12 @@ time {
     height: 20px;
   }
 
+  .wrapper-player {
+    height: 150px;
+  }
+ 
+  .wrapper-player1 {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
 }
