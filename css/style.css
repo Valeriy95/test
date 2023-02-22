@@ -838,4 +838,55 @@ time {
   .todo-input input {
     font-size: 16px;
   }
+  
+  .github-icon {
+    margin-left: 10px;
+  }
+  
+  .rss-icon {
+    margin-left: 10px;
+  }
+  
+  .year {
+    margin-left: 10px;
+  }
+  
+  .imgBtn {
+    margin-left: 19px;
+  }
+  
+  .langBtnSet {
+    font-size: 17px;
+    padding-right: 15px;
+  }
+  
+  .tagBtn1, .tagBtn2 {
+    font-size: 16px;
+    width: 40px;
+    height: 24px;
+  }
+  
+  .tagBtn1 {
+    width: 48px;
+  }
+  
+  .image-collection {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .languages {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .hide-block {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .form-lang {
+    display: flex;
+    flex-direction: column;
+  }
 }
