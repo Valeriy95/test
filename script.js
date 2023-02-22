@@ -465,7 +465,7 @@ function changeLanguagesEnRu (str) {
       inputAudio.textContent = 'Аудио';
       chancelanguage[1].checked = true;
      
-     atest = 'ru';
+      atest = 'ru';
 	   
       for (let i = 0; i < spanListContainer.length; i++) { 
 	   spanListContainer[i].textContent = 'Задач пока нет';
